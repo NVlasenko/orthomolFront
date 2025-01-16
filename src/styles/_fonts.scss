@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../public/fonts/Montserrat-VariableFont_wght.ttf) format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oddval';
+  src: url(${process.env.PUBLIC_URL}/fonts/Oddval-Regular.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
