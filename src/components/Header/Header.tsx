@@ -52,17 +52,25 @@ export const Header: React.FC = () => {
               <div onMouseLeave={handleMouseLeave}>
                    {isCatalogHovered && <DropDownCatalog />}
               </div>
-           
-            </div>
-            <NavLink to="/popular" className={getLinkClass}>
+              </div>
+              <div>
+                 <NavLink to="/popular" className={getLinkClass}>
               Популярні товари
             </NavLink>
-            <NavLink to="#" className={getLinkClass}>
+              </div>
+            <div>
+              <NavLink to="#" className={getLinkClass}>
               Наші бренди
             </NavLink>
-            <NavLink to="#" className={getLinkClass}>
+            </div>
+            <div>
+               <NavLink to="#" className={getLinkClass}>
               FAQ
             </NavLink>
+            </div>
+           
+         
+          
           </nav>
      
 
