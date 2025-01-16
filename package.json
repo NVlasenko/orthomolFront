@@ -2,6 +2,7 @@
   "name": "orthomolfront",
   "version": "1.0.0",
   "main": "stylelint.config.js",
+  "homepage": "https://NVlasenko.github.io/orthomolFront",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
