@@ -46,12 +46,13 @@
 .header__list {
   display: flex;
   flex-direction: row;
-  gap: 27px;
+  gap: 15px;
   align-items: center;
 }
 @media (min-width: 1200px) {
   .header__list {
     align-items: center;
+    gap: 27px;
   }
 }
 .header__link {

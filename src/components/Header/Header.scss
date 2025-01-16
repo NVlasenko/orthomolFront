@@ -40,10 +40,11 @@
   &__list {
     display: flex;
     flex-direction: row;
-    gap: 27px;
+    gap: 15px;
     align-items: center;
     @include on-desktop {
       align-items: center;
+      gap: 27px;
      }
   }
 
@@ -51,7 +52,8 @@
     text-decoration: none;
     color: $first-primary-color;
     transition: color 0.5s ease;
-    font-size: 10px;
+    font-size: 9px;
+    line-height: 18px;
     @include on-desktop {
      font-size: 18px;
     }
