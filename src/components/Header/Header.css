@@ -1,0 +1,251 @@
+@charset "UTF-8";
+.header {
+  background-color: rgba(228, 248, 255, 0.6);
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .header {
+    height: 150px;
+  }
+}
+.header__catalog--wrapper {
+  position: relative;
+  display: inline;
+}
+.header__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .header__content {
+    flex-direction: row;
+    gap: 160px;
+  }
+}
+@media (min-width: 1200px) {
+  .header__content {
+    gap: 260px;
+  }
+}
+.header__section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 1200px) {
+  .header__section {
+    gap: 40px;
+  }
+}
+.header__list {
+  display: flex;
+  flex-direction: row;
+  gap: 27px;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .header__list {
+    align-items: center;
+  }
+}
+.header__link {
+  text-decoration: none;
+  color: #170F49;
+  transition: color 0.5s ease;
+  font-size: 10px;
+}
+@media (min-width: 1200px) {
+  .header__link {
+    font-size: 18px;
+  }
+}
+.header__link.is-active {
+  color: #786FC4;
+}
+.header__link:hover {
+  color: #786FC4;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+.logo__img {
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 1200px) {
+  .logo__img {
+    width: 33px;
+    height: 33px;
+  }
+}
+.logo__text {
+  font-family: "Oddval", sans-serif;
+  font-size: 13px;
+  color: #170f49;
+}
+@media (min-width: 1200px) {
+  .logo__text {
+    font-size: 22px;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+@media (min-width: 1200px) {
+  .contact {
+    justify-content: none;
+  }
+}
+.contact__info {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.contact__info--phone {
+  padding: 3px 7px 3px 7px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 100%;
+  height: 20px;
+  border-radius: 17px;
+  border: 1px solid #786FC4;
+  align-items: center; /* Центрирование по вертикали */
+  justify-content: center;
+}
+@media (min-width: 1200px) {
+  .contact__info--phone {
+    width: 234.44px;
+    gap: 8px;
+    padding: 7px 30px 7px 30px;
+    height: 31px;
+  }
+}
+.contact__info--img {
+  width: 8px;
+  height: 8px;
+}
+@media (min-width: 1200px) {
+  .contact__info--img {
+    width: 14px;
+    height: 14px;
+  }
+}
+.contact__info--number {
+  font-size: 7px;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  color: #786FC4;
+  transition: color 0.5s ease;
+}
+@media (min-width: 1200px) {
+  .contact__info--number {
+    font-size: 15.4px;
+  }
+}
+.contact__info--number:hover {
+  color: #170F49;
+}
+.contact__messenger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+@media (min-width: 1200px) {
+  .contact__messenger {
+    gap: 21px;
+  }
+}
+.contact__messenger--icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #786FC4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+@media (min-width: 1200px) {
+  .contact__messenger--icon {
+    width: 33px;
+    height: 33px;
+  }
+}
+.contact__messenger--icon:hover {
+  transform: scale(1.3);
+}
+.contact__messenger--icon img {
+  width: 10px;
+  height: 10px;
+  transform: scale(1);
+}
+@media (min-width: 1200px) {
+  .contact__messenger--icon img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.basket {
+  position: relative;
+  width: 22px;
+  height: 22px;
+}
+.basket__icon {
+  width: 85%;
+  height: 85%;
+}
+@media (min-width: 1200px) {
+  .basket__icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+.basket__count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #786FC4;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+@media (min-width: 1200px) {
+  .basket__count {
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=Header.css.map */
