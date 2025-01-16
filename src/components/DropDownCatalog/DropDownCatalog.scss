@@ -3,25 +3,26 @@
 .drop-down {
   position: absolute;
   top: 120px;
-  left: 250px;
+  left: 380px;
   z-index: 10;
-border: 1px solid #4e6264;
-border-radius: 15px;
-display: flex;
-flex-direction: row;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(78, 98, 100, 5.3);
+  display: flex;
+  flex-direction: row;
   &.show {
     display: block;
   }
 }
 
 .purpose {
-  background-color: #CEDDDF;
+  background-color: #e4f8ff99;
   width: 300px;
-  border-radius: 15px 0 0 15px;
+  border-radius: 20px 0 0 20px;
   &__list {
     list-style: none;
     padding: 0;
     margin: 0;
+    border-radius: 20px 0 0 20px;
   }
 
   &__link {
@@ -39,13 +40,13 @@ flex-direction: row;
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 10px;
       right: 10px;
       width: 5px;
       height: 22px;
-    
+
       background-image: url(../../../public/images/symbols/arrowRight.svg); // Используйте CSS переменную
       background-repeat: no-repeat;
       background-position: right center;
@@ -53,26 +54,15 @@ flex-direction: row;
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 2px; 
+      height: 2px;
       background-color: #4e6264;
       transition: transform 0.3s ease;
     }
-
-    /* Добавление вертикальной линии справа */
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   right: 0; /* Расположим вертикальную линию справа */
-    //   height: 100%; /* Высота линии будет равна высоте элемента */
-    //   width: 2px; /* Толщина линии */
-    //   background-color: #4e6264; /* Цвет линии */
-    // }
 
     &:hover {
       background-color: #fff;
@@ -84,12 +74,59 @@ flex-direction: row;
     &:last-child::before {
       content: none;
     }
+    &:first-child {
+      border-radius: 20px 0 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 0 20px;
+    }
   }
 }
 
-.vitamins{
-  width: 720px;
-  background-color:#fff;
+.vitamins {
+  width: 500px;
+  background-color: #fff;
   border-left: 1px solid #4e6264;
-  border-radius:0  15px  15px 0;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow-y: auto; /* Вертикальная прокрутка, если содержимое превышает высоту */
+  overflow-x: hidden; /* Скрытие горизонтального скролла */
+  padding: 20px 50px;
+
+  &__category {
+    &--title {
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 22px;
+      position: relative;
+      display: inline-block; /* Обязательно для работы псевдоэлемента */
+
+    }
+
+    &--title::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #E6E6E6; /* Цвет подчеркивания */
+    }
+
+    &--list{
+      padding-left: 20px;
+    }
+
+    &--item{
+    
+font-size: 16px;
+font-weight: 500;
+line-height: 22px;
+color: #666666;
+cursor: pointer;
+    }
+  }
 }

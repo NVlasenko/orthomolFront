@@ -16,9 +16,47 @@ export const DropDownCatalog: React.FC = () => {
           <li className="purpose__link"><span>Всі товари</span></li>
         </ul>
       </div>
+     
+
       <div className="vitamins">
-vdfvdf
+      <div className="vitamins__category">
+        <h3 className="vitamins__category--title">Вітамін D</h3>
+        <ul className="vitamins__category--list">
+          <li className="vitamins__category--item">Вітамін D 400 -5000ME</li>
+          <li className="vitamins__category--item">Вітамін D 5000-25000ME</li>
+        </ul>
       </div>
+
+      <div className="vitamins__category">
+        <h3 className="vitamins__category--title">Вітамін K</h3>
+      </div>
+
+      <div className="vitamins__category">
+        <h3 className="vitamins__category--title">Вітамін B</h3>
+        <ul className="vitamins__category--list">
+          <li className="vitamins__category--item">Біотин</li>
+          <li className="vitamins__category--item">Фолієва кислота</li>
+          <li className="vitamins__category--item">Біотин</li>
+          <li className="vitamins__category--item">Фолієва кислота</li>
+        </ul>
+      </div>
+
+      <div className="vitamins__category">
+        <h3 className="vitamins__category--title">Вітамін D</h3>
+      </div>
+
+      <div className="vitamins__category">
+        <h3 className="vitamins__category--title">Вітамін A</h3>
+      </div>
+
+      <div className="vitamins__category">
+        <h3 className="vitamins__category--title">Вітамін E</h3>
+      </div>
+
+      <div className="vitamins__category">
+        <h3 className="vitamins__category--title">Вітамін C</h3>
+      </div>
+    </div>
     </div>
   );
 };

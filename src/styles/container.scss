@@ -1,15 +1,14 @@
 @import './mixins';
 
 .container {
-  overflow-x: hidden;
   margin: 0 auto;
-  padding: 0 300px;
+  padding: 0 34px;
 
   @include on-tablet {
     padding: 0 34px;
   }
 
   @include on-desktop {
-    padding: 0 120px;
+    padding: 0 200px;
   }
 }
