@@ -193,8 +193,8 @@ export const Header: React.FC = () => {
               </NavLink>
               {isCatalogHovered && (
                 <div
-                  ref={dropDownRef} // Применяем ref к выпадающему меню
-                  onMouseEnter={handleMouseEnterDropdown} // При наведении на dropdown, не закрываем меню
+                  ref={dropDownRef}
+                  onMouseEnter={handleMouseEnterDropdown}
                   onMouseLeave={handleMouseLeaveDropdown} // При выходе из dropdown, закрываем меню
                 >
                   <DropDownCatalog />

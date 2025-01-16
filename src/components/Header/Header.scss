@@ -40,7 +40,7 @@
   &__list {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
     @include on-desktop {
       align-items: center;
