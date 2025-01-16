@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.80e154c9.css",
-    "main.js": "/static/js/main.fabf83ae.js",
-    "static/media/arrowRight.svg": "/static/media/arrowRight.422380150ed64f8b3fd4.svg",
-    "index.html": "/index.html",
-    "main.80e154c9.css.map": "/static/css/main.80e154c9.css.map",
-    "main.fabf83ae.js.map": "/static/js/main.fabf83ae.js.map"
+    "main.css": "/orthomolFront/static/css/main.1d22f1ad.css",
+    "main.js": "/orthomolFront/static/js/main.a60faf96.js",
+    "static/media/arrowRight.svg": "/orthomolFront/static/media/arrowRight.422380150ed64f8b3fd4.svg",
+    "index.html": "/orthomolFront/index.html",
+    "main.1d22f1ad.css.map": "/orthomolFront/static/css/main.1d22f1ad.css.map",
+    "main.a60faf96.js.map": "/orthomolFront/static/js/main.a60faf96.js.map"
   },
   "entrypoints": [
-    "static/css/main.80e154c9.css",
-    "static/js/main.fabf83ae.js"
+    "static/css/main.1d22f1ad.css",
+    "static/js/main.a60faf96.js"
   ]
 }
