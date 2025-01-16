@@ -6,7 +6,7 @@ import { DropDownCatalog } from "../DropDownCatalog";
 import './../../styles/container.scss';
 export const Header: React.FC = () => {
   const [isCatalogHovered, setCatalogHovered] = useState(false);
-  const catalogRef = useRef<HTMLAnchorElement | null>(null);
+  const catalogRef = useRef<HTMLDivElement | null>(null);
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
     classNames("header__link", {
       "is-active": isActive,
