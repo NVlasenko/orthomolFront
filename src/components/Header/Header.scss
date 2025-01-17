@@ -21,7 +21,7 @@
   justify-content: center;
     @include on-tablet {
       flex-direction: row;
-      gap: 160px;
+      gap: 30px;
     }
     @include on-desktop {
       gap: 260px;
@@ -54,6 +54,9 @@
     transition: color 0.5s ease;
     font-size: 9px;
     line-height: 18px;
+    @include on-tablet {
+      font-size: 11px;
+    }
     @include on-desktop {
      font-size: 18px;
     }
@@ -84,6 +87,9 @@
     font-family: 'Oddval', sans-serif;
     font-size: 13px;
     color: #170f49;
+    @include on-tablet {
+      font-size: 11px;
+    }
     @include on-desktop {
       font-size: 22px;
     }
@@ -97,8 +103,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 32px;
+  @include on-tablet {
+    gap: 15px;
+  }
   @include on-desktop {
     justify-content: none;
+    gap: 32px;
   }
   &__info {
     display: flex;
