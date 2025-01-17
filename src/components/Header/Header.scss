@@ -103,7 +103,10 @@
   &__info {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 15px;
+    @include on-desktop {
+      gap: 30px;
+    }
     &--phone {
       padding: 3px 7px 3px 7px;
       display: flex;
@@ -113,7 +116,7 @@
     height: 20px;
       border-radius: 17px;
       border: 1px solid $second-primary-color;
-      align-items: center; /* Центрирование по вертикали */
+      align-items: center; 
   justify-content: center;
   @include on-desktop {
     width: 234.44px;
