@@ -6,10 +6,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100vh;
   @include on-tablet {
   }
   @include on-desktop {
     flex-direction: row;
+    height: auto;
   }
 
   &__main {
@@ -19,11 +21,13 @@
     justify-content: center;
     background-color: #fbfcfb;
     padding: 30px 50px;
+    height: 100vh;
     @include on-tablet {
     }
     @include on-desktop {
       max-width: 50%;
       padding: 117px 160px;
+      height: auto;
     }
   }
   &__title {
