@@ -4,53 +4,92 @@
 .vitaminPromoBlock {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  @include on-tablet {
+  }
+  @include on-desktop {
+    flex-direction: row;
+  }
 
   &__main {
-    max-width: 50%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #fbfcfb;
-    padding: 117px 160px;
+    padding: 30px 50px;
+    @include on-tablet {
+    }
+    @include on-desktop {
+      max-width: 50%;
+      padding: 117px 160px;
+    }
   }
   &__title {
-    font-size: 70px;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 70px;
+    line-height: 30px;
     letter-spacing: -1px;
     text-align: left;
     color: $first-primary-color;
+    @include on-tablet {
+    }
+    @include on-desktop {
+      font-size: 70px;
+      line-height: 70px;
+    }
   }
   &__subtitle {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
-    line-height: 26px;
+    line-height: 20px;
     text-align: left;
     color: #222222;
-    margin-top: 21px;
+    margin-top: 5px;
+    @include on-tablet {
+    }
+    @include on-desktop {
+      font-size: 20px;
+      line-height: 26px;
+      margin-top: 21px;
+    }
   }
   &__btn {
-    width: 250px;
-    height: 49px;
+    width: 120px;
+    height: 40px;
     color: #f5f5f5;
     background-color: $second-primary-color;
     border-color: $second-primary-color;
     border-radius: 34px;
     cursor: pointer;
     text-align: center;
-    margin-top: 53px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    font-size: 14px;
+    @include on-tablet {
+    }
+    @include on-desktop {
+      margin-top: 53px;
+      width: 250px;
+      height: 49px;
+      font-size: 18px;
+    }
   }
   &__img {
     position: relative;
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include on-tablet {
+    }
+    @include on-desktop {
+      width: 50%;
+    }
     &--main {
       width: 100%;
       height: 100%;
@@ -73,41 +112,51 @@
     animation-fill-mode: forwards;
 
     animation: fadeInAndGrow 2s ease-out 0s forwards,
-               jumpUpAndDown 3s ease-in-out 7s infinite;
+      jumpUpAndDown 3s ease-in-out 7s infinite;
 
     &--1 {
-      height: 280px;
-      width: 280px;
+      height: 125px;
+      width: 125px;
       top: 34%;
       left: 28%;
       animation: fadeInAndGrow 2s ease-out 0s forwards,
-                 pseudo3DFlip 10s ease-in-out 5s infinite;
+        pseudo3DFlip 10s ease-in-out 5s infinite;
       transform-origin: center;
+      @include on-tablet {
+      }
+      @include on-desktop {
+        height: 280px;
+        width: 280px;
+      }
     }
 
     &--2 {
-      height: 300px;
-      width: 300px;
-      top: 28%;
-      left: 48%;
+      height: 170px;
+      width: 170px;
+      top: 20%;
+      left: 45%;
       animation: fadeInAndGrow 2s ease-out 0s forwards,
-                 jumpUpAndDown 3s ease-in-out 7s infinite;
+        jumpUpAndDown 3s ease-in-out 7s infinite;
       transform-origin: center;
+      @include on-tablet {
+      }
+      @include on-desktop {
+        height: 300px;
+        width: 300px;
+        top: 28%;
+        left: 48%;
+      }
     }
   }
 
   @keyframes fadeInAndGrow {
     0% {
       opacity: 0;
-      transform: scale(0);
-    }
-    50% {
-      opacity: 0.5;
-      transform: scale(0.5);
+      transform: scale(0.5); /* Начальный небольшой размер для плавности */
     }
     100% {
       opacity: 1;
-      transform: scale(1);
+      transform: scale(1); /* Полный размер */
     }
   }
 
@@ -130,7 +179,8 @@
   }
 
   @keyframes jumpUpAndDown {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     25% {
@@ -144,4 +194,3 @@
     }
   }
 }
-
