@@ -2,6 +2,7 @@ import React from "react";
 import "./VitaminPromoBlock.scss";
 
 export const VitaminPromoBlock: React.FC = () => {
+
   return (
     <div className="vitaminPromoBlock">
       <div className="vitaminPromoBlock__main">

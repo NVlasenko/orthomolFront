@@ -1,8 +1,12 @@
-import React from "react"
-import { VitaminPromoBlock } from "../../components/VitaminPromoBlock"
+import React from "react";
+import { VitaminPromoBlock } from "../../components/VitaminPromoBlock";
+import { InfoStrip } from "../../components/InfoStrip";
 
 export const HomePage: React.FC = () => {
   return (
-    <VitaminPromoBlock />
-  )
-}
+    <div>
+      <VitaminPromoBlock />
+      <InfoStrip />
+    </div>
+  );
+};
