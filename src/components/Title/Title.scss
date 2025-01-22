@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 96px;
+  letter-spacing: -1px;
+  text-align: left;
+  color: $first-primary-color;
+}

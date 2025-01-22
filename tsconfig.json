@@ -1,7 +1,7 @@
 {
   "include": [
     "src"
-  ],
+, "src/api"  ],
   "compilerOptions": {
     "target": "es5",
     "lib": [

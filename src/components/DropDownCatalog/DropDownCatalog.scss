@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
+
 .drop-down {
   position: absolute;
   top: 83px;
@@ -21,7 +22,7 @@
 }
 
 .purpose {
-  background-color: #e4f8ff;
+  background-color: $background-first;
   width: 120px;
   border-radius: 20px 0 0 20px;
   @include on-tablet {

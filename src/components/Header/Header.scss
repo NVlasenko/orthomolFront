@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 .header {
-  background-color: #e4f8ff99;
+  background-color: $background-first;
   height: 80px;
   width: 100vw;
   display: flex;
