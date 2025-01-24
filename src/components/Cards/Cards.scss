@@ -8,7 +8,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   @include on-tablet {
 
   }
@@ -33,18 +33,24 @@
   &__list {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 95px;
     padding-top: 120px;
     transition: transform 0.3s ease-in-out;
     will-change: transform;
     height: 510px;
     @include on-tablet {
+      justify-content: space-around;
 gap: 85px;
     }
     @include on-desktop {
-      gap: 95px;
+      gap: 20px;
+      flex-wrap: nowrap;
+      justify-content: space-around;
     }
+
+
   }
 
   &__arrow {
@@ -52,7 +58,10 @@ gap: 85px;
     top: 58%;
     transform: translateY(-50%);
     cursor: pointer;
-
+display: none;
+@include on-desktop {
+  display: block;
+}
     &--left {
       left: 0;
       @include on-tablet {

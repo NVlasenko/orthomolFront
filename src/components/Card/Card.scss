@@ -9,8 +9,10 @@
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
+  height: 400px;
   @include on-desktop {
-    width: 310;
+    width: 266px;
+    height: 393px;
   }
   &__image {
     width: 220px;
@@ -40,7 +42,7 @@
 
   &__info {
     margin-bottom: 16px;
-    transform: translateY(-120%);
+    transform: translateY(-85%);
 
     &--title {
       color: $first-primary-color;
@@ -90,7 +92,7 @@
 
     &--btn {
       position: relative;
-      width: 180px;
+      width: 150px;
       height: 44px;
       background-color: $second-primary-color;
       border-radius: 34px;
@@ -99,12 +101,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+font-size: 15px;
       &::before {
         content: "";
         position: absolute;
         top: 8px;
-        left: 20px;
+        left: 15px;
         width: 22px;
         height: 23px;
         background: url("../../../public/images/icons/basket2.svg") no-repeat
