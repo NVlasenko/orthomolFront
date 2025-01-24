@@ -228,54 +228,115 @@ export const Cards: React.FC = () => {
   }
 
   return (
+    // <div className="cards">
+    //   <Title title="Популярні товари" />
+
+    //   {/* Стрелки управления (не убираем их вообще!) */}
+    //   <img
+    //     className={`cards__arrow cards__arrow--left ${
+    //                 !canPrev ? "cards__arrow--disabled" : ""
+    //               }`}
+    //     src={`${process.env.PUBLIC_URL}/images/icons/arrowLeft.svg`}
+    //     alt="arrowLeft"
+    //     onClick={handlePrev}
+    //   />
+    //   <img
+    //       className={`cards__arrow cards__arrow--right ${
+    //                   !canNext ? "cards__arrow--disabled" : ""
+    //                 }`}
+    //     src={`${process.env.PUBLIC_URL}/images/icons/arrowRight.svg`}
+    //     alt="arrowRight"
+    //     onClick={handleNext}
+    //   />
+
+    //   {/* Контент карточек */}
+    //   <div
+    //     className={`cards__content ${showAll ? "show-all" : ""}`}
+    //     ref={contentRef}
+    //     style={{
+    //       height: showAll ? "auto" : "520px", // Ограничиваем высоту только для первой строки
+    //       overflow: showAll ? "visible" : "hidden", // Скрываем всё, кроме первой строки
+    //     }}
+    //   >
+    //     <div className="cards__list" ref={listRef}>
+    //       {products.map((product) => (
+    //         <Card key={product.id} product={product} />
+    //       ))}
+    //     </div>
+    //   </div>
+
+    //   {/* Кнопка "Усі товари" только для мобильной и планшетной версии */}
+    //   <div className="cards__show-all">
+    //     {!showAll ? (
+    //       <button
+    //         className="cards__show-all-btn"
+    //         onClick={() => setShowAll(true)}
+    //       >
+    //         Усі товари
+    //       </button>
+    //     ) : (
+    //       <button
+    //         className="cards__show-all-btn"
+    //         onClick={() => setShowAll(false)}
+    //       >
+    //         Згорнути
+    //       </button>
+    //     )}
+    //   </div>
+    // </div>
     <div className="cards">
-      <Title title="Популярні товари" />
-
-      {/* Стрелки управления (не убираем их вообще!) */}
-      <img
-        className={`cards__arrow cards__arrow--left ${
-                    !canPrev ? "cards__arrow--disabled" : ""
-                  }`}
-        src={`${process.env.PUBLIC_URL}/images/icons/arrowLeft.svg`}
-        alt="arrowLeft"
-        onClick={handlePrev}
-      />
-      <img
-          className={`cards__arrow cards__arrow--right ${
-                      !canNext ? "cards__arrow--disabled" : ""
-                    }`}
-        src={`${process.env.PUBLIC_URL}/images/icons/arrowRight.svg`}
-        alt="arrowRight"
-        onClick={handleNext}
-      />
-
-      {/* Контент карточек */}
-      <div
-        className={`cards__content ${showAll ? "show-all" : ""}`}
-        ref={contentRef}
-        // style={{
-        //   height: showAll ? "auto" : "520px", // Ограничиваем высоту только для первой строки
-        //   overflow: showAll ? "visible" : "hidden", // Скрываем всё, кроме первой строки
-        // }}
-      >
-        <div className="cards__list" ref={listRef}>
-          {products.map((product) => (
-            <Card key={product.id} product={product} />
-          ))}
-        </div>
-      </div>
-
-      {/* Кнопка "Усі товари" только для мобильной и планшетной версии */}
-      <div className="cards__show-all">
-        {!showAll && (
-          <button
-            className="cards__show-all-btn"
-            onClick={() => setShowAll(true)}
-          >
-            Усі товари
-          </button>
-        )}
+    <Title title="Популярні товари" />
+  
+    {/* Стрелки управления */}
+    <img
+      className={`cards__arrow cards__arrow--left ${
+        !canPrev ? "cards__arrow--disabled" : ""
+      }`}
+      src={`${process.env.PUBLIC_URL}/images/icons/arrowLeft.svg`}
+      alt="arrowLeft"
+      onClick={handlePrev}
+    />
+    <img
+      className={`cards__arrow cards__arrow--right ${
+        !canNext ? "cards__arrow--disabled" : ""
+      }`}
+      src={`${process.env.PUBLIC_URL}/images/icons/arrowRight.svg`}
+      alt="arrowRight"
+      onClick={handleNext}
+    />
+  
+    {/* Контент карточек */}
+    <div
+      className={`cards__content ${showAll ? "show-all" : ""}`}
+      ref={contentRef}
+    >
+      <div className="cards__list" ref={listRef}>
+        {products.map((product) => (
+          <Card key={product.id} product={product} />
+        ))}
       </div>
     </div>
+  
+    {/* Кнопка "Усі товари" */}
+    <div className="cards__show-all">
+    {!showAll ? (
+      <button
+        className="cards__show-all-btn"
+        onClick={() => setShowAll(true)}
+      >
+        Усі товари
+      </button>
+    ) : (
+      <button
+        className="cards__show-all-btn"
+        onClick={() => setShowAll(false)}
+      >
+        Згорнути
+      </button>
+    )}
+  </div>
+  </div>
+  
+
   );
 };
