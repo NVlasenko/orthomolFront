@@ -9,7 +9,7 @@
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 390px;
   @include on-desktop {
     width: 266px;
     height: 393px;
@@ -53,15 +53,24 @@
         content: "";
         position: absolute;
         top: -210px;
-        right: -20px;
+    right: -30px;
         width: 45px;
         height: 45px;
         background: url("../../../public/images/product/productCategory.svg")
           no-repeat center / contain;
         z-index: 999;
+        @include on-tablet {
+          top: -220px;
+          width: 55px;
+        height: 55px;
+        }
+        @include on-desktop {
+          top: -168px;
+    right: -30px;
+         }
       }
       @include on-tablet {
-      
+     
       }
       @include on-desktop {
        font-size: 18px;
