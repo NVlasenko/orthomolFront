@@ -5,11 +5,13 @@
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-  width: 310px;
+  width: 290px;
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-
+  @include on-desktop {
+    width: 310;
+  }
   &__image {
     width: 220px;
       height: 180px;
@@ -17,7 +19,7 @@
     transform: translateY(-40%);
     position: relative;
     top: 5px;
-    left: 15%;
+    left: 14%;
     @include on-tablet {
       
     }
@@ -42,8 +44,8 @@
 
     &--title {
       color: $first-primary-color;
-      font-size: 18px;
-      font-weight: 700;
+      font-size: 17px;
+      font-weight: 600;
       margin: 0 0 8px 0;
       &::after {
         content: "";
@@ -55,6 +57,13 @@
         background: url("../../../public/images/product/productCategory.svg")
           no-repeat center / contain;
         z-index: 999;
+      }
+      @include on-tablet {
+      
+      }
+      @include on-desktop {
+       font-size: 18px;
+       font-weight: 700;
       }
     }
 
