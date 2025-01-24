@@ -165,9 +165,8 @@
     &.show-all {
       height: auto; // Высота для всех карточек
       overflow-y: visible; // Открываем контент
-      background-color: $background-first;
-      border-radius: 0 0 15px 15px; // Добавляем закругления снизу
-      padding: 15px; // Отступы при открытии
+      // background-color: $background-first;
+     // Отступы при открытии
     }
   }
 

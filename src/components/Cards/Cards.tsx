@@ -318,7 +318,9 @@ export const Cards: React.FC = () => {
     </div>
   
     {/* Кнопка "Усі товари" */}
-    <div className="cards__show-all">
+    <div className="cards__show-all"
+
+    >
     {!showAll ? (
       <button
         className="cards__show-all-btn"
