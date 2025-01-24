@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/orthomolFront/static/css/main.38ba3e7b.css",
+    "main.css": "/orthomolFront/static/css/main.168dea04.css",
     "main.js": "/orthomolFront/static/js/main.3e9cab31.js",
     "static/media/productCategory.svg": "/orthomolFront/static/media/productCategory.8baa7c7ad8498036bcd5.svg",
     "static/media/basket2.svg": "/orthomolFront/static/media/basket2.eb8059ea9ab2c9937363.svg",
     "static/media/arrowRight.svg": "/orthomolFront/static/media/arrowRight.422380150ed64f8b3fd4.svg",
     "index.html": "/orthomolFront/index.html",
-    "main.38ba3e7b.css.map": "/orthomolFront/static/css/main.38ba3e7b.css.map",
+    "main.168dea04.css.map": "/orthomolFront/static/css/main.168dea04.css.map",
     "main.3e9cab31.js.map": "/orthomolFront/static/js/main.3e9cab31.js.map"
   },
   "entrypoints": [
-    "static/css/main.38ba3e7b.css",
+    "static/css/main.168dea04.css",
     "static/js/main.3e9cab31.js"
   ]
 }
