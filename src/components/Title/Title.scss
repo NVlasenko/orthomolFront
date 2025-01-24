@@ -2,10 +2,17 @@
 @import "../../styles/mixins";
 
 .title {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 96px;
+  line-height: 45px;
   letter-spacing: -1px;
   text-align: left;
   color: $first-primary-color;
+  @include on-tablet {
+
+  }
+  @include on-desktop {
+    font-size: 48px;
+    line-height: 96px;
+  }
 }

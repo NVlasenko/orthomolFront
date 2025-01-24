@@ -6,7 +6,6 @@ export const fetchProducts = async (): Promise<Product[]> => {
     const data: Product[] = vitaminsData;
     return data;
   } catch (error) {
-    console.error("Error loading products:", error);
     throw error;
   }
 };

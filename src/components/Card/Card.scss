@@ -1,0 +1,110 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  width: 310px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(-40%);
+    position: relative;
+  }
+
+  &__content {
+    padding: 20px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__info {
+    margin-bottom: 16px;
+    transform: translateY(-120%);
+
+    &--title {
+      color: $first-primary-color;
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      &::after {
+        content: "";
+        position: absolute;
+        top: -210px;
+        right: -20px;
+        width: 45px;
+        height: 45px;
+        background: url("../../../public/images/product/productCategory.svg")
+          no-repeat center / contain;
+        z-index: 999;
+      }
+    }
+
+    &--subtitle {
+      font-size: 13.2px;
+      font-weight: 400;
+      color: $first-primary-color;
+      margin: 0;
+    }
+  }
+
+  &__price {
+    font-size: 17.6px;
+    font-weight: 800;
+    color: $first-primary-color;
+    margin: 0 0 16px 0;
+  }
+
+  &__actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--btn {
+      position: relative;
+      width: 180px;
+      height: 44px;
+      background-color: $second-primary-color;
+      border-radius: 34px;
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 20px;
+        width: 22px;
+        height: 23px;
+        background: url("../../../public/images/icons/basket2.svg") no-repeat
+          center / contain;
+      }
+    }
+
+    &--wishlist {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: #faf0f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &--heart {
+        width: 22px;
+        height: 20px;
+      }
+    }
+  }
+}

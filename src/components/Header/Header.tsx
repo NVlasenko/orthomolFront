@@ -75,9 +75,21 @@ export const Header: React.FC = () => {
               )}
             </div>
             <div>
-              <NavLink to="/popular" className={getLinkClass}>
+              {/* <NavLink to="/popular" className={getLinkClass}>
                 Популярні товари
-              </NavLink>
+              </NavLink> */}
+              <a
+                href="#"
+                className="header__link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("popular")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Популярні товари
+              </a>
             </div>
 
             <div>

@@ -1,7 +1,69 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
-.cards{
-  background-color:$background-first;
-  padding: 39px 109px 127px 109px;
+.cards {
+  background-color: $background-first;
+  padding: 39px 78px 80px;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include on-tablet {
+
+  }
+  @include on-desktop {
+    padding: 39px 90px 127px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    height: 520px;
+    @include on-tablet {
+
+    }
+    @include on-desktop {
+     
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 95px;
+    padding-top: 120px;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+    height: 510px;
+    @include on-tablet {
+gap: 85px;
+    }
+    @include on-desktop {
+      gap: 95px;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 58%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &--left {
+      left: 35px;
+    }
+
+    &--right {
+      right: 35px;
+    }
+
+    &--disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
 }
