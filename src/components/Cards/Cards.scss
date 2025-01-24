@@ -54,11 +54,23 @@ gap: 85px;
     cursor: pointer;
 
     &--left {
-      left: 35px;
+      left: 0;
+      @include on-tablet {
+      
+      }
+      @include on-desktop {
+        left: 35px;
+      }
     }
 
     &--right {
-      right: 35px;
+      right: 27px;
+      @include on-tablet {
+      
+      }
+      @include on-desktop {
+        right: 35px;
+      }
     }
 
     &--disabled {
