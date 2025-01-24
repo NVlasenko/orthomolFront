@@ -11,11 +11,22 @@
   flex-direction: column;
 
   &__image {
-    width: 100%;
-    height: auto;
+    width: 220px;
+      height: 180px;
     object-fit: cover;
     transform: translateY(-40%);
     position: relative;
+    top: 5px;
+    left: 15%;
+    @include on-tablet {
+      
+    }
+    @include on-desktop {
+      width: 100%;
+      height: auto;
+      top: auto;
+    left: auto;
+    }
   }
 
   &__content {
