@@ -7,7 +7,9 @@
   @include on-tablet {
     padding: 0 34px;
   }
-
+  @include on-mid-desktop {
+    padding: 0 50px;
+  }
   @include on-desktop {
     padding: 0 200px;
   }

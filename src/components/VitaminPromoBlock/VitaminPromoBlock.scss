@@ -22,6 +22,10 @@
     padding: 30px 50px;
     @include on-tablet {
     }
+    @include on-mid-desktop {
+      max-width: 50%;
+      padding: 120px 120px;
+    }
     @include on-desktop {
       max-width: 50%;
       padding: 117px 160px;
@@ -35,6 +39,12 @@
     text-align: left;
     color: $first-primary-color;
     @include on-tablet {
+      font-size: 25px;
+      line-height: 35px;
+    }
+    @include on-mid-desktop {
+      font-size: 30px;
+      line-height: 50px;
     }
     @include on-desktop {
       font-size: 70px;
@@ -49,6 +59,12 @@
     color: #222222;
     margin-top: 5px;
     @include on-tablet {
+      font-size: 17px;
+      line-height: 25px;
+    }
+    @include on-mid-desktop {
+      font-size: 20px;
+      line-height: 30px;
     }
     @include on-desktop {
       font-size: 20px;
@@ -73,6 +89,12 @@
     font-size: 14px;
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
     @include on-tablet {
+      margin-top: 30px;
+    }
+    @include on-mid-desktop {
+      width: 150px;
+      height: 47px;
+      font-size: 16px;
     }
     @include on-desktop {
       margin-top: 53px;
@@ -81,7 +103,7 @@
       font-size: 18px;
     }
     &:hover {
-      background-color: lighten($second-primary-color, 10%); /* Осветление фона */
+      // background-color: lighten($second-primary-color, 10%); /* Осветление фона */
       box-shadow: 4px 4px 10px rgba(120, 111, 196, 0.5); /* Светлая тень */
     }
   }
@@ -119,42 +141,70 @@
 
     animation: fadeInAndGrow 2s ease-out 0s forwards,
       jumpUpAndDown 3s ease-in-out 7s infinite;
-
+     
     &--1 {
-      height: 125px;
-      width: 125px;
+      // height: 125px;
+      // width: 125px;
+      width: 30vw;
+      height: 30vw;
       top: 34%;
       left: 28%;
       animation: fadeInAndGrow 2s ease-out 0s forwards,
         pseudo3DFlip 10s ease-in-out 5s infinite;
       transform-origin: center;
       @include on-tablet {
-        height: 110px;
-        width: 110px;
+        // animation: none;
+        // height: 170px;
+        // width: 150px;
+        top: 45%;
+        width: 15vw;
+      height: 15vw;
+      }
+      @include on-mid-desktop {
+        width: 15vw;
+      height: 15vw;
+      top: 42%;
       }
       @include on-desktop {
-        height: 280px;
-        width: 280px;
+        // animation: fadeInAndGrow 2s ease-out 0s forwards,
+        // pseudo3DFlip 10s ease-in-out 5s infinite;
+        // height: 280px;
+        // width: 280px;
+        width: 15vw;
+      height: 15vw;
+      top: 36%;
       }
     }
 
     &--2 {
-      height: 170px;
-      width: 170px;
-      top: 20%;
+      // height: 170px;
+      // width: 170px;
+      width: 35vw;
+      height: 35vw;
+      top: 27%;
       left: 45%;
       animation: fadeInAndGrow 2s ease-out 0s forwards,
         jumpUpAndDown 3s ease-in-out 7s infinite;
       transform-origin: center;
       @include on-tablet {
-        height: 150px;
-        width: 120px;
-        top: 20%;
-        left: 50%;
+        // animation: none;
+        // height: 150px;
+        // width: 120px;
+        top: 37%;
+        left: 45%;
+        width: 17vw;
+      height: 17vw;
+      }
+      @include on-mid-desktop {
+        width: 18vw;
+      height: 18vw;
+      top: 36%;
       }
       @include on-desktop {
-        height: 300px;
-        width: 300px;
+        // animation: fadeInAndGrow 2s ease-out 0s forwards,
+        // jumpUpAndDown 3s ease-in-out 7s infinite;
+        // height: 300px;
+        // width: 300px;
         top: 28%;
         left: 48%;
       }

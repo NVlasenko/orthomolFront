@@ -1,11 +1,14 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 .header {
-  background-color: $background-first;
+background-color: $background-first;
+background-size: 400% 400%;
+// animation: gradient-animation 6s ease infinite;
   height: 80px;
   width: 100vw;
   display: flex;
   align-items: center;
+
   @include on-desktop {
     height: 150px;
   }
@@ -24,6 +27,10 @@
       flex-direction: row;
       gap: 20px;
     }
+    @include on-mid-desktop {
+      gap: 200px;
+      padding: 0;
+    }
     @include on-desktop {
       gap: 230px;
     }
@@ -37,6 +44,9 @@
     @include on-tablet {
       gap: 10px;
     }
+    @include on-mid-desktop {
+      gap: 30px;
+    }
     @include on-desktop {
       gap: 40px;
     }
@@ -47,6 +57,9 @@
     flex-direction: row;
     gap: 10px;
     align-items: center;
+    @include on-mid-desktop {
+     gap: 20px;
+    }
     @include on-desktop {
       gap: 27px;
     }
@@ -60,6 +73,9 @@
     line-height: 18px;
     @include on-tablet {
       font-size: 10px;
+    }
+    @include on-mid-desktop {
+      font-size: 17px;
     }
     @include on-desktop {
       font-size: 18px;
@@ -101,6 +117,9 @@
     @include on-tablet {
       font-size: 11px;
     }
+    @include on-mid-desktop {
+      font-size: 24px;
+    }
     @include on-desktop {
       font-size: 22px;
     }
@@ -141,6 +160,10 @@
       border: 1px solid $second-primary-color;
       align-items: center;
       justify-content: center;
+      @include on-mid-desktop {
+        height: 30px;
+        padding: 5px 9px 5px 9px;
+      }
       @include on-desktop {
         width: 234.44px;
         gap: 8px;
@@ -153,6 +176,10 @@
       width: 8px;
       height: 8px;
       cursor: pointer;
+      @include on-mid-desktop {
+        width: 13px;
+        height: 13px;
+      }
       @include on-desktop {
         width: 14px;
         height: 14px;
@@ -166,6 +193,9 @@
       text-decoration: none;
       color: $second-primary-color;
       transition: color 0.5s ease;
+      @include on-mid-desktop {
+        font-size: 15px;
+      }
       @include on-desktop {
         font-size: 15.4px;
       }
@@ -194,6 +224,10 @@
       align-items: center;
       justify-content: center;
       transition: transform 0.5s ease;
+      @include on-mid-desktop {
+        width: 30px;
+        height: 30px;
+      }
       @include on-desktop {
         width: 33px;
         height: 33px;
@@ -205,6 +239,10 @@
         width: 10px;
         height: 10px;
         transform: scale(1);
+        @include on-mid-desktop {
+          width: 15px;
+          height: 15px;
+        }
         @include on-desktop {
           width: 15px;
           height: 15px;
@@ -222,6 +260,10 @@
   &__icon {
     width: 85%;
     height: 85%;
+    @include on-mid-desktop {
+      width: 100%;
+      height: 100%;
+    }
     @include on-desktop {
       width: 100%;
       height: 100%;
@@ -245,6 +287,13 @@
     border: 1px solid #fff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    @include on-mid-desktop {
+      top: -10px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+    }
     @include on-desktop {
       top: -10px;
       right: -10px;
@@ -254,3 +303,16 @@
     }
   }
 }
+
+
+// @keyframes gradient-animation {
+//   0% {
+//     background-position: 0% 50%; // Начальная позиция
+//   }
+//   50% {
+//     background-position: 100% 50%; // Перелив вправо
+//   }
+//   100% {
+//     background-position: 0% 50%; // Возвращение в исходную позицию
+//   }
+// }

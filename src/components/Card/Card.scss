@@ -4,7 +4,11 @@
 .card {
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  // box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.15), /* тень сверху */
+  //           -4px 0px 8px rgba(0, 0, 0, 0.15), /* тень слева */
+  //            4px 0px 8px rgba(0, 0, 0, 0.15); /* тень справа */
+
+  border: 1px solid rgba(0, 0, 0, 0.15);
   width: 290px;
   flex: 0 0 auto;
   display: flex;
@@ -104,13 +108,15 @@
       width: 150px;
       height: 44px;
       background-color: $second-primary-color;
+      border: 1px solid $second-primary-color;
       border-radius: 34px;
       text-decoration: none;
       color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-font-size: 15px;
+      font-size: 15px;
+      cursor: pointer;
       &::before {
         content: "";
         position: absolute;
@@ -120,6 +126,15 @@ font-size: 15px;
         height: 23px;
         background: url("../../../public/images/icons/basket2.svg") no-repeat
           center / contain;
+      }
+      &:hover {
+        background-color: darken($second-primary-color, 10%);
+      }
+    
+      &.in-basket {
+        background-color: #e0e0e0; // Серый цвет для состояния "У кошику"
+        cursor: not-allowed; // Изменяем курсор
+        border: 1px solid $background-first;
       }
     }
 

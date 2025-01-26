@@ -4,12 +4,14 @@ import classNames from "classnames";
 import { Link, NavLink } from "react-router-dom";
 import { DropDownCatalog } from "../DropDownCatalog";
 import "./../../styles/container.scss";
+import { useBasket } from "../../context/BasketContextType";
 
 export const Header: React.FC = () => {
+  const { basketItems } = useBasket();
   const [isCatalogHovered, setCatalogHovered] = useState(false);
   const catalogRef = useRef<HTMLDivElement | null>(null);
   const dropDownRef = useRef<HTMLDivElement | null>(null);
-
+console.log(basketItems);
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
     classNames("header__link", {
       "is-active": isActive,
@@ -146,14 +148,14 @@ export const Header: React.FC = () => {
             </div>
           </div>
           <div className="basket">
-            <NavLink to="#">
+            <NavLink to="/basket">
               <img
                 src={`${process.env.PUBLIC_URL}/images/icons/basket.svg`}
                 alt="Basket"
                 className="basket__icon"
               />
             </NavLink>
-            <span className="basket__count">0</span>
+            <span className="basket__count">{basketItems.length}</span>
           </div>
         </div>
       </div>
