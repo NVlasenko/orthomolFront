@@ -95,15 +95,39 @@ console.log(basketItems);
             </div>
 
             <div>
-              <NavLink to="#" className={getLinkClass}>
+            <a
+                href="#"
+                className="header__link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("partners")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 Наші партнери
-              </NavLink>
+              </a>
+              {/* <NavLink to="#" className={getLinkClass}>
+                Наші партнери
+              </NavLink> */}
             </div>
 
             <div>
-              <NavLink to="#" className={getLinkClass}>
+            <a
+                href="#"
+                className="header__link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("faq")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 FAQ
-              </NavLink>
+              </a>
+              {/* <NavLink to="#" className={getLinkClass}>
+                FAQ
+              </NavLink> */}
             </div>
           </nav>
         </div>

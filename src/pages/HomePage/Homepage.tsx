@@ -4,6 +4,7 @@ import { InfoStrip } from "../../components/InfoStrip";
 
 import { PopularProducts } from "../../components/PopularProducts";
 import { Categories } from "../../components/Categories";
+import { Partners } from "../../components/Partners";
 
 export const HomePage: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ export const HomePage: React.FC = () => {
       <InfoStrip />
       <PopularProducts />
       <Categories />
+      <Partners />
     </div>
   );
 };
