@@ -8,7 +8,9 @@ background-size: 400% 400%;
   width: 100vw;
   display: flex;
   align-items: center;
-
+  @include on-tablet {
+    height: 110px;
+  }
   @include on-desktop {
     height: 150px;
   }

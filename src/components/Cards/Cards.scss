@@ -147,6 +147,7 @@
   flex-direction: column;
 
   @include on-tablet {
+    padding: 60px 65px 80px;
   }
 
   @include on-desktop {
