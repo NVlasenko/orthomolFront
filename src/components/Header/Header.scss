@@ -25,6 +25,7 @@ background-size: 400% 400%;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
+    width: 100vw;
     @include on-tablet {
       flex-direction: row;
       gap: 20px;
@@ -32,6 +33,7 @@ background-size: 400% 400%;
     @include on-mid-desktop {
       gap: 200px;
       padding: 0;
+      justify-content: space-around;
     }
     @include on-desktop {
       gap: 230px;

@@ -1,0 +1,11 @@
+[
+  { "id": 1, "name": "Імунна система", "icon": "/images/imgCategories/immune.svg", "color": "orange" },
+  { "id": 2, "name": "Стрес", "icon": "/images/imgCategories/stress.svg", "color": "teal" },
+  { "id": 3, "name": "Порушення сну", "icon": "/images/imgCategories/sleep.svg", "color": "blue" },
+  { "id": 4, "name": "Мозкова активність", "icon": "/images/imgCategories/brain.svg", "color": "green" },
+  { "id": 5, "name": "Краса", "icon": "/images/imgCategories/beauty.svg", "color": "pink" },
+  { "id": 6, "name": "Зачаття і вагітність", "icon": "/images/imgCategories/pregnancy.svg", "color": "magenta" },
+  { "id": 7, "name": "Зір", "icon": "/images/imgCategories/vision.svg", "color": "blue-light" },
+  { "id": 8, "name": "Серце і судини", "icon": "/images/imgCategories/heart.svg", "color": "red" },
+  { "id": 9, "name": "Діти", "icon": "/images/imgCategories/children.svg", "color": "pink-light" }
+]

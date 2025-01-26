@@ -154,8 +154,9 @@ console.log(basketItems);
                 alt="Basket"
                 className="basket__icon"
               />
+              <span className="basket__count">{basketItems.length}</span>
             </NavLink>
-            <span className="basket__count">{basketItems.length}</span>
+            
           </div>
         </div>
       </div>
