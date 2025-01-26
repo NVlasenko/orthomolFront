@@ -234,7 +234,8 @@
     }
   }
 
-  &__total {
+  &__total,
+  &__order {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -246,17 +247,46 @@
     );
     color: #fff;
     border-radius: 12px;
-    font-size: 20px;
 
-    &-text {
-      font-size: 18px;
+    &--text {
+      font-size: 20px;
       font-weight: 600;
+      @include on-tablet {
+        font-size: 23px;
+      }
+      @include on-mid-desktop {
+        font-size: 24px;
+      }
+      @include on-desktop {
+        font-size: 23px;
+      }
     }
 
-    &-value {
-      font-size: 24px;
+    &--value {
+      font-size: 23px;
       font-weight: 700;
+      @include on-tablet {
+        font-size: 24px;
+      }
     }
+  }
+
+  &__order{
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin: 0 auto; /* Расположить кнопку по центру */
+  display: block; /* Сделать кнопку блочным элементом */
+  width: 200px; /* Задать ширину кнопки */
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  @include on-tablet {
+    width: 300px;
+  }
+  &:hover {
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+    background: linear-gradient(to right, lighten($second-primary-color, 10%), lighten($first-primary-color, 10%));
+  }
   }
 }
 

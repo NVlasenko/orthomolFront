@@ -181,8 +181,11 @@
     will-change: transform;
 
     @include on-tablet {
-      justify-content: space-around;
+      justify-content: center;
       gap: 85px;
+    }
+    @include on-mid-desktop {
+     justify-content: space-between;
     }
 
     @include on-desktop {

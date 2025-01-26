@@ -96,11 +96,13 @@ export const BasketPage: React.FC = () => {
             ))}
           </div>
           <div className="basketPage__total">
-            <h3 className="basketPage__total-text">Загальна сума:</h3>
-            <span className="basketPage__total-value">
-            <span>{calculateTotal().toLocaleString("uk-UA")} грн</span>
+            <h3 className="basketPage__total--text">Загальна сума:</h3>
+            <span className="basketPage__total--value">
+            {calculateTotal().toLocaleString("uk-UA")} грн
             </span>
           </div>
+          <button className="basketPage__order basketPage__order--text">Замовити:
+          </button>
         </div>
       )}
     </div>
