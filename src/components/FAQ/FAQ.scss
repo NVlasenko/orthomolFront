@@ -63,20 +63,37 @@
     }
 
     .faq__toggle {
-      background: $second-primary-color;
+      background: linear-gradient(
+        to right,
+        $second-primary-color,
+        $first-primary-color
+      );
       border: none;
       color: #fff;
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
       border-radius: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 20px;
+      font-size: 15px;
       font-weight: bold;
       cursor: pointer;
       transition: transform 0.3s ease, background-color 0.3s ease;
-
+      @include on-tablet {
+        width: 25px;
+        height: 25px;
+        font-size: 17px;
+      }
+      @include on-mid-desktop {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+      }
+      @include on-desktop {
+      width: 30px;
+      height: 30px;
+      }
       &:hover {
         transform: scale(1.1);
         background-color: lighten($second-primary-color, 10%);

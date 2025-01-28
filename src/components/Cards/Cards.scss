@@ -2,7 +2,8 @@
 @import "../../styles/mixins";
 
 .cards {
-  background-color: $background-first;
+  // background-color: $background-first;
+  background: linear-gradient(to top, #3a7c9d, #ffffff);
   padding: 15px 18px 20px;
   border-radius: 15px;
   position: relative;
@@ -23,7 +24,8 @@
     overflow-y: hidden;
     height: 520px;
     transition: height 0.3s ease-in-out;
-
+/* Начинаем выравнивание с левого края */
+    scroll-behavior: smooth;
     &.show-all {
       height: auto;
       overflow-y: visible;
@@ -104,7 +106,11 @@
     &-btn {
       width: 150px;
       height: 44px;
-      background-color: $second-primary-color;
+      background: linear-gradient(
+        to right,
+        $second-primary-color,
+        $first-primary-color
+      );
       border-radius: 34px;
       text-decoration: none;
       color: #fff;

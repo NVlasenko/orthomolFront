@@ -10,7 +10,9 @@ export const App: React.FC = () => {
     <BasketProvider>
       <div>
         <Header />
-        <div className="content container">
+        <div 
+        // className="content"
+        >
           <Outlet />
         </div>
       </div>

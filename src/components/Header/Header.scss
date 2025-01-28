@@ -1,12 +1,20 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 .header {
-  background-color: $background-first;
+  // background-color: $background-first;
+  // background: linear-gradient(to top, rgba(58, 124, 157, 1), rgba(255, 255, 255, 0.9));
+  // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+  // animation: gradientShift 6s ease infinite;
+  background: linear-gradient(to bottom, #e0f2f8, #d1e9f3, #ffffff);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+  animation: gradientShift 8s ease-in-out infinite;
   background-size: 400% 400%;
   height: 80px;
   width: 100vw;
   display: flex;
   align-items: center;
+  border: none;
+
   @include on-tablet {
     height: 110px;
   }
@@ -309,5 +317,17 @@
       height: 20px;
       font-size: 12px;
     }
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

@@ -48,7 +48,20 @@ export const Cards: React.FC = () => {
       fullWidthOneCard = cardWidth + gap;
     }
   }
-
+  useEffect(() => {
+    const handleResize = () => {
+      if (contentRef.current) {
+        const width = contentRef.current.offsetWidth;
+        setVisibleWidth(width);
+      }
+    };
+  
+    window.addEventListener("resize", handleResize);
+    handleResize();
+  
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
   const maxIndex = useMemo(() => {
     if (visibleWidth === 0 || fullWidthOneCard <= 0) {
       return 0;
