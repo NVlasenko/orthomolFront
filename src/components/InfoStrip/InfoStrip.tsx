@@ -12,8 +12,7 @@ export const InfoStrip: React.FC = () => {
             className="infoStrip__img"
           />
         </div>
-        <div className="infoStrip__text">Безкоштовна доставка
-        від 2000 грн</div>
+        <div className="infoStrip__text">Безкоштовна доставка від 2000 грн</div>
       </div>
 
       <div className="infoStrip__content">
@@ -23,8 +22,7 @@ export const InfoStrip: React.FC = () => {
             alt="serviceIcons"
           />
         </div>
-        <div className="infoStrip__text">Різні способи
-        оплати</div>
+        <div className="infoStrip__text">Різні способи оплати</div>
       </div>
 
       <div className="infoStrip__content">
@@ -34,8 +32,7 @@ export const InfoStrip: React.FC = () => {
             alt="serviceIcons"
           />
         </div>
-        <div className="infoStrip__text">Швидка 
-        доставка</div>
+        <div className="infoStrip__text">Швидка доставка</div>
       </div>
 
       <div className="infoStrip__content">
@@ -45,8 +42,7 @@ export const InfoStrip: React.FC = () => {
             alt="serviceIcons"
           />
         </div>
-        <div className="infoStrip__text">Знижки постійним
-        клієнтам</div>
+        <div className="infoStrip__text">Знижки постійним клієнтам</div>
       </div>
     </div>
   );

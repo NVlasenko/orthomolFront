@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
   const [isCatalogHovered, setCatalogHovered] = useState(false);
   const catalogRef = useRef<HTMLDivElement | null>(null);
   const dropDownRef = useRef<HTMLDivElement | null>(null);
-console.log(basketItems);
+  console.log(basketItems);
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
     classNames("header__link", {
       "is-active": isActive,
@@ -77,9 +77,6 @@ console.log(basketItems);
               )}
             </div>
             <div>
-              {/* <NavLink to="/popular" className={getLinkClass}>
-                Популярні товари
-              </NavLink> */}
               <a
                 href="#"
                 className="header__link"
@@ -95,7 +92,7 @@ console.log(basketItems);
             </div>
 
             <div>
-            <a
+              <a
                 href="#"
                 className="header__link"
                 onClick={(e) => {
@@ -107,13 +104,10 @@ console.log(basketItems);
               >
                 Наші партнери
               </a>
-              {/* <NavLink to="#" className={getLinkClass}>
-                Наші партнери
-              </NavLink> */}
             </div>
 
             <div>
-            <a
+              <a
                 href="#"
                 className="header__link"
                 onClick={(e) => {
@@ -125,9 +119,6 @@ console.log(basketItems);
               >
                 FAQ
               </a>
-              {/* <NavLink to="#" className={getLinkClass}>
-                FAQ
-              </NavLink> */}
             </div>
           </nav>
         </div>
@@ -180,7 +171,6 @@ console.log(basketItems);
               />
               <span className="basket__count">{basketItems.length}</span>
             </NavLink>
-            
           </div>
         </div>
       </div>

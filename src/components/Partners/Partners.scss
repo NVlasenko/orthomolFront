@@ -10,8 +10,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 100px; /* Высота строки */
-
+    height: 100px;
     &::before,
     &::after {
       content: "";
@@ -25,33 +24,40 @@
 
     &::before {
       left: 0;
-      background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+      );
     }
 
     &::after {
       right: 0;
-      background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+      );
     }
   }
 
   &__line {
     display: flex;
-    gap: 40px; /* Расстояние между картинками */
+    gap: 40px;
     animation: scroll 15s linear infinite;
 
     img {
-      height: 80px; /* Размер картинок */
+      height: 80px;
       object-fit: contain;
       transition: transform 0.3s ease;
-
+      cursor: pointer;
       &:hover {
-        transform: scale(1.1); /* Увеличение при наведении */
+        transform: scale(1.1);
       }
     }
   }
 }
 
-/* Анимация бегущей строки */
 @keyframes scroll {
   from {
     transform: translateX(0%);

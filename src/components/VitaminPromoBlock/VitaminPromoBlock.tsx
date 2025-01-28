@@ -2,16 +2,17 @@ import React from "react";
 import "./VitaminPromoBlock.scss";
 
 export const VitaminPromoBlock: React.FC = () => {
-
   return (
     <div className="vitaminPromoBlock">
       <div className="vitaminPromoBlock__main">
         <h1 className="vitaminPromoBlock__title">Вітамінні комплекси</h1>
         <h2 className="vitaminPromoBlock__subtitle">
-        Інтернет-магазин вітамінів в Україні. 
-        Вся продукція сертифікована німецькою Радою Технічного Контролю (TÜV Rheinland)
+          Інтернет-магазин вітамінів в Україні. Вся продукція сертифікована
+          німецькою Радою Технічного Контролю (TÜV Rheinland)
         </h2>
-        <a href="#" className="vitaminPromoBlock__btn">У Каталог</a>
+        <a href="#" className="vitaminPromoBlock__btn">
+          У Каталог
+        </a>
       </div>
       <div className="vitaminPromoBlock__img">
         <img

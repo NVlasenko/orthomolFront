@@ -1,9 +1,8 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 .header {
-background-color: $background-first;
-background-size: 400% 400%;
-// animation: gradient-animation 6s ease infinite;
+  background-color: $background-first;
+  background-size: 400% 400%;
   height: 80px;
   width: 100vw;
   display: flex;
@@ -45,6 +44,7 @@ background-size: 400% 400%;
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    justify-content: space-between;
     @include on-tablet {
       gap: 10px;
     }
@@ -62,7 +62,7 @@ background-size: 400% 400%;
     gap: 10px;
     align-items: center;
     @include on-mid-desktop {
-     gap: 20px;
+      gap: 20px;
     }
     @include on-desktop {
       gap: 27px;
@@ -107,6 +107,10 @@ background-size: 400% 400%;
     @include on-tablet {
       width: 20px;
       height: 20px;
+    }
+    @include on-mid-desktop {
+      width: 30px;
+      height: 30px;
     }
     @include on-desktop {
       width: 33px;
@@ -307,16 +311,3 @@ background-size: 400% 400%;
     }
   }
 }
-
-
-// @keyframes gradient-animation {
-//   0% {
-//     background-position: 0% 50%; // Начальная позиция
-//   }
-//   50% {
-//     background-position: 100% 50%; // Перелив вправо
-//   }
-//   100% {
-//     background-position: 0% 50%; // Возвращение в исходную позицию
-//   }
-// }

@@ -1,143 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
-// .cards {
-//   background-color: $background-first;
-//   padding: 15px 18px 20px;
-//   border-radius: 15px;
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   // justify-content: space-between;
-//   @include on-tablet {
-
-//   }
-//   @include on-desktop {
-//     padding: 39px 90px 127px;
-//   }
-//   &__content {
-//     display: flex;
-//     flex-direction: row;
-//     width: 100%;
-//     overflow-x: hidden;
-//     overflow-y: visible;
-//     height: 520px;
-//     transition: height 0.3s ease-in-out;
-//     &.show-all {
-//       height: auto; // Высота для всех карточек
-//       background-color: $background-first;
-//       border-radius: 0 0 15px 15px; // Для визуального эффекта плавного перехода
-//       padding: 15px; // Внутренние отступы при открытии
-//     }
-//     @include on-tablet {
-
-//     }
-//     @include on-desktop {
-
-//     }
-//   }
-
-//   &__list {
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     gap: 95px;
-//     padding-top: 120px;
-//     transition: transform 0.3s ease-in-out;
-//     will-change: transform;
-//     height: 510px;
-//     @include on-tablet {
-//       justify-content: space-around;
-// gap: 85px;
-//     }
-//     @include on-desktop {
-//       gap: 20px;
-//       flex-wrap: nowrap;
-//       justify-content: space-around;
-//     }
-
-//   }
-
-//   &__arrow {
-//     position: absolute;
-//     top: 58%;
-//     transform: translateY(-50%);
-//     cursor: pointer;
-// display: none;
-// @include on-desktop {
-//   display: block;
-// }
-//     &--left {
-//       left: 0;
-//       @include on-tablet {
-
-//       }
-//       @include on-desktop {
-//         left: 35px;
-//       }
-//     }
-
-//     &--right {
-//       right: 0;
-//       @include on-tablet {
-
-//       }
-//       @include on-desktop {
-//         right: 35px;
-//       }
-//     }
-
-//     &--disabled {
-//       opacity: 0.3;
-//       pointer-events: none;
-//     }
-//   }
-
-//   &__show-all {
-//     text-align: center;
-//     margin-top: 15px;
-//     display: block; // Скрываем кнопку по умолчанию
-
-//     @include on-desktop {
-//       display: none; // Отображаем кнопку на планшетах
-//     }
-
-//     .cards__show-all-btn {
-//       padding: 10px 20px;
-//       font-size: 16px;
-//       background-color: $second-primary-color;
-//       color: #fff;
-//       border: none;
-//       border-radius: 5px;
-//       cursor: pointer;
-//       transition: background-color 0.3s;
-
-//       &:hover {
-//         background-color: darken($second-primary-color, 10%);
-//       }
-//     }
-//   }
-// }
-
-// // .cards__show-all-btn,
-// // .cards__collapse-btn {
-// //   padding: 10px 20px;
-// //   font-size: 16px;
-// //   background-color: $second-primary-color;
-// //   color: #fff;
-// //   border: none;
-// //   border-radius: 5px;
-// //   cursor: pointer;
-// //   margin: 20px auto 0; // Центрируем и добавляем отступ сверху
-// //   display: block;
-// //   text-align: center;
-
-// //   &:hover {
-// //     background-color: darken($second-primary-color, 10%);
-// //
-
-// // }
 .cards {
   background-color: $background-first;
   padding: 15px 18px 20px;
@@ -145,11 +8,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-
   @include on-tablet {
     padding: 60px 65px 80px;
   }
-
   @include on-desktop {
     padding: 39px 90px 80px;
   }
@@ -159,15 +20,13 @@
     flex-direction: row;
     width: 100%;
     overflow-x: hidden;
-    overflow-y: hidden; // Скрыть лишние карточки до нажатия "Усі товари"
-    height: 520px; // Высота для показа только одной строки карточек
+    overflow-y: hidden;
+    height: 520px;
     transition: height 0.3s ease-in-out;
 
     &.show-all {
-      height: auto; // Высота для всех карточек
-      overflow-y: visible; // Открываем контент
-      // background-color: $background-first;
-     // Отступы при открытии
+      height: auto;
+      overflow-y: visible;
     }
   }
 
@@ -180,13 +39,12 @@
     padding-top: 120px;
     transition: transform 0.3s ease-in-out;
     will-change: transform;
-
     @include on-tablet {
       justify-content: center;
       gap: 85px;
     }
     @include on-mid-desktop {
-     justify-content: space-between;
+      justify-content: space-between;
     }
 
     @include on-desktop {
@@ -202,7 +60,6 @@
     transform: translateY(-50%);
     cursor: pointer;
     display: none;
-
     @include on-desktop {
       display: block;
     }
@@ -234,7 +91,7 @@
     margin-top: 15px;
     display: flex;
     justify-content: center;
-width: 100%;
+    width: 100%;
     &-btn {
       width: 150px;
       height: 44px;
