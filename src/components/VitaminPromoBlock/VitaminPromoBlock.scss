@@ -2,12 +2,13 @@
 @import "../../styles/mixins";
 
 .vitaminPromoBlock {
-  height: 100vh;
+  height:60vh;
   display: flex;
   flex-direction: column;
   @include on-tablet {
     flex-direction: row;
     height: auto;
+   
   }
 
   &__main {
@@ -24,13 +25,18 @@
       padding: 50px 30px;
       justify-content: center;
       border-radius: 0 0 0 10px;
+
+    }
+    @include on-mid-desktop {
+      gap: 20px;
     }
     @include on-desktop {
       padding: 70px 50px;
+      gap: 0;
     }
   }
   &__title {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 30px;
     letter-spacing: -1px;
@@ -40,6 +46,10 @@
       font-size: 25px;
       line-height: 35px;
     }
+    @include on-mid-desktop {
+      font-size: 40px;
+      line-height: 40px;
+    }
     @include on-desktop {
       font-size: 70px;
       line-height: 70px;
@@ -47,7 +57,7 @@
   }
 
   &__subtitle {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 300;
     line-height: 20px;
     text-align: left;
@@ -56,6 +66,10 @@
     @include on-tablet {
       font-size: 18px;
       line-height: 25px;
+    }
+    @include on-mid-desktop {
+      font-size: 20px;
+      line-height: 30px;
     }
     @include on-desktop {
       font-size: 22px;
@@ -86,6 +100,12 @@
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
     @include on-tablet {
       margin-top: 30px;
+    }
+    @include on-mid-desktop {
+      margin-top: 40px;
+        width: 180px;
+        height: 48px;
+        font-size: 17px;
     }
     @include on-desktop {
       margin-top: 53px;
@@ -121,8 +141,8 @@
 
     &--overlay {
       position: absolute;
-      width: 40vw;
-      height: 40vw;
+      width: 35vw;
+      height: 30vw;
       animation: fadeInAndGrow 2s ease-out 0s forwards,
         jumpUpAndDown 3s ease-in-out 7s infinite;
 
