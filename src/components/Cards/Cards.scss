@@ -44,7 +44,9 @@
       gap: 85px;
     }
     @include on-mid-desktop {
-      justify-content: space-between;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: nowrap;
     }
 
     @include on-desktop {
@@ -60,13 +62,18 @@
     transform: translateY(-50%);
     cursor: pointer;
     display: none;
+    @include on-mid-desktop {
+      display: block;
+    }
     @include on-desktop {
       display: block;
     }
 
     &--left {
       left: 0;
-
+      @include on-mid-desktop {
+        left: 22px;
+      }
       @include on-desktop {
         left: 35px;
       }
@@ -74,7 +81,9 @@
 
     &--right {
       right: 0;
-
+      @include on-mid-desktop {
+        right: 22px;
+      }
       @include on-desktop {
         right: 35px;
       }
@@ -110,7 +119,9 @@
         background-color: darken($second-primary-color, 10%);
       }
     }
-
+    @include on-mid-desktop {
+      display: none;
+    }
     @include on-desktop {
       display: none;
     }
