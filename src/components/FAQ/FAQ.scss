@@ -56,10 +56,19 @@
     cursor: pointer;
 
     p {
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 600;
       color: $first-primary-color;
       margin: 0;
+      @include on-tablet {
+       font-size: 17px;
+      }
+      @include on-mid-desktop {
+      font-size: 19px;
+      }
+      @include on-desktop {
+     font-size: 20px;
+      }
     }
 
     .faq__toggle {
@@ -113,10 +122,19 @@
     }
 
     p {
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 400;
       color: $first-primary-color;
       line-height: 1.5;
+      @include on-tablet {
+        font-size: 13px;
+       }
+       @include on-mid-desktop {
+       font-size: 15px;
+       }
+       @include on-desktop {
+      font-size: 16px;
+       }
     }
 
     border-left: 2px solid $second-primary-color;
