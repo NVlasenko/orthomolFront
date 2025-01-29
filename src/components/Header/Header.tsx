@@ -58,7 +58,7 @@ export const Header: React.FC = () => {
 
           <nav className="header__list">
             <div
-              className="header__catalog-wrapper"
+              className="header__catalog--wrapper"
               ref={catalogRef}
               onMouseEnter={handleMouseEnterCatalog}
               onMouseLeave={handleMouseLeaveCatalog}

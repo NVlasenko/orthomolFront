@@ -86,7 +86,7 @@ color: #4E4771;
 
   &__button {
     padding: 15px;
-    font-size: 16px;
+    font-size: 11px;
     font-weight: 600;
     color: #fff;
     background: linear-gradient(
@@ -101,9 +101,18 @@ color: #4E4771;
 width: 50%;
 margin: 0 auto;
 margin-top: 30px;
+@include on-tablet {
+font-size: 13px;
+ @include on-mid-desktop {
+font-size: 15px;
+ }
+ @include on-desktop {
+  font-size: 16px;
+ }
 &:hover {
       background-color: darken($second-primary-color, 10%);
       box-shadow: 0 4px 15px rgba(120, 111, 196, 0.5);
     }
   }
+}
 }
