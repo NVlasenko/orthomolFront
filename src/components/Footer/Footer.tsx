@@ -57,25 +57,25 @@ export const Footer: React.FC = () => {
             <div className="footer__social-placeholder">Telegram</div>
           </div>
         </div> */}
-        <div className="contact">
-          <div className="contact__info">
-            <div className="contact__info--phone">
+        <div className="actions">
+          <div className="actions__info">
+            <div className="actions__info--phone">
               <img
-                className="contact__info--img"
+                className="actions__info--img"
                 src={`${process.env.PUBLIC_URL}/images/footerIcon/phone.svg`}
                 alt="phone"
               />
-              <a className="contact__info--number" href="tel:+380969196366">
+              <a className="actions__info--number" href="tel:+380969196366">
                 +38 (067) 109 71 93
               </a>
             </div>
 
-            <div className="contact__messenger">
+            <div className="actions__messenger">
               <a
                 href="https://t.me/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact__messenger--icon"
+                className="actions__messenger--icon"
               >
                 <img
                   src={`${process.env.PUBLIC_URL}/images/footerIcon/viber.svg`}
@@ -87,7 +87,7 @@ export const Footer: React.FC = () => {
                 href="https://t.me/Everythingpasses"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact__messenger--icon"
+                className="actions__messenger--icon"
               >
                 <img
                   src={`${process.env.PUBLIC_URL}/images/footerIcon/telegram.svg`}
