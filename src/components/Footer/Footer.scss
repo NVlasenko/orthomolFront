@@ -5,13 +5,14 @@
   background-color: $second-primary-color;
 
   &__content {
-    padding-top: 45px;
-    padding-bottom: 40px;
+    padding-top: 15px;
+    padding-bottom: 25px;
     display: flex;
     flex-direction: column;
     gap: 25px;
     @include on-tablet {
-     
+      padding-top: 45px;
+      padding-bottom: 40px;
     }
     @include on-mid-desktop {
      gap: 40px;
@@ -25,13 +26,23 @@
 
   &__wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    @include on-tablet {
+     flex-direction: row;
+    }
+    @include on-mid-desktop {
+  
+    }
+    @include on-desktop {
+      
+    }
   }
 
   &__logo {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 5px;
     text-decoration: none;
@@ -65,7 +76,7 @@
       font-family: Oddval;
       font-size: 15px;
       font-weight: 600;
-      line-height: 58.41px;
+      line-height: 35px;
       color: #fff;
       cursor: pointer;
       @include on-tablet {
@@ -82,10 +93,12 @@
 
   &__contacts {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+   
     gap: 2px;
+    align-items: center;
     @include on-tablet {
-     
+      flex-direction: column;
     }
     @include on-mid-desktop {
      gap: 10px;
@@ -144,10 +157,12 @@
     &--list {
       display: flex;
       flex-direction: row;
-      gap: 8px;
+      justify-content: center;
+      gap: 15px;
       list-style: none;
       @include on-tablet {
-     
+     justify-content: none;
+     gap: 8px;
       }
       @include on-mid-desktop {
        gap: 20px;
@@ -160,10 +175,10 @@
     &--link {
       color: #fff;
       font-family: Oddval;
-      font-size: 7px;
+      font-size: 10px;
       font-weight: 600;
       line-height: 21.6px;
-      text-align: left;
+      text-align: center;
       text-decoration-line: underline;
       text-decoration-style: solid;
       text-underline-offset: 4px;
@@ -202,10 +217,11 @@
 
   &__info {
     display: flex;
-    flex-direction: row;
+    margin: 0 auto;
     gap: 8px;
     @include on-tablet {
       gap: 15px;
+
     }
     @include on-mid-desktop {
       gap: 20px;
