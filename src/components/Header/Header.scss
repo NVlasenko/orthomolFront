@@ -34,7 +34,7 @@
     justify-content: center;
     width: 100vw;
     @include on-tablet {
-      flex-direction: row;
+      flex-direction: column;
       gap: 20px;
     }
     @include on-mid-desktop {
@@ -69,6 +69,9 @@
     flex-direction: row;
     gap: 10px;
     align-items: center;
+    @include on-tablet {
+      gap: 15px;
+    }
     @include on-mid-desktop {
       gap: 20px;
     }
@@ -84,7 +87,7 @@
     font-size: 9px;
     line-height: 18px;
     @include on-tablet {
-      font-size: 10px;
+      font-size: 16px;
     }
     @include on-mid-desktop {
       font-size: 17px;
@@ -131,7 +134,7 @@
     font-size: 10px;
     color: #170f49;
     @include on-tablet {
-      font-size: 11px;
+      font-size: 19px;
     }
     @include on-mid-desktop {
       font-size: 24px;
@@ -161,6 +164,12 @@
     display: flex;
     flex-direction: row;
     gap: 15px;
+    @include on-tablet {
+     gap: 20px;
+    }
+    @include on-mid-desktop {
+      gap: 27px;
+    }
     @include on-desktop {
       gap: 30px;
     }
@@ -176,6 +185,10 @@
       border: 1px solid $second-primary-color;
       align-items: center;
       justify-content: center;
+      @include on-tablet {
+        height: 30px;
+        padding: 7px 11px 7px 11px;
+       }
       @include on-mid-desktop {
         height: 30px;
         padding: 5px 9px 5px 9px;
@@ -192,6 +205,10 @@
       width: 8px;
       height: 8px;
       cursor: pointer;
+      @include on-tablet {
+        width: 10px;
+        height: 10px;
+       }
       @include on-mid-desktop {
         width: 13px;
         height: 13px;
@@ -209,6 +226,9 @@
       text-decoration: none;
       color: $second-primary-color;
       transition: color 0.5s ease;
+      @include on-tablet {
+        font-size: 10px;
+       }
       @include on-mid-desktop {
         font-size: 15px;
       }
@@ -240,6 +260,10 @@
       align-items: center;
       justify-content: center;
       transition: transform 0.5s ease;
+      @include on-tablet {
+        width: 25px;
+      height: 25px;
+       }
       @include on-mid-desktop {
         width: 30px;
         height: 30px;
@@ -255,6 +279,10 @@
         width: 10px;
         height: 10px;
         transform: scale(1);
+        @include on-tablet {
+          width: 13px;
+        height: 13px;
+         }
         @include on-mid-desktop {
           width: 15px;
           height: 15px;
@@ -276,6 +304,10 @@
   &__icon {
     width: 85%;
     height: 85%;
+    @include on-tablet {
+      width: 25px;
+      height: 25px;
+     }
     @include on-mid-desktop {
       width: 100%;
       height: 100%;
@@ -303,6 +335,13 @@
     border: 1px solid #fff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    @include on-tablet {
+      top: -10px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+     }
     @include on-mid-desktop {
       top: -10px;
       right: -10px;

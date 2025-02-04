@@ -139,8 +139,17 @@
 
   &__inputs {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 15px;
+    @include on-tablet {
+      grid-template-columns: repeat(2, 1fr);
+     }
+    @include on-mid-desktop {
+      
+    }
+    @include on-desktop {
+   
+    }
 
     &--input {
       height: 43px;
@@ -171,12 +180,13 @@
   &__delivery {
     display: flex;
     gap: 20px;
+    align-items: flex-start;
 
     &--text {
       display: flex;
       align-items: center;
       gap: 5px;
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 500;
       line-height:76px;
       letter-spacing: -1px;
