@@ -14,12 +14,12 @@
      
     }
     @include on-mid-desktop {
-     gap: 80px;
+     gap: 40px;
     }
     @include on-desktop {
-      padding-top: 145px;
-      padding-bottom: 100px;
-      gap: 111px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      gap: 40px;
     }
   }
 
@@ -34,6 +34,7 @@
     flex-direction: row;
     align-items: center;
     gap: 5px;
+    text-decoration: none;
     @include on-tablet {
      gap:10px;
     }
@@ -46,6 +47,7 @@
     &--img {
       width: 20px;
       height: 20px;
+      cursor: pointer;
       @include on-tablet {
         width: 35px;
         height: 35px;
@@ -55,8 +57,8 @@
         height: 50px;
       }
       @include on-desktop {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
       }
     }
     &--title {
@@ -65,6 +67,7 @@
       font-weight: 600;
       line-height: 58.41px;
       color: #fff;
+      cursor: pointer;
       @include on-tablet {
      font-size: 25px;
       }
@@ -72,7 +75,7 @@
        font-size: 30px;
       }
       @include on-desktop {
-        font-size: 48.68px;
+        font-size: 43px;
       }
     }
   }

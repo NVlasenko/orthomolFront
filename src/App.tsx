@@ -9,10 +9,10 @@ import { Footer } from "./components/Footer";
 export const App: React.FC = () => {
   return (
     <BasketProvider>
-      <div>
+      <div className="app-layout">
         <Header />
         <div 
-        // className="content"
+        className="content"
         >
           <Outlet />
         </div>

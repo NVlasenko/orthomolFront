@@ -1,16 +1,21 @@
 import React from "react";
 import { useBasket } from "../../context/BasketContextType";
 import "./BasketPage.scss";
+import { useNavigate } from "react-router-dom";
 
 export const BasketPage: React.FC = () => {
   const { basketItems, removeFromBasket, updateQuantity } = useBasket();
+  const navigate = useNavigate();
 
   const calculateTotal = () =>
     basketItems.reduce(
       (sum, item) => sum + item.product.priceRegular * item.quantity,
       0
     );
-
+    const handleOrder = () => {
+      // Переход на страницу с компонентом Order
+      navigate("order");
+    };
   return (
     <div className="basketPage">
       <h2 className="basketPage__title">Ваш кошик</h2>
@@ -65,7 +70,9 @@ export const BasketPage: React.FC = () => {
               {calculateTotal().toLocaleString("uk-UA")} грн
             </span>
           </div>
-          <button className="basketPage__order basketPage__order--text">
+          <button className="basketPage__order basketPage__order--text"
+          onClick={handleOrder}
+          >
             Замовити
           </button>
         </div>

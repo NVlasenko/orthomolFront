@@ -284,7 +284,7 @@ console.log(filteredProducts.length);
   // Рендер компонента
   return (
     <div className="cards">
-      <Title title="Популярні товари (Імунна система)" />
+      <Title title="Популярні товари" />
 
       {/* Левая стрелка */}
       <img

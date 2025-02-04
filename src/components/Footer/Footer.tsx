@@ -1,5 +1,7 @@
 import React from "react";
 import "./Footer.scss";
+import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Footer: React.FC = () => {
   return (
@@ -8,11 +10,14 @@ export const Footer: React.FC = () => {
       <div className="footer__content container">
            <div className="footer__wrapper">
         {/* Логотип */}
-        <div className="footer__logo">
+        <div>
+           <Link to="/" className="footer__logo">
           <img className="footer__logo--img" src={`${process.env.PUBLIC_URL}/images/footerIcon/logo.svg`} alt="logo" />
-          <h2 className="footer__logo--title">Orthomol</h2>
+       <h2 className="footer__logo--title">Orthomol</h2>
+        </Link>
+   
         </div>
-
+       
         {/* Контакты */}
         <div className="footer__contacts">
           <p className="footer__contacts--address">мiсто Київ, <br /> вул. Кирилівська, 152</p>
@@ -27,22 +32,42 @@ export const Footer: React.FC = () => {
         <nav className="footer__nav">
           <ul className="footer__nav--list">
             <li className="footer__nav--item">
-              <a href="#" className="footer__nav--link">
+              <NavLink to="#" className="footer__nav--link">
                 Каталог
-              </a>
+              </NavLink>
             </li>
             <li className="footer__nav--item">
-              <a href="#" className="footer__nav--link">
+              <a href="#" className="footer__nav--link"
+               onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("popular")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}>
                 Популярні товари
               </a>
             </li>
             <li className="footer__nav--item">
-              <a href="#" className="footer__nav--link">
-                Наші бренди
+              <a href="#" className="footer__nav--link"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("partners")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              >
+                Наші партнери
               </a>
             </li>
             <li className="footer__nav--item">
-              <a href="#" className="footer__nav--link">
+              <a href="#" className="footer__nav--link"
+               onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("faq")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              >
                 FAQ
               </a>
             </li>

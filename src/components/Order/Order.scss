@@ -1,0 +1,383 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.orderPage {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__title {
+    color: $first-primary-color;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: -1px;
+    text-align: left;
+    @include on-tablet {
+     font-size: 26px;
+    }
+    @include on-mid-desktop {
+      font-size: 30px;
+    }
+    @include on-desktop {
+      font-size: 36px;
+    font-weight: 700;
+    line-height: 86px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+    @include on-tablet {
+     gap: 100px;
+    }
+    @include on-mid-desktop {
+      flex-direction: row;
+      gap: 200px;
+    }
+    @include on-desktop {
+      flex-direction: row;
+      gap: 200px;
+    }
+  }
+
+  &__form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -1px;
+    text-align: left;
+    color: $first-primary-color;
+    @include on-tablet {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 86px;
+    }
+    @include on-mid-desktop {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 86px;
+    }
+    @include on-desktop {
+     
+    }
+    &--text {
+      color: $first-primary-color;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 35px;
+      letter-spacing: -1px;
+      text-align: left;
+      @include on-tablet {
+        font-size: 24px;
+      font-weight: 600;
+      line-height: 40px;
+      }
+      @include on-mid-desktop {
+       
+      }
+      @include on-desktop {
+        
+      }
+    }
+  }
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    &--content {
+      flex: 1;
+      background: linear-gradient(to top, #3a7c9d, #ffffff);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      &__item {
+        display: flex;
+        gap: 10px;
+
+        img {
+          width: 60px;
+          height: 60px;
+          object-fit: cover;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    &__submit {
+      padding: 10px 20px;
+      background-color: #735db8;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        background-color: #583da1;
+      }
+    }
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    &--input {
+      height: 43px;
+      padding: 10px;
+      border: 1px solid $first-primary-color;
+      border-radius: 16px;
+      color: #595454;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 76px;
+      letter-spacing: -1px;
+      text-align: left;
+      @include on-tablet {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 96px;
+        height: 63px;
+      }
+      @include on-mid-desktop {
+       
+      }
+      @include on-desktop {
+        
+      }
+    }
+  }
+
+  &__delivery {
+    display: flex;
+    gap: 20px;
+
+    &--text {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height:76px;
+      letter-spacing: -1px;
+      text-align: left;
+      color: #595454;
+      @include on-tablet {
+        font-size: 24px;
+    
+        line-height: 96px;
+      }
+      @include on-mid-desktop {
+       
+      }
+      @include on-desktop {
+        
+      }
+    }
+  }
+
+  &__total {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: -1px;
+    color: $first-primary-color;
+  }
+
+  &__popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: popup-show 0.5s ease;
+    border: 1px solid $first-primary-color;
+    &-content {
+      text-align: center;
+
+      h3 {
+        font-size: 25px;
+        font-weight: 700;
+        color: $first-primary-color;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @keyframes popup-show {
+    from {
+      transform: translate(-50%, -60%);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+
+  &__button {
+    background: #3a7c9d;
+    margin-top: 35px;
+    font-size: 13px;
+    
+  }
+}
+
+.orderPage__delivery input[type="radio"] {
+  appearance: none; /* Убираем стандартный стиль браузера */
+  width: 16px;
+  height: 16px;
+  border: 2px solid $second-primary-color; /* Цвет рамки */
+  border-radius: 50%; /* Делаем круг */
+  outline: none;
+  cursor: pointer;
+  background-color: #fff; /* Цвет фона кнопки */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Состояние, когда кнопка выбрана */
+.orderPage__delivery input[type="radio"]:checked {
+  background-color: $second-primary-color; /* Цвет фона выбранной кнопки */
+  border-color: $second-primary-color; /* Цвет рамки выбранной кнопки */
+}
+
+/* Наведение */
+.orderPage__delivery input[type="radio"]:hover {
+  border-color: #583da1; /* Цвет рамки при наведении */
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 50px;
+
+  &__title {
+    color: $first-primary-color;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -1px;
+    text-align: left;
+    @include on-tablet {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 56px;
+    }
+    @include on-mid-desktop {
+     
+    }
+    @include on-desktop {
+      
+    }
+  }
+
+  &__method {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input[type="radio"] {
+      appearance: none; /* Убираем стандартный стиль */
+      width: 16px;
+      height: 16px;
+      border: 5px solid #735db8; /* Цвет рамки */
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      background-color: #fff;
+      transition: background-color 0.3s, border-color 0.3s;
+
+      &:checked {
+        /* Цвет внутри выбранной кнопки */
+        border-color: #735db8;
+      }
+
+      &:hover {
+        border-color: #583da1; /* Цвет рамки при наведении */
+      }
+    }
+  }
+
+  &__label {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 46px;
+    letter-spacing: -1px;
+    text-align: left;
+    color: #595454;
+    @include on-tablet {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 56px;
+    }
+    @include on-mid-desktop {
+     
+    }
+    @include on-desktop {
+      
+    }
+  }
+
+  &__info {
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    word-wrap: break-word;
+    @include on-tablet {
+      font-size: 14px;
+      line-height: 25px;
+    }
+    @include on-mid-desktop {
+     
+    }
+    @include on-desktop {
+      
+    }
+    .payment__link {
+      color: #735db8;
+      text-decoration: underline;
+
+      &:hover {
+        color: #583da1;
+      }
+    }
+  }
+}
