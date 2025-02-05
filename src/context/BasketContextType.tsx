@@ -6,18 +6,17 @@ type BasketContextType = {
   addToBasket: (product: Product) => void;
   removeFromBasket: (productId: number) => void;
   updateQuantity: (productId: number, quantity: number) => void;
+  clearBasket: () => void;
 };
 
 const BasketContext = createContext<BasketContextType | undefined>(undefined);
 
 export const BasketProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [basketItems, setBasketItems] = useState<{ product: Product; quantity: number }[]>(() => {
-    // Загружаем данные корзины из localStorage при первой загрузке
     const savedBasket = localStorage.getItem("basket");
     return savedBasket ? JSON.parse(savedBasket) : [];
   });
 
-  // Сохраняем данные корзины в localStorage при изменении
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basketItems));
   }, [basketItems]);
@@ -47,9 +46,12 @@ export const BasketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       )
     );
   };
-
+  const clearBasket = () => {
+    setBasketItems([]);
+    localStorage.removeItem("basket");
+  };
   return (
-    <BasketContext.Provider value={{ basketItems, addToBasket, removeFromBasket, updateQuantity }}>
+    <BasketContext.Provider value={{ basketItems, addToBasket, removeFromBasket, updateQuantity, clearBasket }}>
       {children}
     </BasketContext.Provider>
   );

@@ -11,9 +11,7 @@ export const App: React.FC = () => {
     <BasketProvider>
       <div className="app-layout">
         <Header />
-        <div 
-        className="content"
-        >
+        <div className="content">
           <Outlet />
         </div>
         <Footer />

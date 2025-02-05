@@ -1,10 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useBasket } from "../../context/BasketContextType";
 import "./Order.scss";
 import "../../styles/container.scss";
+import {
+  fetchCities,
+  fetchOblasts,
+  fetchWarehouses,
+} from "../../api/novaPoshtaService";
+
 export const Order: React.FC = () => {
-  const { basketItems, updateQuantity, removeFromBasket } = useBasket();
+  const { basketItems, updateQuantity, removeFromBasket, clearBasket } =
+    useBasket();
   const [isOrderConfirmed, setIsOrderConfirmed] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    surname: "",
+    phone: "",
+    email: "",
+    deliveryMethod: "",
+    oblast: "",
+    misto: "",
+    viddilennia: "",
+    paymentMethod: "",
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [basketError, setBasketError] = useState<string | null>(null);
+  const [oblasts, setOblasts] = useState([]);
+  const [cities, setCities] = useState([]);
+  const [warehouses, setWarehouses] = useState([]);
+  useEffect(() => {
+    fetchOblasts().then(setOblasts);
+  }, []);
 
   const calculateTotal = () =>
     basketItems.reduce(
@@ -12,14 +38,189 @@ export const Order: React.FC = () => {
       0
     );
 
-  const handleOrderSubmit = () => {
-    // Показываем подтверждение заказа
-    setIsOrderConfirmed(true);
+  const validateField = (field: string, value: string) => {
+    switch (field) {
+      case "name":
+        return value.trim().length < 2
+          ? "Ім’я обов’язкове і має бути не менше 2 символів."
+          : "";
+      case "surname":
+        return value.trim().length < 2
+          ? "Прізвище обов’язкове і має бути не менше 2 символів."
+          : "";
+      case "phone":
+        const phoneRegex = /^\+?\d{10,12}$/;
+        return !phoneRegex.test(value) ? "Введіть дійсний номер телефону." : "";
+      case "email":
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return !emailRegex.test(value)
+          ? "Введіть дійсну електронну адресу."
+          : "";
+      default:
+        return "";
+    }
+  };
 
-    // Скрываем подтверждение через 3 секунды
+  const handleInputChange = (field: string, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+
+    const error = validateField(field, value);
+    setErrors((prev) => {
+      const newErrors = { ...prev };
+      if (!error) {
+        delete newErrors[field];
+      } else {
+        newErrors[field] = error;
+      }
+      return newErrors;
+    });
+  };
+
+  const handleOrderSubmit = () => {
+    if (basketItems.length === 0) {
+      setBasketError(
+        "Ваша корзина порожня. Додайте товари перед оформленням замовлення."
+      );
+      return;
+    } else {
+      setBasketError(null);
+    }
+    const newErrors: Record<string, string> = {};
+
+    Object.keys(formData).forEach((field) => {
+      const error = validateField(
+        field,
+        formData[field as keyof typeof formData]
+      );
+      if (error) newErrors[field] = error;
+    });
+
+    if (!formData.deliveryMethod) {
+      newErrors.deliveryMethod = "Оберіть спосіб доставки.";
+    }
+    if (!formData.oblast) {
+      newErrors.oblast = "Оберіть область.";
+    }
+    if (!formData.misto) {
+      newErrors.misto = "Оберіть місто.";
+    }
+    if (!formData.viddilennia) {
+      newErrors.viddilennia = "Оберіть відділення.";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setErrors({});
+    setIsOrderConfirmed(true);
+    clearBasket();
+    setFormData({
+      name: "",
+      surname: "",
+      phone: "",
+      email: "",
+      deliveryMethod: "",
+      oblast: "",
+      misto: "",
+      viddilennia: "",
+      paymentMethod: "",
+    });
+
     setTimeout(() => {
       setIsOrderConfirmed(false);
     }, 3000);
+  };
+
+  const handleOblastChange = async (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    const oblastRef = e.target.value;
+
+    setFormData((prev) => ({
+      ...prev,
+      oblast: oblastRef,
+      misto: "",
+      viddilennia: "",
+    }));
+
+    setErrors((prev) => {
+      const newErrors = { ...prev };
+      delete newErrors.oblast;
+      delete newErrors.misto;
+      delete newErrors.viddilennia;
+      return newErrors;
+    });
+
+    const fetchedCities = await fetchCities(oblastRef);
+    setCities(fetchedCities);
+    setWarehouses([]);
+  };
+
+  const handleCityChange = async (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const cityRef = e.target.value;
+
+    setFormData((prev) => ({
+      ...prev,
+      misto: cityRef,
+      viddilennia: "",
+    }));
+
+    setErrors((prev) => {
+      const newErrors = { ...prev };
+      delete newErrors.misto;
+      delete newErrors.viddilennia;
+      return newErrors;
+    });
+
+    try {
+      const fetchedWarehouses = await fetchWarehouses(cityRef);
+
+      const filteredWarehouses = fetchedWarehouses.filter((warehouse: any) =>
+        formData.deliveryMethod === "nova-poshta-terminal"
+          ? warehouse.Description.startsWith("Поштомат")
+          : !warehouse.Description.startsWith("Поштомат")
+      );
+
+      setWarehouses(filteredWarehouses);
+    } catch (error) {
+      console.error("Ошибка при загрузке отделений:", error);
+    }
+  };
+
+  const handleDeliveryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const deliveryMethod = e.target.value;
+
+    setFormData((prev) => ({ ...prev, deliveryMethod }));
+
+    setErrors((prev) => {
+      const newErrors = { ...prev };
+      delete newErrors.deliveryMethod;
+      return newErrors;
+    });
+
+    if (formData.misto) {
+      fetchWarehouses(formData.misto).then((fetchedWarehouses) => {
+        const filteredWarehouses = fetchedWarehouses.filter((warehouse: any) =>
+          deliveryMethod === "nova-poshta-terminal"
+            ? warehouse.Description.startsWith("Поштомат")
+            : !warehouse.Description.startsWith("Поштомат")
+        );
+
+        setWarehouses(filteredWarehouses);
+      });
+    }
+  };
+
+  const handleWarehouseChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFormData((prev) => ({ ...prev, viddilennia: e.target.value }));
+
+    setErrors((prev) => {
+      const newErrors = { ...prev };
+      delete newErrors.viddilennia;
+      return newErrors;
+    });
   };
 
   return (
@@ -27,31 +228,64 @@ export const Order: React.FC = () => {
       <h2 className="orderPage__title">Оформлення замовлення</h2>
       <hr />
       <div className="orderPage__container">
-        {/* Левая колонка */}
         <div className="orderPage__form">
           <div className="orderPage__section">
             <h3 className="orderPage__subtitle">Ваші дані:</h3>
             <div className="orderPage__inputs">
-              <input
-                className="orderPage__inputs--input"
-                type="text"
-                placeholder="Ваше ім’я"
-              />
-              <input
-                className="orderPage__inputs--input"
-                type="text"
-                placeholder="Ваше прізвище"
-              />
-              <input
-                className="orderPage__inputs--input"
-                type="tel"
-                placeholder="Ваш телефон"
-              />
-              <input
-                className="orderPage__inputs--input"
-                type="email"
-                placeholder="Ваш email"
-              />
+              <div>
+                <input
+                  className={`orderPage__inputs--input ${
+                    errors.name ? "error" : ""
+                  }`}
+                  type="text"
+                  placeholder="Ваше ім’я"
+                  value={formData.name}
+                  onChange={(e) => handleInputChange("name", e.target.value)}
+                />
+                {errors.name && <p className="error-message">{errors.name}</p>}
+              </div>
+              <div>
+                <input
+                  className={`orderPage__inputs--input ${
+                    errors.surname ? "error" : ""
+                  }`}
+                  type="text"
+                  placeholder="Ваше прізвище"
+                  value={formData.surname}
+                  onChange={(e) => handleInputChange("surname", e.target.value)}
+                />
+                {errors.surname && (
+                  <p className="error-message">{errors.surname}</p>
+                )}
+              </div>
+              <div>
+                <input
+                  className={`orderPage__inputs--input ${
+                    errors.phone ? "error" : ""
+                  }`}
+                  type="tel"
+                  placeholder="Ваш телефон"
+                  value={formData.phone}
+                  onChange={(e) => handleInputChange("phone", e.target.value)}
+                />
+                {errors.phone && (
+                  <p className="error-message">{errors.phone}</p>
+                )}
+              </div>
+              <div>
+                <input
+                  className={`orderPage__inputs--input ${
+                    errors.email ? "error" : ""
+                  }`}
+                  type="email"
+                  placeholder="Ваш email"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange("email", e.target.value)}
+                />
+                {errors.email && (
+                  <p className="error-message">{errors.email}</p>
+                )}
+              </div>
             </div>
             <hr style={{ marginTop: "50px" }} />
           </div>
@@ -61,39 +295,99 @@ export const Order: React.FC = () => {
             <p className="orderPage__subtitle--text">Спосіб доставки:</p>
             <div className="orderPage__delivery">
               <label className="orderPage__delivery--text">
-                <input type="radio" name="delivery" value="nova-poshta" />
-                Нова Пошта
+                <input
+                  type="radio"
+                  name="delivery"
+                  value="nova-poshta"
+                  checked={formData.deliveryMethod === "nova-poshta"}
+                  onChange={(e) => handleDeliveryChange(e)}
+                />
+                Нова Пошта (відділення)
               </label>
               <label className="orderPage__delivery--text">
                 <input
                   type="radio"
                   name="delivery"
                   value="nova-poshta-terminal"
+                  checked={formData.deliveryMethod === "nova-poshta-terminal"}
+                  onChange={(e) => handleDeliveryChange(e)}
                 />
-                Нова Пошта Поштомат
+                Нова Пошта (Поштомат)
               </label>
             </div>
-            <div className="orderPage__inputs">
-              <input
-                className="orderPage__inputs--input"
-                type="text"
-                placeholder="Область"
-              />
-              <input
-                className="orderPage__inputs--input"
-                type="text"
-                placeholder="Місто"
-              />
-              <input
-                className="orderPage__inputs--input"
-                type="text"
-                placeholder="Відділення"
-              />
+            {errors.deliveryMethod && (
+              <p className="orderPage__error-message">
+                {errors.deliveryMethod}
+              </p>
+            )}
+
+            <div className="address">
+              <div className="address__select-group">
+                <label className="address__label">Область:</label>
+                <select
+                  className={`address__select ${errors.oblast ? "error" : ""}`}
+                  value={formData.oblast}
+                  onChange={handleOblastChange}
+                >
+                  <option value="">Оберіть область</option>
+                  {oblasts.map((oblast: any) => (
+                    <option key={oblast.Ref} value={oblast.Ref}>
+                      {oblast.Description}
+                    </option>
+                  ))}
+                </select>
+                {errors.oblast && (
+                  <p className="orderPage__error-message">{errors.oblast}</p>
+                )}
+              </div>
+
+              <div className="address__select-group">
+                <label className="address__label">Місто:</label>
+                <select
+                  className={`address__select ${errors.misto ? "error" : ""}`}
+                  value={formData.misto}
+                  onChange={handleCityChange}
+                  disabled={!formData.oblast}
+                >
+                  <option value="">Оберіть місто</option>
+                  {cities.map((city: any) => (
+                    <option key={city.Ref} value={city.Ref}>
+                      {city.Description}
+                    </option>
+                  ))}
+                </select>
+                {errors.misto && (
+                  <p className="orderPage__error-message">{errors.misto}</p>
+                )}
+              </div>
+
+              <div className="address__select-group">
+                <label className="address__label">Відділення:</label>
+                <select
+                  className={`address__select ${
+                    errors.viddilennia ? "error" : ""
+                  }`}
+                  value={formData.viddilennia}
+                  onChange={handleWarehouseChange}
+                  disabled={!formData.misto}
+                >
+                  <option value="">Оберіть відділення</option>
+                  {warehouses.map((warehouse: any) => (
+                    <option key={warehouse.Ref} value={warehouse.Description}>
+                      {warehouse.Description}
+                    </option>
+                  ))}
+                </select>
+                {errors.viddilennia && (
+                  <p className="orderPage__error-message">
+                    {errors.viddilennia}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Правая колонка */}
         <div className="orderPage__summary">
           <div className="orderPage__summary--content">
             <h3 className="orderPage__subtitle">Ваше замовлення</h3>
@@ -139,7 +433,6 @@ export const Order: React.FC = () => {
                 </div>
               ))}
             </div>
-
             <div>
               <hr />
               <div className="orderPage__total">
@@ -147,13 +440,6 @@ export const Order: React.FC = () => {
                 <p>{calculateTotal().toLocaleString()} грн</p>
               </div>
             </div>
-
-            {/* <button
-            className="basketPage__order--text basketPage__order"
-            onClick={handleOrderSubmit}
-          >
-            Оформити замовлення
-          </button> */}
           </div>
 
           <div className="payment">
@@ -162,9 +448,13 @@ export const Order: React.FC = () => {
               <div className="payment__radio">
                 <input
                   type="radio"
-                  id="payment-method"
+                  id="cash-on-delivery"
                   name="payment"
-                  checked
+                  value="cash-on-delivery"
+                  checked={formData.paymentMethod === "cash-on-delivery"}
+                  onChange={(e) =>
+                    handleInputChange("paymentMethod", e.target.value)
+                  }
                 />
                 <label htmlFor="payment-method" className="payment__label">
                   Оплата при отриманні
@@ -172,8 +462,8 @@ export const Order: React.FC = () => {
               </div>
               <p className="payment__info">
                 Ваші персональні дані будуть використовуватися для обробки
-                вашого <br /> замовлення, підтримки вашого досвіду на цьому сайті та
-                для інших цілей, <br /> описаних у цьому посиланні -
+                вашого <br /> замовлення, підтримки вашого досвіду на цьому
+                сайті та для інших цілей, <br /> описаних у цьому посиланні -
                 <a href="#" className="payment__link">
                   політика конфіденційності
                 </a>
@@ -181,18 +471,21 @@ export const Order: React.FC = () => {
               </p>
             </div>
           </div>
-
           <div>
-            <button
-              className="basketPage__order--text basketPage__order orderPage__button"
-              onClick={handleOrderSubmit}
-            >
-              Оформити замовлення
-            </button>
+            <div>
+              {basketError && (
+                <p className="orderPage__error-message">{basketError}</p>
+              )}
+              <button
+                className="basketPage__order--text basketPage__order orderPage__button"
+                onClick={handleOrderSubmit}
+              >
+                Оформити замовлення
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
       {isOrderConfirmed && (
         <div className="orderPage__popup">
           <div className="orderPage__popup-content">

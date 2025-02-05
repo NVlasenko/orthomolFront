@@ -13,7 +13,6 @@ export const BasketPage: React.FC = () => {
       0
     );
     const handleOrder = () => {
-      // Переход на страницу с компонентом Order
       navigate("order");
     };
   return (

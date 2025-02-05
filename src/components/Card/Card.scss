@@ -10,17 +10,16 @@
   display: flex;
   flex-direction: column;
   height: 390px;
-position: relative;
-transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 
-&--flying {
-  transform: translate(300px, -300px) rotate(45deg) scale(0.5);
-  opacity: 0;
-  z-index: 1000;
-}
+  &--flying {
+    transform: translate(300px, -300px) rotate(45deg) scale(0.5);
+    opacity: 0;
+    z-index: 1000;
+  }
 
   @include on-tablet {
-  
   }
   @include on-mid-desktop {
     width: 270px;
@@ -180,5 +179,3 @@ transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 1;
   }
 }
-
-

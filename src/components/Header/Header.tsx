@@ -11,7 +11,6 @@ export const Header: React.FC = () => {
   const [isCatalogHovered, setCatalogHovered] = useState(false);
   const catalogRef = useRef<HTMLDivElement | null>(null);
   const dropDownRef = useRef<HTMLDivElement | null>(null);
-  console.log(basketItems);
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
     classNames("header__link", {
       "is-active": isActive,

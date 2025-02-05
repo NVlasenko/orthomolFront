@@ -8,13 +8,11 @@
   border-radius: 24px 24px 0 0;
   overflow: hidden;
 
-
   &__container {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
     padding: 40px;
-    // background-color: rgba(255, 255, 255, 0.9);
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
@@ -38,7 +36,7 @@
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
-color: #4E4771;
+    color: #4e4771;
     @include on-tablet {
       font-size: 18px;
     }
@@ -70,14 +68,14 @@ color: #4E4771;
     @include on-tablet {
       font-size: 14px;
       line-height: 30px;
-     }
-     @include on-mid-desktop {
-     font-size: 15px;
-     }
-     @include on-desktop {
-    font-size: 16px;
-    line-height: 40px;
-     }
+    }
+    @include on-mid-desktop {
+      font-size: 15px;
+    }
+    @include on-desktop {
+      font-size: 16px;
+      line-height: 40px;
+    }
     &:focus {
       box-shadow: 0 0 10px rgba(120, 111, 196, 0.5);
       border-color: $second-primary-color;
@@ -98,21 +96,21 @@ color: #4E4771;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-width: 50%;
-margin: 0 auto;
-margin-top: 30px;
-@include on-tablet {
-font-size: 13px;
- @include on-mid-desktop {
-font-size: 15px;
- }
- @include on-desktop {
-  font-size: 16px;
- }
-&:hover {
-      background-color: darken($second-primary-color, 10%);
-      box-shadow: 0 4px 15px rgba(120, 111, 196, 0.5);
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    @include on-tablet {
+      font-size: 13px;
+      @include on-mid-desktop {
+        font-size: 15px;
+      }
+      @include on-desktop {
+        font-size: 16px;
+      }
+      &:hover {
+        background-color: darken($second-primary-color, 10%);
+        box-shadow: 0 4px 15px rgba(120, 111, 196, 0.5);
+      }
     }
   }
-}
 }

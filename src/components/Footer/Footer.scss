@@ -15,7 +15,7 @@
       padding-bottom: 40px;
     }
     @include on-mid-desktop {
-     gap: 40px;
+      gap: 40px;
     }
     @include on-desktop {
       padding-top: 60px;
@@ -29,13 +29,11 @@
     flex-direction: column;
     justify-content: space-between;
     @include on-tablet {
-     flex-direction: row;
+      flex-direction: row;
     }
     @include on-mid-desktop {
-  
     }
     @include on-desktop {
-      
     }
   }
 
@@ -47,13 +45,12 @@
     gap: 5px;
     text-decoration: none;
     @include on-tablet {
-     gap:10px;
+      gap: 10px;
     }
     @include on-mid-desktop {
-     gap: 10px;
+      gap: 10px;
     }
     @include on-desktop {
-     
     }
     &--img {
       width: 20px;
@@ -80,10 +77,10 @@
       color: #fff;
       cursor: pointer;
       @include on-tablet {
-     font-size: 25px;
+        font-size: 25px;
       }
       @include on-mid-desktop {
-       font-size: 30px;
+        font-size: 30px;
       }
       @include on-desktop {
         font-size: 43px;
@@ -94,14 +91,14 @@
   &__contacts {
     display: flex;
     flex-direction: row;
-   
+
     gap: 2px;
     align-items: center;
     @include on-tablet {
       flex-direction: column;
     }
     @include on-mid-desktop {
-     gap: 10px;
+      gap: 10px;
     }
     @include on-desktop {
       gap: 17px;
@@ -114,10 +111,10 @@
       text-align: right;
       color: #fff;
       @include on-tablet {
-     font-size: 13px;
+        font-size: 13px;
       }
       @include on-mid-desktop {
-       font-size: 14px;
+        font-size: 14px;
       }
       @include on-desktop {
         font-size: 16px;
@@ -132,7 +129,7 @@
       @include on-tablet {
         width: 22px;
         height: 22px;
-         }
+      }
     }
 
     &--rights {
@@ -142,10 +139,10 @@
       text-align: right;
       color: #fff;
       @include on-tablet {
-     font-size: 14px;
+        font-size: 14px;
       }
       @include on-mid-desktop {
-       font-size: 15px;
+        font-size: 15px;
       }
       @include on-desktop {
         font-size: 16px;
@@ -161,11 +158,11 @@
       gap: 15px;
       list-style: none;
       @include on-tablet {
-     justify-content: none;
-     gap: 8px;
+        justify-content: none;
+        gap: 8px;
       }
       @include on-mid-desktop {
-       gap: 20px;
+        gap: 20px;
       }
       @include on-desktop {
         gap: 32px;
@@ -183,18 +180,16 @@
       text-decoration-style: solid;
       text-underline-offset: 4px;
       @include on-tablet {
-     font-size: 11px;
+        font-size: 11px;
       }
       @include on-mid-desktop {
-       font-size: 20px;
+        font-size: 20px;
       }
       @include on-desktop {
         font-size: 21px;
       }
     }
   }
-
-
 }
 
 .actions {
@@ -208,8 +203,8 @@
     gap: 15px;
   }
   @include on-mid-desktop {
-   gap: 20px;
-   }
+    gap: 20px;
+  }
   @include on-desktop {
     justify-content: none;
     gap: 32px;
@@ -221,11 +216,10 @@
     gap: 8px;
     @include on-tablet {
       gap: 15px;
-
     }
     @include on-mid-desktop {
       gap: 20px;
-      }
+    }
     @include on-desktop {
       gap: 30px;
     }
@@ -279,7 +273,7 @@
       color: #fff;
       transition: color 0.5s ease;
       @include on-tablet {
-       font-size: 8px;
+        font-size: 8px;
       }
       @include on-mid-desktop {
         font-size: 15px;
@@ -314,7 +308,7 @@
       transition: transform 0.5s ease;
       @include on-tablet {
         width: 20px;
-      height: 20px;
+        height: 20px;
       }
       @include on-mid-desktop {
         width: 30px;
@@ -333,7 +327,7 @@
         transform: scale(1);
         @include on-tablet {
           width: 12px;
-        height: 12px;
+          height: 12px;
         }
         @include on-mid-desktop {
           width: 15px;

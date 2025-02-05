@@ -7,9 +7,9 @@ export const Consultation: React.FC = () => {
     <section className="consultation">
       <div className="consultation__container">
         <div className="consultation__title">
-                <Title title="Проконсультуватися" />
+          <Title title="Проконсультуватися" />
         </div>
-  
+
         <p className="consultation__description">
           Вітаміни Ортомол, вироблені в Німеччині, представлені широким
           асортиментом унікальних препаратів. Склад кожного окремого комплексу

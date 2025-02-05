@@ -61,13 +61,13 @@
       color: $first-primary-color;
       margin: 0;
       @include on-tablet {
-       font-size: 17px;
+        font-size: 17px;
       }
       @include on-mid-desktop {
-      font-size: 19px;
+        font-size: 19px;
       }
       @include on-desktop {
-     font-size: 20px;
+        font-size: 20px;
       }
     }
 
@@ -100,8 +100,8 @@
         font-size: 20px;
       }
       @include on-desktop {
-      width: 30px;
-      height: 30px;
+        width: 30px;
+        height: 30px;
       }
       &:hover {
         transform: scale(1.1);
@@ -128,13 +128,13 @@
       line-height: 1.5;
       @include on-tablet {
         font-size: 13px;
-       }
-       @include on-mid-desktop {
-       font-size: 15px;
-       }
-       @include on-desktop {
-      font-size: 16px;
-       }
+      }
+      @include on-mid-desktop {
+        font-size: 15px;
+      }
+      @include on-desktop {
+        font-size: 16px;
+      }
     }
 
     border-left: 2px solid $second-primary-color;
