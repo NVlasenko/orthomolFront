@@ -1,0 +1,106 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+
+.privacy-policy {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+    @include on-tablet {
+      padding: 30px;
+    }
+    @include on-mid-desktop {
+      
+    }
+    @include on-desktop {
+      
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: $first-primary-color;
+    margin-bottom: 20px;
+    @include on-tablet {
+      font-size: 22px;
+    }
+    @include on-mid-desktop {
+      font-size: 28px;
+    }
+    @include on-desktop {
+      font-size: 30px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    margin-top: 20px;
+    color: $first-primary-color;
+    @include on-tablet {
+      font-size: 18px;
+    }
+    @include on-mid-desktop {
+      font-size: 22px;
+    }
+    @include on-desktop {
+      font-size: 24px;
+    }
+  }
+
+  &__info {
+    font-size: 10px;
+    line-height: 15px;
+    color: #555;
+    margin-bottom: 15px;
+    @include on-tablet {
+      font-size: 15px;
+      line-height: 25px;
+    }
+    @include on-mid-desktop {
+      font-size: 16px;
+      line-height: 27px;
+    }
+    @include on-desktop {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__list {
+    margin: 10px 0;
+    padding-left: 20px;
+    @include on-tablet {
+      
+    }
+    @include on-mid-desktop {
+      
+    }
+    @include on-desktop {
+      
+    }
+
+    &--link {
+      font-size: 10px;
+      color: #555;
+      margin-bottom: 5px;
+      @include on-tablet {
+        font-size: 14px;
+      }
+      @include on-mid-desktop {
+        font-size: 16px;
+      }
+      @include on-desktop {
+        font-size: 18px;
+      }
+    }
+  }
+}

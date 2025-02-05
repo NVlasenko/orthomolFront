@@ -7,6 +7,7 @@ import {
   fetchOblasts,
   fetchWarehouses,
 } from "../../api/novaPoshtaService";
+import { NavLink } from "react-router-dom";
 
 export const Order: React.FC = () => {
   const { basketItems, updateQuantity, removeFromBasket, clearBasket } =
@@ -464,9 +465,9 @@ export const Order: React.FC = () => {
                 Ваші персональні дані будуть використовуватися для обробки
                 вашого <br /> замовлення, підтримки вашого досвіду на цьому
                 сайті та для інших цілей, <br /> описаних у цьому посиланні -
-                <a href="#" className="payment__link">
+                <NavLink to="privacy" className="payment__link">
                   політика конфіденційності
-                </a>
+                </NavLink>
                 .
               </p>
             </div>

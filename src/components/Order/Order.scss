@@ -390,7 +390,7 @@
     .payment__link {
       color: #735db8;
       text-decoration: underline;
-
+      cursor: pointer;
       &:hover {
         color: #583da1;
       }

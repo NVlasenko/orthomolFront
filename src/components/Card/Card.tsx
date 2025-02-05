@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback} from "react";
 import "./Card.scss";
 import { Product } from "../../types";
 import { useBasket } from "../../context/BasketContextType";
@@ -8,28 +8,39 @@ type Props = {
 };
 
 export const Card: React.FC<Props> = ({ product }) => {
-  const { addToBasket } = useBasket();
+  const { addToBasket, basketItems } = useBasket();
   const [inBasket, setInBasket] = useState(false);
   const [isFlying, setIsFlying] = useState(false);
 
+  // useEffect(() => {
+  //   const savedBasket = localStorage.getItem("basket");
+  //   if (savedBasket) {
+  //     const basketItems = JSON.parse(savedBasket);
+  //     const isInBasket = basketItems.some(
+  //       (item: { product: Product }) => item.product.id === product.id
+  //     );
+  //     setInBasket(isInBasket);
+  //   }
+  // }, [basketItems, product.id]);
   useEffect(() => {
-    const savedBasket = localStorage.getItem("basket");
-    if (savedBasket) {
-      const basketItems = JSON.parse(savedBasket);
-      const isInBasket = basketItems.some(
-        (item: { product: Product }) => item.product.id === product.id
-      );
-      setInBasket(isInBasket);
-    }
-  }, [product.id]);
+    setInBasket(basketItems.some((item) => item.product.id === product.id));
+  }, [basketItems, product.id]); 
 
-  const handleAddToBasket = () => {
+  // const handleAddToBasket = () => {
+  //   if (inBasket) return;
+
+  //   setIsFlying(true);
+  //   addToBasket(product);
+  //   setInBasket(true);
+  // };
+  const handleAddToBasket = useCallback(() => {
     if (inBasket) return;
-
+  
     setIsFlying(true);
     addToBasket(product);
-    setInBasket(true);
-  };
+
+  }, [inBasket, addToBasket, product]);
+  
 
   return (
     <div className="card">
