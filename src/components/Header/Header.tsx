@@ -62,7 +62,7 @@ export const Header: React.FC = () => {
               onMouseEnter={handleMouseEnterCatalog}
               onMouseLeave={handleMouseLeaveCatalog}
             >
-              <NavLink to="#" className={getLinkClass}>
+              <NavLink to="/catalog" className={getLinkClass}>
                 Каталог
               </NavLink>
               {isCatalogHovered && (

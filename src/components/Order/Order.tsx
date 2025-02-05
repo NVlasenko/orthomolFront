@@ -12,6 +12,11 @@ import { NavLink } from "react-router-dom";
 export const Order: React.FC = () => {
   const { basketItems, updateQuantity, removeFromBasket, clearBasket } =
     useBasket();
+    const [errors, setErrors] = useState<Record<string, string>>({});
+  const [basketError, setBasketError] = useState<string | null>(null);
+  const [oblasts, setOblasts] = useState([]);
+  const [cities, setCities] = useState([]);
+  const [warehouses, setWarehouses] = useState([]);
   const [isOrderConfirmed, setIsOrderConfirmed] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -24,11 +29,7 @@ export const Order: React.FC = () => {
     viddilennia: "",
     paymentMethod: "",
   });
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [basketError, setBasketError] = useState<string | null>(null);
-  const [oblasts, setOblasts] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [warehouses, setWarehouses] = useState([]);
+  
   useEffect(() => {
     fetchOblasts().then(setOblasts);
   }, []);

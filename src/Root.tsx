@@ -5,6 +5,7 @@ import { HomePage } from "./pages/HomePage";
 import { BasketPage } from "./pages/BasketPage";
 import { Order } from "./components/Order";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
+import { CatalogPage } from "./pages/CatalogPage";
 
 export const Root: React.FC = () => (
   <Router>
@@ -13,12 +14,12 @@ export const Root: React.FC = () => (
         <Route index element={<HomePage />} />
         <Route path="basket">
           <Route index element={<BasketPage />} />
-
           <Route path="order">
             <Route index element={<Order />} />
             <Route path="privacy" element={<PrivacyPolicyPage />} />
           </Route>
         </Route>
+        <Route path="catalog" element={<CatalogPage />} />
       </Route>
     </Routes>
   </Router>

@@ -22,6 +22,7 @@ export const Cards: React.FC = () => {
         const data = await fetchProducts();
         setProducts(data);
       } catch (err) {
+        console.error("Ошибка загрузки продуктов:", err);
         setError((err as Error).message);
       } finally {
         setIsLoading(false);
