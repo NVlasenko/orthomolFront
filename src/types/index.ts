@@ -12,7 +12,7 @@ export type Product = {
   name: string;
   appointment: string;
   category: string;
-  sex: "women" | "men" | "unisex";
+  gender: "women" | "men" | "unisex";
   ageCategory: string[];
   healthCategory:string[];
   priceRegular: number;

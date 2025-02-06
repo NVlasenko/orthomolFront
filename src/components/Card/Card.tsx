@@ -44,11 +44,15 @@ export const Card: React.FC<Props> = ({ product }) => {
 
   return (
     <div className="card">
-      <img
+     
+      <div>
+         <img
         className="card__image"
         src={`${process.env.PUBLIC_URL}/${product.imgProductRef}`}
         alt={product.name}
       />
+      </div>
+     
 
       <div className="card__content">
         <div className="card__info">
@@ -56,7 +60,9 @@ export const Card: React.FC<Props> = ({ product }) => {
           <h3 className="card__info--subtitle">{product.appointment}</h3>
         </div>
 
-        <div className="card__price">
+
+<div className="card__actions--w">
+  <div className="card__price">
           {product.priceRegular.toLocaleString()} грн
         </div>
 
@@ -76,6 +82,8 @@ export const Card: React.FC<Props> = ({ product }) => {
             />
           </a>
         </div>
+</div>
+        
       </div>
 
       <img

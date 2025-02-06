@@ -1,0 +1,17 @@
+.catalog {
+margin-top: 50px;
+  &__container{
+     display: flex;
+  gap: 30px;
+  }
+ 
+
+  &__sidebar {
+    flex: 0 0 250px; // Фиксированная ширина для сайдбара
+    max-width: 250px;
+  }
+
+  &__shopItems {
+    flex: 1; // Занимает оставшееся пространство
+  }
+}

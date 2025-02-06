@@ -4,7 +4,7 @@
     "name": "Orthomol ",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
-    "sex": "women",
+    "gender": "women",
     "ageCategory": ["до 18 років"],
     "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
     "priceRegular": 33353,
@@ -16,7 +16,7 @@
     "shape": "Таблетки",
     "taste":"Апельсин",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -64,7 +64,7 @@
     "name": "A",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
-    "sex": "women",
+    "gender": "women",
     "ageCategory": ["до 18 років"],
     "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
     "priceRegular": 32153,
@@ -76,7 +76,7 @@
     "shape": "Таблетки",
     "taste":"Апельсин",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -124,10 +124,10 @@
     "name": "B",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
-    "sex": "women",
+    "gender": "women",
     "ageCategory": ["до 18 років"],
     "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
-    "priceRegular": 3153,
+    "priceRegular": 2,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
     "inStock": true,
@@ -136,7 +136,7 @@
     "shape": "Таблетки",
     "taste":"Апельсин",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -184,7 +184,7 @@
     "name": "ium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
-    "sex": "women",
+    "gender": "women",
     "ageCategory": ["до 18 років"],
     "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
     "priceRegular": 5153,
@@ -244,7 +244,7 @@
     "name": "Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
-    "sex": "man",
+    "gender": "men",
     "ageCategory": ["до 18 років"],
     "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
     "priceRegular": 166153,
@@ -256,7 +256,7 @@
     "shape": "Таблетки",
     "taste":"Грейпфрут",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -304,7 +304,7 @@
     "name": "l Magnesium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
-    "sex": "man",
+    "gender": "men",
     "ageCategory": ["до 18 років"],
     "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
     "priceRegular": 1545153,
@@ -316,7 +316,7 @@
     "shape": "Капсули",
     "taste":"Грейпфрут",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -364,7 +364,7 @@
     "name": "ol Magnesium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
-    "sex": "women",
+    "gender": "women",
     "ageCategory": ["від 18 до 50 років"],
     "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
     "priceRegular": 15153,
@@ -376,7 +376,7 @@
     "shape": "Капсули",
     "taste":"Грейпфрут",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -424,7 +424,7 @@
     "name": "Orthomol Magnelus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
-    "sex": "women",
+    "gender": "women",
     "ageCategory": ["від 18 до 50 років"],
     "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
     "priceRegular": 7753,
@@ -436,7 +436,7 @@
     "shape": "Капсули",
     "taste":"Грейпфрут",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -481,10 +481,10 @@
   },
   {
     "id": 9,
-    "name": "Osium Plus",
-    "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
+    "name": "Osium Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
+    "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус dfhjdf fjsdhfjd sdjsdjssk fsjjjjjjjjdkfdsf  jjjjkdksd",
     "category": "immune",
-    "sex": "man",
+    "gender": "men",
     "ageCategory": ["від 18 до 50 років"],
     "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
     "priceRegular": 12153,
@@ -496,7 +496,7 @@
     "shape": "Капсули",
     "taste":"Лайм-малина",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -544,7 +544,7 @@
     "name": "Orthomol Magnesium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "immune",
-    "sex": "man",
+    "gender": "men",
     "ageCategory": ["від 18 до 50 років"],
     "healthCategory": ["Серце і судини", "Спорт", "Діти"],
     "priceRegular": 1153,
@@ -556,7 +556,7 @@
     "shape": "Питні пляшечки",
     "taste":"Лайм-малина",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -604,7 +604,7 @@
     "name": "Orthomol Magnesium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "immune",
-    "sex": "women",
+    "gender": "women",
     "ageCategory": ["від 18 до 50 років"],
     "healthCategory": ["Серце і судини", "Спорт", "Діти"],
     "priceRegular": 1153,
@@ -616,7 +616,7 @@
     "shape": "Питні пляшечки",
     "taste":"Лайм-малина",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -664,7 +664,7 @@
     "name": "Orthomol Magnesium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "immune",
-    "sex": "man",
+    "gender": "men",
     "ageCategory": ["від 50 років"],
     "healthCategory": ["Серце і судини", "Спорт", "Діти"],
     "priceRegular": 1153,
@@ -676,7 +676,7 @@
     "shape": "Питні пляшечки",
     "taste":"Лайм-малина",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -724,7 +724,7 @@
     "name": "Orthomol Magnesium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "immune",
-    "sex": "women",
+    "gender": "women",
     "ageCategory": ["від 50 років"],
     "healthCategory": ["Серце і судини", "Спорт", "Діти"],
     "priceRegular": 1153,
@@ -736,7 +736,7 @@
     "shape": "Питні пляшечки",
     "taste":"Лісові ягоди",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -784,7 +784,7 @@
     "name": "Orthomol Magnesium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "immune",
-    "sex": "man",
+    "gender": "men",
     "ageCategory": ["від 50 років"],
     "healthCategory": ["Простата", "Травлення"],
     "priceRegular": 1153,
@@ -796,7 +796,7 @@
     "shape": "Капсули",
     "taste":"Лісові ягоди",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -844,7 +844,7 @@
     "name": "Orthomol Magnesium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "immune",
-    "sex": "women",
+    "gender": "women",
     "ageCategory": ["від 50 років"],
     "healthCategory": ["Простата", "Травлення"],
     "priceRegular": 1153,
@@ -856,7 +856,7 @@
     "shape": "Капсули",
     "taste":"Лісові ягоди",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -904,7 +904,7 @@
     "name": "Orthomol Magnesium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "immune",
-    "sex": "women",
+    "gender": "women",
     "ageCategory": ["від 50 років"],
     "healthCategory": ["Простата", "Травлення"],
     "priceRegular": 1153,
@@ -916,7 +916,7 @@
     "shape": "Капсули",
     "taste":"Лісові ягоди",
     "packaging": 90,
-    "hit": true,
+    "hit": false,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
