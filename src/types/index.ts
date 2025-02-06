@@ -12,6 +12,9 @@ export type Product = {
   name: string;
   appointment: string;
   category: string;
+  sex: "women" | "men" | "unisex";
+  ageCategory: string[];
+  healthCategory:string[];
   priceRegular: number;
   imgProductRef: string;
   imgCategoryRef: string;
@@ -19,6 +22,8 @@ export type Product = {
   articleNumber: string;
   brand: string;
   shape: string;
+  taste: string;
+  hit: boolean;
   packaging: number;
   expirationDate: string;
   description: ProductDescription[];

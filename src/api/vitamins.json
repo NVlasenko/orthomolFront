@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "name": "Orthomol Magnesium Plus",
+    "name": "Orthomol ",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
     "sex": "women",
     "ageCategory": ["до 18 років"],
     "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
-    "priceRegular": 1153,
+    "priceRegular": 33353,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
     "inStock": true,
@@ -61,13 +61,13 @@
   },
   {
     "id": 2,
-    "name": "Orthomol Magnesium Plus",
+    "name": "A",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
     "sex": "women",
     "ageCategory": ["до 18 років"],
     "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
-    "priceRegular": 2153,
+    "priceRegular": 32153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
     "inStock": true,
@@ -121,7 +121,7 @@
   },
   {
     "id": 3,
-    "name": "Orthomol Magnesium Plus",
+    "name": "B",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
     "sex": "women",
@@ -181,13 +181,13 @@
   },
   {
     "id": 4,
-    "name": "Orthomol Magnesium Plus",
+    "name": "ium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
     "sex": "women",
     "ageCategory": ["до 18 років"],
     "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
-    "priceRegular": 1153,
+    "priceRegular": 5153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
     "inStock": true,
@@ -241,13 +241,13 @@
   },
   {
     "id": 5,
-    "name": "Orthomol Magnesium Plus",
+    "name": "Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
     "sex": "man",
     "ageCategory": ["до 18 років"],
     "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
-    "priceRegular": 1153,
+    "priceRegular": 166153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
     "inStock": true,
@@ -301,13 +301,13 @@
   },
   {
     "id": 6,
-    "name": "Orthomol Magnesium Plus",
+    "name": "l Magnesium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
     "sex": "man",
     "ageCategory": ["до 18 років"],
     "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
-    "priceRegular": 1153,
+    "priceRegular": 1545153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
     "inStock": true,
@@ -361,13 +361,13 @@
   },
   {
     "id": 7,
-    "name": "Orthomol Magnesium Plus",
+    "name": "ol Magnesium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
     "sex": "women",
     "ageCategory": ["від 18 до 50 років"],
     "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
-    "priceRegular": 1153,
+    "priceRegular": 15153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
     "inStock": true,
@@ -421,13 +421,13 @@
   },
   {
     "id": 8,
-    "name": "Orthomol Magnesium Plus",
+    "name": "Orthomol Magnelus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "magnesium",
     "sex": "women",
     "ageCategory": ["від 18 до 50 років"],
     "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
-    "priceRegular": 1153,
+    "priceRegular": 7753,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
     "inStock": true,
@@ -481,13 +481,13 @@
   },
   {
     "id": 9,
-    "name": "Orthomol Magnesium Plus",
+    "name": "Osium Plus",
     "appointment": "Вітамінний комплекс сприяє метаболізму, покращує м'язовий тонус",
     "category": "immune",
     "sex": "man",
     "ageCategory": ["від 18 до 50 років"],
     "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
-    "priceRegular": 1153,
+    "priceRegular": 12153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
     "inStock": true,
@@ -496,7 +496,7 @@
     "shape": "Капсули",
     "taste":"Лайм-малина",
     "packaging": 90,
-    "hit": false,
+    "hit": true,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -556,7 +556,7 @@
     "shape": "Питні пляшечки",
     "taste":"Лайм-малина",
     "packaging": 90,
-    "hit": false,
+    "hit": true,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -616,7 +616,7 @@
     "shape": "Питні пляшечки",
     "taste":"Лайм-малина",
     "packaging": 90,
-    "hit": false,
+    "hit": true,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -676,7 +676,7 @@
     "shape": "Питні пляшечки",
     "taste":"Лайм-малина",
     "packaging": 90,
-    "hit": false,
+    "hit": true,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -736,7 +736,7 @@
     "shape": "Питні пляшечки",
     "taste":"Лісові ягоди",
     "packaging": 90,
-    "hit": false,
+    "hit": true,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -796,7 +796,7 @@
     "shape": "Капсули",
     "taste":"Лісові ягоди",
     "packaging": 90,
-    "hit": false,
+    "hit": true,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -856,7 +856,7 @@
     "shape": "Капсули",
     "taste":"Лісові ягоди",
     "packaging": 90,
-    "hit": false,
+    "hit": true,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {
@@ -916,7 +916,7 @@
     "shape": "Капсули",
     "taste":"Лісові ягоди",
     "packaging": 90,
-    "hit": false,
+    "hit": true,
     "expirationDate": "30 лип. 2026 р.",
     "description": [
       {

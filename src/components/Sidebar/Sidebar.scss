@@ -17,7 +17,7 @@
     font-size: 17.6px;
     font-weight: 700;
     line-height: 31.68px;
-    color: $first-primary-color; 
+    color: $first-primary-color;
   }
 
   &__list {
@@ -28,17 +28,14 @@
       margin-bottom: 10px;
 
       label {
-   
-        color: $first-primary-color; 
+        color: $first-primary-color;
         cursor: pointer;
         display: flex;
         align-items: center;
         gap: 10px;
-font-size: 14px;
-font-weight: 500;
-line-height: 22px;
-
-
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
 
         input[type="checkbox"] {
           accent-color: #6b46c1;
