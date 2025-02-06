@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/orthomolFront/static/css/main.bb4fe850.css",
-    "main.js": "/orthomolFront/static/js/main.f152ede6.js",
+    "main.css": "/orthomolFront/static/css/main.26634808.css",
+    "main.js": "/orthomolFront/static/js/main.aec24cc4.js",
     "static/media/productCategory.svg": "/orthomolFront/static/media/productCategory.8baa7c7ad8498036bcd5.svg",
     "static/media/basket2.svg": "/orthomolFront/static/media/basket2.eb8059ea9ab2c9937363.svg",
     "static/media/arrowRight.svg": "/orthomolFront/static/media/arrowRight.422380150ed64f8b3fd4.svg",
     "static/media/sort.svg": "/orthomolFront/static/media/sort.3357f3d01a15d6a4f5a2.svg",
     "index.html": "/orthomolFront/index.html",
-    "main.bb4fe850.css.map": "/orthomolFront/static/css/main.bb4fe850.css.map",
-    "main.f152ede6.js.map": "/orthomolFront/static/js/main.f152ede6.js.map"
+    "main.26634808.css.map": "/orthomolFront/static/css/main.26634808.css.map",
+    "main.aec24cc4.js.map": "/orthomolFront/static/js/main.aec24cc4.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb4fe850.css",
-    "static/js/main.f152ede6.js"
+    "static/css/main.26634808.css",
+    "static/js/main.aec24cc4.js"
   ]
 }
