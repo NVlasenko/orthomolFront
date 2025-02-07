@@ -89,7 +89,7 @@
   }
 
   &__list {
-    display: grid;
+ 
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     row-gap: 120px;
     column-gap: 50px;
@@ -100,7 +100,7 @@
     align-content: center;
 display: none;
     @include on-tablet {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
     place-items: center; /* Центрирование по горизонтали и вертикали */
     margin: 0 auto;
     margin-top: 150px;
@@ -111,53 +111,16 @@ display: none;
     }
     @include on-mid-desktop {
       column-gap: 30px;
-      
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
       display: grid;
     }
     @include on-desktop {
       column-gap: 30px;
-      display: block;
       display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     }
   }
 }
-
-
-
-
-
-// .shopItems__carousel {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   position: relative;
-//   overflow: hidden;
-//   height: 500px;
-//   touch-action: pan-y;
-
-//   @include on-mid-desktop {
-//     display: none;
-//   }
-//   @include on-desktop {
-//     display: none;
-//   }
-// }
-
-// .shopItems__carousel--wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   overflow: hidden;
-//   height: 100%;
-//   gap: 150px;
-//   justify-content: space-around;
-//   padding-top: 90px;
-// }
-
-// .shopItems__carousel--item {
-//   flex: 0 0 auto;
-//   width: 100%;
-//   transition: transform 0.5s ease, opacity 0.5s ease;
-// }
 
 
 .shopItems__carousel {
@@ -166,10 +129,10 @@ display: none;
   align-items: center;
   position: relative;
   overflow: hidden;
-  height: 500px;
+  max-height: 500px;
   touch-action: pan-y;
-  
-  
+  scroll-behavior: smooth;
+  overflow-y: scroll;
   @include on-mid-desktop {
     display: none;
   }
@@ -181,28 +144,46 @@ display: none;
 .shopItems__carousel--wrapper {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+
   height: 100%;
   justify-content: center;
   // position: relative;
   padding-bottom: 50px;
   padding-top: 150px;
   gap: 150px;
+  @include on-tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // Две карточки в ряд
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .shopItems__carousel--item {
   flex: 0 0 auto;
-  width: 90%;
-  
   border-radius: 16px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 16px;
+  // transform-style: preserve-3d;
+  // perspective: 1000px;
+  // border-radius: 16px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
   text-align: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  @include on-tablet {
+    width: 100%; // Чтобы карточки равномерно распределялись
+  }
+  @include on-mid-desktop {
+    width: 100%;
+  }
+
+  @include on-desktop {
+    width: 100%;
+  }
 }
 
 .shopItems__carousel-item.active {
-  transform: scale(1.1) rotateX(0deg);
+  transform: scale(1.1);
   z-index: 10;
   opacity: 1;
 }
