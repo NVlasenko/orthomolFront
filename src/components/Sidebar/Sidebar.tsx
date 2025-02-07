@@ -333,7 +333,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   const resetFilters = () => {
     onFilterChange({
-      priceRange: { min: 0, max: 10000000 },
+      priceRange: { min: 0, max: 100000 },
       gender: "all",
       ageCategory: "all",
       purpose: "all",
@@ -344,10 +344,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
   };
 
   return (
-<div className="sidebar-wrapper">
+<div className="sidebar--wrapper">
 
     {/* Кнопка "Фільтри" только для мобильных и планшетов */}
-    <button className="sidebar__toggle-btn" onClick={() => setIsSidebarOpen(true)}>
+    <button className="sidebar__toggle--btn" onClick={() => setIsSidebarOpen(true)}>
         Фільтри
       </button>
 
@@ -356,8 +356,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
     <div className={`sidebar ${isSidebarOpen ? "sidebar--open" : ""}`}>
     <div className="sidebar__header">
-          <h2 className="sidebar__header-title">Фільтри</h2>
-          <button className="sidebar__close-btn" onClick={() => setIsSidebarOpen(false)}>✕</button>
+          <h2 className="sidebar__header--title">Фільтри</h2>
+          <button className="sidebar__close--btn" onClick={() => setIsSidebarOpen(false)}>✕</button>
         </div>
 
 
@@ -582,7 +582,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
 
             <div className="sidebar__reset">
-              <button onClick={resetFilters} className="sidebar__reset-btn">
+              <button onClick={resetFilters} className="sidebar__reset--btn">
                 Скинути всі фільтри
               </button>
             </div>

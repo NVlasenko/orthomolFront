@@ -8,7 +8,7 @@ export const useFilters = () => {
   const filters: Filters = {
     priceRange: {
       min: Number(searchParams.get("min")) || 0,
-      max: Number(searchParams.get("max")) || 10000000000,
+      max: Number(searchParams.get("max")) || 100000,
     },
     gender: searchParams.get("gender") || "all",
     ageCategory: searchParams.get("ageCategory") || "all",
