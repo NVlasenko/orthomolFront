@@ -1,112 +1,373 @@
+// @import "../../styles/variables";
+// @import "../../styles/mixins";
+
+// .sidebar {
+//   // width: 240px;
+//   background-color: #f9f9f9;
+//   padding: 20px;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+//   font-family: "Montserrat", sans-serif;
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   align-content: stretch;
+//   justify-content: space-evenly;
+//   margin-top: 20px;
+//   position: relative;
+//   z-index: 1001;
+//   overflow-y: auto;
+//   @include on-tablet {
+//   }
+
+//   @include on-mid-desktop {
+//     flex-direction: column;
+//     justify-content: initial;
+//     width: 240px;
+//     margin-top: 30px;
+//   }
+
+//   @include on-desktop {
+//     flex-direction: column;
+//     justify-content: initial;
+//     width: 240px;
+//     margin-top: 40px;
+//   }
+//   &__section {
+//     margin-bottom: 20px;
+//   }
+
+//   &__title {
+//     font-size: 12px;
+//     font-weight: 700;
+//     line-height: 31.68px;
+//     color: $first-primary-color;
+//     @include on-tablet {
+//       font-size: 14px;
+//     }
+
+//     @include on-mid-desktop {
+//       font-size: 17px;
+//     }
+
+//     @include on-desktop {
+//       font-size: 17px;
+//     }
+//   }
+
+//   &__list {
+//     list-style: none;
+//     padding: 0;
+
+//     li {
+//       margin-bottom: 10px;
+
+//       label {
+//         color: $first-primary-color;
+//         cursor: pointer;
+//         display: flex;
+//         align-items: center;
+//         gap: 10px;
+//         font-size: 10px;
+//         font-weight: 500;
+//         line-height: 10px;
+//         @include on-tablet {
+//           font-size: 12px;
+//         }
+
+//         @include on-mid-desktop {
+//           font-size: 14px;
+//         }
+
+//         @include on-desktop {
+//           font-size: 14px;
+//           line-height: 22px;
+//         }
+//         input[type="checkbox"] {
+//           accent-color: #6b46c1;
+//           width: 16px;
+//           height: 16px;
+//         }
+//       }
+//     }
+//   }
+
+//   &__price {
+//     display: flex;
+//     align-items: center;
+//     gap: 5px;
+
+//     .sidebar__input {
+//       width: 80px;
+//       padding: 5px;
+//       font-size: 14px;
+//       border: 1px solid #ddd;
+//       border-radius: 4px;
+//     }
+//   }
+
+//   &__slider {
+//     margin-top: 10px;
+
+//     .sidebar__range {
+//       width: 100%;
+//       cursor: pointer;
+//     }
+//   }
+
+//   &__reset {
+//     margin-top: 20px;
+//     display: flex;
+//     justify-content: center;
+//   }
+
+//   &__reset-btn {
+//     background-color: #6b46c1;
+//     color: #fff;
+//     padding: 10px 20px;
+//     border: none;
+//     border-radius: 8px;
+//     cursor: pointer;
+//     font-size: 16px;
+//     font-weight: 500;
+//     transition: background-color 0.3s ease;
+
+//     &:hover {
+//       background-color: darken(#6b46c1, 10%);
+//     }
+//   }
+
+
+// }
+
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
-.sidebar {
-  // width: 240px;
-  background-color: #f9f9f9;
-  padding: 20px;
+.sidebar-wrapper {
+  position: relative;
+}
+
+/* Кнопка "Фільтри" только для мобильных и планшетов */
+.sidebar__toggle-btn {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  padding: 10px;
+  background-color: $second-primary-color;
+  color: white;
+  border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: stretch;
-  justify-content: space-evenly;
-  @include on-tablet {
-   
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($second-primary-color, 10%);
   }
 
   @include on-mid-desktop {
-    flex-direction: column;
-    justify-content: initial;
-    width: 240px;
+    display: none;
   }
-
-@include on-desktop {
-  flex-direction: column;
-  justify-content: initial;
-    width: 240px;
+  @include on-desktop {
+    display: none;
+  }
 }
-  &__section {
-    margin-bottom: 20px;
+
+/* Оверлей при открытом сайдбаре на моб и планшетах */
+.sidebar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: block;
+
+  @include on-mid-desktop {
+    display: none;
+  }
+  @include on-desktop {
+    display: none;
+  }
+}
+
+/* Сам сайдбар */
+.sidebar {
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100vh;
+  width: 280px;
+  overflow-y: auto;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+
+  &--open {
+    left: 0;
   }
 
-  &__title {
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 31.68px;
-    color: $first-primary-color;
-    @include on-tablet {
-   font-size: 14px;
-    }
-  
-    @include on-mid-desktop {
-     font-size: 17px;
-    }
-  
+  @include on-mid-desktop {
+    position: static;
+    height: auto;
+    left: 0;
+    width: 240px;
+    margin-top: 30px;
+  }
+  @include on-desktop {
+    position: static;
+    height: auto;
+    left: 0;
+    width: 240px;
+    margin-top: 40px;
+  }
+}
+
+/* Заголовок + кнопка закрытия (ТОЛЬКО для моб и планшета) */
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+
+  @include on-mid-desktop {
+    display: none;
+  }
+  @include on-desktop {
+    display: none;
+  }
+}
+
+.sidebar__header-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar__close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Секция фильтров */
+.sidebar__section {
+  margin-bottom: 20px;
+}
+
+.sidebar__title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 31.68px;
+  color: $first-primary-color;
+
+  @include on-tablet {
+    font-size: 14px;
+  }
+
+  @include on-mid-desktop {
+    font-size: 17px;
+  }
+
   @include on-desktop {
     font-size: 17px;
   }
-  }
+}
 
-  &__list {
-    list-style: none;
-    padding: 0;
+/* Список фильтров */
+.sidebar__list {
+  list-style: none;
+  padding: 0;
 
-    li {
-      margin-bottom: 10px;
+  li {
+    margin-bottom: 10px;
 
-      label {
-        color: $first-primary-color;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 10px;
-        font-weight: 500;
-        line-height: 10px;
-        @include on-tablet {
-   font-size: 12px;
-        }
-      
-        @include on-mid-desktop {
-         font-size: 14px;
-        }
-      
+    label {
+      color: $first-primary-color;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 10px;
+
+      @include on-tablet {
+        font-size: 12px;
+      }
+
+      @include on-mid-desktop {
+        font-size: 14px;
+      }
+
       @include on-desktop {
         font-size: 14px;
         line-height: 22px;
       }
-        input[type="checkbox"] {
-          accent-color: #6b46c1;
-          width: 16px;
-          height: 16px;
-        }
+
+      input[type="checkbox"] {
+        accent-color: #6b46c1;
+        width: 16px;
+        height: 16px;
       }
     }
   }
+}
 
-  &__price {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+/* Ползунки ценового фильтра */
+.sidebar__price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 
-    .sidebar__input {
-      width: 80px;
-      padding: 5px;
-      font-size: 14px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
+  .sidebar__input {
+    width: 80px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
   }
+}
 
-  &__slider {
-    margin-top: 10px;
+.sidebar__slider {
+  margin-top: 10px;
 
-    .sidebar__range {
-      width: 100%;
-      cursor: pointer;
-    }
+  .sidebar__range {
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+/* Кнопка "Скинути всі фільтри" */
+.sidebar__reset {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar__reset-btn {
+  background-color: #6b46c1;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(#6b46c1, 10%);
   }
 }
