@@ -38,8 +38,6 @@ export const DropDownCatalog: React.FC = () => {
           <ul className="vitamins__category--list">
             <li className="vitamins__category--item">Біотин</li>
             <li className="vitamins__category--item">Фолієва кислота</li>
-            <li className="vitamins__category--item">Біотин</li>
-            <li className="vitamins__category--item">Фолієва кислота</li>
           </ul>
         </div>
 

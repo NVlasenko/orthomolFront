@@ -6,7 +6,11 @@
     "category": "magnesium",
     "gender": "women",
     "ageCategory": ["до 18 років"],
-    "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
+    "healthCategory": [
+      "Імунна система",
+      "Стрес та порушення сну",
+      "Мозкова активність"
+    ],
     "priceRegular": 33353,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
@@ -14,10 +18,16 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Таблетки",
-    "taste":"Апельсин",
+    "taste": "Апельсин",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
+    "compositionOfVitamins": [
+      {
+        "vitamin": "D",
+        "details": ["Вітамін D 400 -5000ME", "Вітамін D 5000-25000ME"]
+      }
+    ] ,
     "description": [
       {
         "text": [
@@ -66,7 +76,11 @@
     "category": "magnesium",
     "gender": "women",
     "ageCategory": ["до 18 років"],
-    "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
+    "healthCategory": [
+      "Імунна система",
+      "Стрес та порушення сну",
+      "Мозкова активність"
+    ],
     "priceRegular": 32153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
@@ -74,10 +88,16 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Таблетки",
-    "taste":"Апельсин",
+    "taste": "Апельсин",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
+    "compositionOfVitamins": [
+      {
+        "vitamin": "B",
+        "details": ["Біотин", "Фолієва кислота"]
+      }
+    ] ,
     "description": [
       {
         "text": [
@@ -126,7 +146,11 @@
     "category": "magnesium",
     "gender": "women",
     "ageCategory": ["до 18 років"],
-    "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
+    "healthCategory": [
+      "Імунна система",
+      "Стрес та порушення сну",
+      "Мозкова активність"
+    ],
     "priceRegular": 2,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
@@ -134,10 +158,16 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Таблетки",
-    "taste":"Апельсин",
+    "taste": "Апельсин",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
+    "compositionOfVitamins": [
+      {
+        "vitamin": "B",
+        "details": ["Фолієва кислота"]
+      }
+    ] ,
     "description": [
       {
         "text": [
@@ -186,7 +216,11 @@
     "category": "magnesium",
     "gender": "women",
     "ageCategory": ["до 18 років"],
-    "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
+    "healthCategory": [
+      "Імунна система",
+      "Стрес та порушення сну",
+      "Мозкова активність"
+    ],
     "priceRegular": 5153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
@@ -194,10 +228,15 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Таблетки",
-    "taste":"Апельсин",
+    "taste": "Апельсин",
     "packaging": 90,
     "hit": true,
     "expirationDate": "30 лип. 2026 р.",
+    "compositionOfVitamins": [
+      {
+        "vitamin": "K"
+      }
+    ] ,
     "description": [
       {
         "text": [
@@ -246,7 +285,11 @@
     "category": "magnesium",
     "gender": "men",
     "ageCategory": ["до 18 років"],
-    "healthCategory": ["Імунна система", "Стрес та порушення сну", "Мозкова активність"],
+    "healthCategory": [
+      "Імунна система",
+      "Стрес та порушення сну",
+      "Мозкова активність"
+    ],
     "priceRegular": 166153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
@@ -254,10 +297,15 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Таблетки",
-    "taste":"Грейпфрут",
+    "taste": "Грейпфрут",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
+    "compositionOfVitamins": [
+      {
+        "vitamin": "A"
+      }
+    ] ,
     "description": [
       {
         "text": [
@@ -306,7 +354,11 @@
     "category": "magnesium",
     "gender": "men",
     "ageCategory": ["до 18 років"],
-    "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
+    "healthCategory": [
+      "Краса (шкіра, волосся, нігті)",
+      "Зачаття та вагітність",
+      "Зір"
+    ],
     "priceRegular": 1545153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
@@ -314,10 +366,15 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Капсули",
-    "taste":"Грейпфрут",
+    "taste": "Грейпфрут",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
+    "compositionOfVitamins": [
+      {
+        "vitamin": "E"
+      }
+    ] ,
     "description": [
       {
         "text": [
@@ -366,7 +423,11 @@
     "category": "magnesium",
     "gender": "women",
     "ageCategory": ["від 18 до 50 років"],
-    "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
+    "healthCategory": [
+      "Краса (шкіра, волосся, нігті)",
+      "Зачаття та вагітність",
+      "Зір"
+    ],
     "priceRegular": 15153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
@@ -374,10 +435,15 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Капсули",
-    "taste":"Грейпфрут",
+    "taste": "Грейпфрут",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
+    "compositionOfVitamins": [
+      {
+        "vitamin": "C"
+      }
+    ] ,
     "description": [
       {
         "text": [
@@ -426,7 +492,11 @@
     "category": "magnesium",
     "gender": "women",
     "ageCategory": ["від 18 до 50 років"],
-    "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
+    "healthCategory": [
+      "Краса (шкіра, волосся, нігті)",
+      "Зачаття та вагітність",
+      "Зір"
+    ],
     "priceRegular": 7753,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
@@ -434,10 +504,16 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Капсули",
-    "taste":"Грейпфрут",
+    "taste": "Грейпфрут",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
+    "compositionOfVitamins": [
+      {
+        "vitamin": "D",
+        "details": ["Вітамін D 400 -5000ME"]
+      }
+    ] ,
     "description": [
       {
         "text": [
@@ -486,7 +562,11 @@
     "category": "immune",
     "gender": "men",
     "ageCategory": ["від 18 до 50 років"],
-    "healthCategory": ["Краса (шкіра, волосся, нігті)", "Зачаття та вагітність", "Зір"],
+    "healthCategory": [
+      "Краса (шкіра, волосся, нігті)",
+      "Зачаття та вагітність",
+      "Зір"
+    ],
     "priceRegular": 12153,
     "imgProductRef": "/images/product/product1.svg",
     "imgCategoryRef": "/images/product/productCategory.svg",
@@ -494,7 +574,7 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Капсули",
-    "taste":"Лайм-малина",
+    "taste": "Лайм-малина",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
@@ -554,7 +634,7 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Питні пляшечки",
-    "taste":"Лайм-малина",
+    "taste": "Лайм-малина",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
@@ -614,7 +694,7 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Питні пляшечки",
-    "taste":"Лайм-малина",
+    "taste": "Лайм-малина",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
@@ -674,7 +754,7 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Питні пляшечки",
-    "taste":"Лайм-малина",
+    "taste": "Лайм-малина",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
@@ -734,7 +814,7 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Питні пляшечки",
-    "taste":"Лісові ягоди",
+    "taste": "Лісові ягоди",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
@@ -794,7 +874,7 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Капсули",
-    "taste":"Лісові ягоди",
+    "taste": "Лісові ягоди",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
@@ -854,7 +934,7 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Капсули",
-    "taste":"Лісові ягоди",
+    "taste": "Лісові ягоди",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
@@ -914,7 +994,7 @@
     "articleNumber": "CEN22263",
     "brand": "21st Century",
     "shape": "Капсули",
-    "taste":"Лісові ягоди",
+    "taste": "Лісові ягоди",
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
@@ -955,6 +1035,584 @@
       {
         "text": [
           "Якщо у вас діагностовано одне з наступних захворювань: остеопороз, рахіт, серцево-судинні захворювання, псоріаз, вітіліго, епілепсія, розсіяний склероз, симптоми зниженого імунітету."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "NeuroBoost",
+    "appointment": "Допомагає підвищити концентрацію та покращити пам’ять",
+    "category": "brain",
+    "gender": "unisex",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Мозкова активність", "Стрес та порушення сну"],
+    "priceRegular": 27999,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN22345",
+    "brand": "Nature's Way",
+    "shape": "Капсули",
+    "taste": "Лайм-малина",
+    "packaging": 60,
+    "hit": false,
+    "expirationDate": "25 серп. 2026 р.",
+    "description": [
+      {
+        "text": [
+          "NeuroBoost – це спеціально розроблений комплекс для підтримки когнітивної функції."
+        ]
+      },
+      {
+        "text": [
+          "Продукт містить екстракт гінкго білоба, який покращує кровопостачання мозку."
+        ]
+      }
+    ],
+    "recommendation": [
+      {
+        "title": ["Для кого рекомендується"]
+      },
+      {
+        "text": [
+          "Підходить для студентів, офісних працівників, людей з підвищеними розумовими навантаженнями."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "HeartGuard",
+    "appointment": "Підтримка серцево-судинної системи",
+    "category": "heart",
+    "gender": "men",
+    "ageCategory": ["від 50 років"],
+    "healthCategory": ["Серце і судини", "Травлення"],
+    "priceRegular": 31500,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN22567",
+    "brand": "NOW Foods",
+    "shape": "Таблетки",
+    "taste": "Грейпфрут",
+    "packaging": 90,
+    "hit": true,
+    "expirationDate": "10 черв. 2025 р.",
+    "description": [
+      {
+        "text": [
+          "HeartGuard допомагає нормалізувати кров'яний тиск і підтримувати роботу серця."
+        ]
+      },
+      {
+        "text": [
+          "Містить коензим Q10 та омега-3 для оптимальної серцево-судинної підтримки."
+        ]
+      }
+    ],
+    "recommendation": [
+      {
+        "title": ["Кому варто приймати"]
+      },
+      {
+        "text": [
+          "Рекомендується для людей з підвищеним рівнем холестерину або серцевими проблемами."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Immunity Pro",
+    "appointment": "Зміцнює імунітет та підвищує стійкість до вірусів",
+    "category": "immune",
+    "gender": "women",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Імунна система", "Краса (шкіра, волосся, нігті)"],
+    "priceRegular": 29900,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": false,
+    "articleNumber": "CEN22888",
+    "brand": "Swisse",
+    "shape": "Капсули",
+    "taste": "Лісові ягоди",
+    "packaging": 60,
+    "hit": false,
+    "expirationDate": "5 лют. 2027 р.",
+    "description": [
+      {
+        "text": [
+          "Immunity Pro містить вітамін C, цинк і екстракт ехінацеї для зміцнення імунітету."
+        ]
+      },
+      {
+        "text": ["Допомагає організму боротися з вірусами та бактеріями."]
+      }
+    ],
+    "recommendation": [
+      {
+        "title": ["Рекомендується"]
+      },
+      {
+        "text": [
+          "Підходить для людей, які часто хворіють або мають ослаблений імунітет."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Vision Max",
+    "appointment": "Підтримує здоров'я очей та знижує втому",
+    "category": "vision",
+    "gender": "unisex",
+    "ageCategory": ["від 50 років"],
+    "healthCategory": ["Зір", "Мозкова активність"],
+    "priceRegular": 18500,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN22999",
+    "brand": "Doctor's Best",
+    "shape": "Таблетки",
+    "taste": "Апельсин",
+    "packaging": 120,
+    "hit": true,
+    "expirationDate": "15 трав. 2026 р.",
+    "description": [
+      {
+        "text": [
+          "Vision Max містить лютеїн та зеаксантин для захисту очей від шкідливого впливу."
+        ]
+      },
+      {
+        "text": [
+          "Допомагає знизити втому очей при тривалій роботі за комп’ютером."
+        ]
+      }
+    ],
+    "recommendation": [
+      {
+        "title": ["Для кого цей продукт"]
+      },
+      {
+        "text": [
+          "Ідеально підходить для людей, які багато працюють за монітором або мають вікові зміни зору."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Energy Shot",
+    "appointment": "Заряд енергії та підтримка активності протягом дня",
+    "category": "energy",
+    "gender": "men",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Спорт", "Мозкова активність"],
+    "priceRegular": 26500,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": false,
+    "articleNumber": "CEN23012",
+    "brand": "Optimum Nutrition",
+    "shape": "Питні пляшечки",
+    "taste": "Грейпфрут",
+    "packaging": 12,
+    "hit": false,
+    "expirationDate": "28 бер. 2025 р.",
+    "description": [
+      {
+        "text": [
+          "Energy Shot містить кофеїн, таурин та вітаміни групи B для підтримки енергії."
+        ]
+      },
+      {
+        "text": ["Допомагає підвищити продуктивність та витривалість."]
+      }
+    ],
+    "recommendation": [
+      {
+        "title": ["Для активних людей"]
+      },
+      {
+        "text": [
+          "Рекомендується для спортсменів, водіїв та людей з напруженим графіком."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "SleepWell",
+    "appointment": "Сприяє здоровому сну та знижує рівень стресу",
+    "category": "sleep",
+    "gender": "unisex",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Стрес та порушення сну"],
+    "priceRegular": 19900,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN23123",
+    "brand": "Nature Made",
+    "shape": "Капсули",
+    "taste": "Лісові ягоди",
+    "packaging": 60,
+    "hit": false,
+    "expirationDate": "10 лип. 2026 р."
+  },
+  {
+    "id": 23,
+    "name": "DigestPlus",
+    "appointment": "Допомагає покращити травлення та підтримує здоров’я шлунку",
+    "category": "digest",
+    "gender": "unisex",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Травлення"],
+    "priceRegular": 24500,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN23234",
+    "brand": "Solgar",
+    "shape": "Таблетки",
+    "taste": "Апельсин",
+    "packaging": 90,
+    "hit": true,
+    "expirationDate": "22 жовт. 2025 р."
+  },
+  {
+    "id": 24,
+    "name": "IronBoost",
+    "appointment": "Допомагає підтримувати рівень заліза в організмі",
+    "category": "iron",
+    "gender": "women",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Краса (шкіра, волосся, нігті)", "Імунна система"],
+    "priceRegular": 27800,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": false,
+    "articleNumber": "CEN23345",
+    "brand": "MegaFood",
+    "shape": "Капсули",
+    "taste": "Грейпфрут",
+    "packaging": 60,
+    "hit": false,
+    "expirationDate": "15 бер. 2027 р."
+  },
+  {
+    "id": 25,
+    "name": "Collagen Beauty",
+    "appointment": "Сприяє здоров'ю шкіри, волосся та нігтів",
+    "category": "beauty",
+    "gender": "women",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Краса (шкіра, волосся, нігті)"],
+    "priceRegular": 32000,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN23456",
+    "brand": "Vital Proteins",
+    "shape": "Питні пляшечки",
+    "taste": "Лайм-малина",
+    "packaging": 30,
+    "hit": true,
+    "expirationDate": "5 серп. 2026 р."
+  },
+  {
+    "id": 26,
+    "name": "ProstateCare",
+    "appointment": "Підтримує здоров’я передміхурової залози",
+    "category": "prostate",
+    "gender": "men",
+    "ageCategory": ["від 50 років"],
+    "healthCategory": ["Простата"],
+    "priceRegular": 31000,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN23567",
+    "brand": "NOW Foods",
+    "shape": "Капсули",
+    "taste": "Лісові ягоди",
+    "packaging": 60,
+    "hit": false,
+    "expirationDate": "30 лист. 2025 р."
+  },
+  {
+    "id": 27,
+    "name": "Liver Detox",
+    "appointment": "Очищення та підтримка здоров'я печінки",
+    "category": "liver",
+    "gender": "unisex",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Травлення"],
+    "priceRegular": 23500,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": false,
+    "articleNumber": "CEN23678",
+    "brand": "Gaia Herbs",
+    "shape": "Таблетки",
+    "taste": "Апельсин",
+    "packaging": 90,
+    "hit": false,
+    "expirationDate": "18 черв. 2026 р."
+  },
+  {
+    "id": 28,
+    "name": "Kids Immune",
+    "appointment": "Зміцнює імунітет дітей",
+    "category": "kids",
+    "gender": "unisex",
+    "ageCategory": ["Діти"],
+    "healthCategory": ["Імунна система"],
+    "priceRegular": 18000,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN23789",
+    "brand": "SmartyPants",
+    "shape": "Капсули",
+    "taste": "Лайм-малина",
+    "packaging": 60,
+    "hit": true,
+    "expirationDate": "5 груд. 2027 р."
+  },
+  {
+    "id": 29,
+    "name": "Glucose Balance",
+    "appointment": "Підтримує рівень цукру в крові",
+    "category": "diabetes",
+    "gender": "unisex",
+    "ageCategory": ["від 50 років"],
+    "healthCategory": ["Серце і судини"],
+    "priceRegular": 29500,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN23890",
+    "brand": "Nature's Bounty",
+    "shape": "Таблетки",
+    "taste": "Апельсин",
+    "packaging": 90,
+    "hit": false,
+    "expirationDate": "20 лют. 2026 р."
+  },
+  {
+    "id": 30,
+    "name": "Sport Recovery",
+    "appointment": "Допомагає швидкому відновленню після тренувань",
+    "category": "sport",
+    "gender": "men",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Спорт"],
+    "priceRegular": 34000,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN23901",
+    "brand": "BSN",
+    "shape": "Питні пляшечки",
+    "taste": "Грейпфрут",
+    "packaging": 12,
+    "hit": true,
+    "expirationDate": "15 лип. 2025 р."
+  },
+  {
+    "id": 31,
+    "name": "HeartGuard",
+    "appointment": "Підтримка серцево-судинної системи",
+    "category": "heart",
+    "gender": "unisex",
+    "ageCategory": ["від 50 років"],
+    "healthCategory": ["Серце і судини"],
+    "priceRegular": 31500,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN24001",
+    "brand": "Doctor's Best",
+    "shape": "Капсули",
+    "taste": "Апельсин",
+    "packaging": 90,
+    "hit": true,
+    "expirationDate": "10 серп. 2026 р.",
+    "description": [
+      {
+        "text": [
+          "HeartGuard допомагає підтримувати здоров'я серця, знижує рівень холестерину та покращує циркуляцію крові."
+        ]
+      },
+      {
+        "text": [
+          "Містить коензим Q10, омега-3 жирні кислоти та магній, які сприяють нормалізації артеріального тиску."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "EyeVision Max",
+    "appointment": "Підтримує зір і здоров'я очей",
+    "category": "vision",
+    "gender": "unisex",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Зір"],
+    "priceRegular": 26000,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": false,
+    "articleNumber": "CEN24002",
+    "brand": "Puritan's Pride",
+    "shape": "Таблетки",
+    "taste": "Лісові ягоди",
+    "packaging": 60,
+    "hit": false,
+    "expirationDate": "5 квіт. 2026 р.",
+    "description": [
+      {
+        "text": [
+          "EyeVision Max містить лютеїн і зеаксантин, які сприяють підтримці гостроти зору."
+        ]
+      },
+      {
+        "text": [
+          "Рекомендується для людей, які працюють за комп’ютером або мають підвищене навантаження на очі."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "KidSmart Omega",
+    "appointment": "Розвиток мозку і пам’яті у дітей",
+    "category": "kids",
+    "gender": "unisex",
+    "ageCategory": ["Діти"],
+    "healthCategory": ["Мозкова активність"],
+    "priceRegular": 19800,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN24003",
+    "brand": "Nordic Naturals",
+    "shape": "Капсули",
+    "taste": "Лайм-малина",
+    "packaging": 30,
+    "hit": true,
+    "expirationDate": "22 трав. 2027 р.",
+    "description": [
+      {
+        "text": [
+          "KidSmart Omega містить омега-3 DHA, необхідну для розвитку мозку у дітей."
+        ]
+      },
+      {
+        "text": [
+          "Підходить для дітей від 3 років, сприяє концентрації уваги та покращенню когнітивних функцій."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "ImmunoBoost",
+    "appointment": "Зміцнення імунітету в сезон застуд",
+    "category": "immune",
+    "gender": "unisex",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Імунна система"],
+    "priceRegular": 27850,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN24004",
+    "brand": "Nature's Way",
+    "shape": "Питні пляшечки",
+    "taste": "Грейпфрут",
+    "packaging": 20,
+    "hit": false,
+    "expirationDate": "15 вер. 2026 р.",
+    "description": [
+      {
+        "text": [
+          "ImmunoBoost містить вітамін C, цинк і екстракт ехінацеї для підтримки імунітету."
+        ]
+      },
+      {
+        "text": [
+          "Сприяє швидкому відновленню після хвороб і підвищує захисні сили організму."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "NeuroBalance",
+    "appointment": "Підтримує роботу нервової системи",
+    "category": "nervous",
+    "gender": "unisex",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Стрес та порушення сну"],
+    "priceRegular": 31200,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": false,
+    "articleNumber": "CEN24005",
+    "brand": "Thorne Research",
+    "shape": "Капсули",
+    "taste": "Лісові ягоди",
+    "packaging": 90,
+    "hit": true,
+    "expirationDate": "30 жовт. 2025 р.",
+    "description": [
+      {
+        "text": [
+          "NeuroBalance допомагає зменшити рівень стресу, покращує якість сну та емоційний стан."
+        ]
+      },
+      {
+        "text": [
+          "Містить магній, вітаміни групи B та екстракт ашваганди для заспокоєння нервової системи."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "VitalPregnancy",
+    "appointment": "Комплекс для вагітних для підтримки здоров’я матері та дитини",
+    "category": "pregnancy",
+    "gender": "women",
+    "ageCategory": ["Зачаття та вагітність"],
+    "healthCategory": ["Зачаття та вагітність"],
+    "priceRegular": 29000,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN24006",
+    "brand": "Garden of Life",
+    "shape": "Таблетки",
+    "taste": "Апельсин",
+    "packaging": 120,
+    "hit": false,
+    "expirationDate": "1 лип. 2027 р.",
+    "description": [
+      {
+        "text": [
+          "VitalPregnancy містить фолієву кислоту, залізо та DHA для підтримки здоров'я матері та розвитку дитини."
+        ]
+      },
+      {
+        "text": [
+          "Допомагає знизити ризик дефектів розвитку та підтримує нормальну вагітність."
         ]
       }
     ]

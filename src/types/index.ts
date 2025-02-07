@@ -7,6 +7,11 @@ export type ProductRecommendation = {
   text?: string[];
 };
 
+export type CompositionOfVitamins = {
+  vitamin?: string;
+  details?: string[]; // Поле details также необязательно
+};
+
 export type Product = {
   id: number;
   name: string;
@@ -26,6 +31,7 @@ export type Product = {
   hit: boolean;
   packaging: number;
   expirationDate: string;
+  compositionOfVitamins?: CompositionOfVitamins[];
   description: ProductDescription[];
   recommendation: ProductRecommendation[];
 };

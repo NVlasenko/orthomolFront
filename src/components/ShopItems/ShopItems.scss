@@ -5,7 +5,6 @@
   width: 100%;
   padding: 20px 0;
   margin: 0 auto;
-
   margin-bottom: 200px;
   &__header {
     display: flex;
@@ -101,9 +100,13 @@
     align-content: center;
 
     @include on-tablet {
-      row-gap: 150px;
-      column-gap: 50px;
-      width: auto;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    place-items: center; /* Центрирование по горизонтали и вертикали */
+
+    margin-top: 150px;
+    row-gap: 150px;
+    column-gap: 50px;
+    width: auto;
     }
     @include on-mid-desktop {
       column-gap: 30px;

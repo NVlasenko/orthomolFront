@@ -338,7 +338,7 @@
         content: "";
         position: absolute;
         top: 8px;
-        left: 15px;
+        left: 11px;
         width: 22px;
         height: 23px;
         background: url("../../../public/images/icons/basket2.svg") no-repeat center / contain;
@@ -372,10 +372,26 @@
   }
 }
 
+// .flying__image {
+//   position: absolute;
+//   bottom: 10px;
+//   left: 60%;
+//   transform: translateX(-50%) scale(0);
+//   width: 40px;
+//   height: 40px;
+//   opacity: 0;
+//   transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+//   pointer-events: none;
+
+//   &--active {
+//     transform: translate(250px, -700px) scale(3);
+//     opacity: 1;
+//   }
+// }
 .flying__image {
   position: absolute;
   bottom: 10px;
-  left: 50%;
+  left: 60%;
   transform: translateX(-50%) scale(0);
   width: 40px;
   height: 40px;
@@ -384,7 +400,17 @@
   pointer-events: none;
 
   &--active {
-    transform: translate(250px, -700px) scale(3);
+    animation: fly-diagonal 1.5s ease-in-out forwards;
+  }
+}
+
+@keyframes fly-diagonal {
+  0% {
+    transform: translate(0, 0) scale(1);
     opacity: 1;
+  }
+  100% {
+    transform: translate(300px, -700px) scale(3);
+    opacity: 0;
   }
 }

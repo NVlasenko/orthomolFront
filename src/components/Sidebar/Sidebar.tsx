@@ -329,7 +329,6 @@
 // //         </ul>
 // //       </div>
 
-
 // //       <div className="sidebar__section">
 // //         <h3 className="sidebar__title">Форма випуску</h3>
 // //         <ul className="sidebar__list">
@@ -383,7 +382,6 @@
 // //           </li>
 // //         </ul>
 // //       </div>
-
 
 // //       <div className="sidebar__section">
 // //         <h3 className="sidebar__title">Смак</h3>
@@ -814,7 +812,6 @@
 //         </ul>
 //       </div>
 
-
 //       <div className="sidebar__section">
 //         <h3 className="sidebar__title">Форма випуску</h3>
 //         <ul className="sidebar__list">
@@ -868,7 +865,6 @@
 //           </li>
 //         </ul>
 //       </div>
-
 
 //       <div className="sidebar__section">
 //         <h3 className="sidebar__title">Смак</h3>
@@ -1299,7 +1295,6 @@
 //         </ul>
 //       </div>
 
-
 //       <div className="sidebar__section">
 //         <h3 className="sidebar__title">Форма випуску</h3>
 //         <ul className="sidebar__list">
@@ -1353,7 +1348,6 @@
 //           </li>
 //         </ul>
 //       </div>
-
 
 //       <div className="sidebar__section">
 //         <h3 className="sidebar__title">Смак</h3>
@@ -1457,9 +1451,10 @@ import React from "react";
 import "./Sidebar.scss";
 import { SidebarProps } from "../../types/Filters";
 
-
-
-export const Sidebar: React.FC<SidebarProps> = ({ filters, onFilterChange }) => {
+export const Sidebar: React.FC<SidebarProps> = ({
+  filters,
+  onFilterChange,
+}) => {
   const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     onFilterChange({
@@ -1471,7 +1466,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ filters, onFilterChange }) => 
     });
   };
 
-  const handleFilterChange = (key: keyof typeof filters, value: string | boolean) => {
+  const handleFilterChange = (
+    key: keyof typeof filters,
+    value: string | boolean
+  ) => {
     onFilterChange({
       ...filters,
       [key]: value,
@@ -1534,7 +1532,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ filters, onFilterChange }) => 
                   checked={filters.gender === gender}
                   onChange={(e) => handleFilterChange("gender", e.target.value)}
                 />
-                {gender === "all" ? "Всі" : gender === "women" ? "Для жінок" : "Для чоловіків"}
+                {gender === "all"
+                  ? "Всі"
+                  : gender === "women"
+                  ? "Для жінок"
+                  : "Для чоловіків"}
               </label>
             </li>
           ))}
@@ -1542,30 +1544,31 @@ export const Sidebar: React.FC<SidebarProps> = ({ filters, onFilterChange }) => 
       </div>
 
       <div className="sidebar__section">
-  <h3 className="sidebar__title">Вік</h3>
-  <ul className="sidebar__list">
-    {[
-      { value: "all", label: "Всі" },
-      { value: "до 18 років", label: "До 18 років" },
-      { value: "від 18 до 50 років", label: "Від 18 до 50 років" },
-      { value: "від 50 років", label: "Від 50 років" },
-    ].map(({ value, label }) => (
-      <li key={value}>
-        <label>
-          <input
-            type="radio"
-            name="ageCategory"
-            value={value}
-            checked={filters.ageCategory === value}
-            onChange={(e) => handleFilterChange("ageCategory", e.target.value)}
-          />
-          {label}
-        </label>
-      </li>
-    ))}
-  </ul>
-</div>
-
+        <h3 className="sidebar__title">Вік</h3>
+        <ul className="sidebar__list">
+          {[
+            { value: "all", label: "Всі" },
+            { value: "до 18 років", label: "До 18 років" },
+            { value: "від 18 до 50 років", label: "Від 18 до 50 років" },
+            { value: "від 50 років", label: "Від 50 років" },
+          ].map(({ value, label }) => (
+            <li key={value}>
+              <label>
+                <input
+                  type="radio"
+                  name="ageCategory"
+                  value={value}
+                  checked={filters.ageCategory === value}
+                  onChange={(e) =>
+                    handleFilterChange("ageCategory", e.target.value)
+                  }
+                />
+                {label}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div className="sidebar__section">
         <h3 className="sidebar__title">Призначення</h3>
@@ -1576,8 +1579,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ filters, onFilterChange }) => 
             { value: "Травлення", label: "Травлення" },
             { value: "Мозкова активність", label: "Мозкова активність" },
             { value: "мунна система", label: "Імунна система" },
-            { value: "Стрес та порушення сну", label: "Стрес та порушення сну" },
-            { value: "Краса (шкіра, волосся, нігті)", label: "Краса (шкіра, волосся, нігті)" },
+            {
+              value: "Стрес та порушення сну",
+              label: "Стрес та порушення сну",
+            },
+            {
+              value: "Краса (шкіра, волосся, нігті)",
+              label: "Краса (шкіра, волосся, нігті)",
+            },
             { value: "Зачаття та вагітність", label: "Зачаття та вагітність" },
             { value: "Зір", label: "Зір" },
             { value: "Простата", label: "Простата" },
@@ -1591,7 +1600,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ filters, onFilterChange }) => 
                   name="purpose"
                   value={value}
                   checked={filters.purpose === value}
-                  onChange={(e) => handleFilterChange("purpose", e.target.value)}
+                  onChange={(e) =>
+                    handleFilterChange("purpose", e.target.value)
+                  }
                 />
                 {label}
               </label>
@@ -1601,32 +1612,29 @@ export const Sidebar: React.FC<SidebarProps> = ({ filters, onFilterChange }) => 
       </div>
 
       <div className="sidebar__section">
-  <h3 className="sidebar__title">Форма випуску</h3>
-  <ul className="sidebar__list">
-    {[
-      { value: "all", label: "Всі" },
-      { value: "Таблетки", label: "Таблетки" },
-      { value: "Капсули", label: "Капсули" },
-      { value: "Питні пляшечки", label: "Питні пляшечки" },
-    ].map(({ value, label }) => (
-      <li key={value}>
-        <label>
-          <input
-            type="radio"
-            name="shape"
-            value={value}
-            checked={filters.shape === value}
-            onChange={(e) => handleFilterChange("shape", e.target.value)}
-          />
-          {label}
-        </label>
-      </li>
-    ))}
-  </ul>
-</div>
-
-
-
+        <h3 className="sidebar__title">Форма випуску</h3>
+        <ul className="sidebar__list">
+          {[
+            { value: "all", label: "Всі" },
+            { value: "Таблетки", label: "Таблетки" },
+            { value: "Капсули", label: "Капсули" },
+            { value: "Питні пляшечки", label: "Питні пляшечки" },
+          ].map(({ value, label }) => (
+            <li key={value}>
+              <label>
+                <input
+                  type="radio"
+                  name="shape"
+                  value={value}
+                  checked={filters.shape === value}
+                  onChange={(e) => handleFilterChange("shape", e.target.value)}
+                />
+                {label}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div className="sidebar__section">
         <h3 className="sidebar__title">Смак</h3>
@@ -1654,36 +1662,32 @@ export const Sidebar: React.FC<SidebarProps> = ({ filters, onFilterChange }) => 
         </ul>
       </div>
       <div className="sidebar__section">
-  <h3 className="sidebar__title">Інші фільтри</h3>
-  <ul className="sidebar__list">
-    {[
-      { value: "all", label: "Всі" },
-      { value: "true", label: "Хіти продажу" }, // "true" передается как строка
-    ].map(({ value, label }) => (
-      <li key={value}>
-        <label>
-          <input
-            type="radio"
-            name="hit"
-            value={value}
-            checked={filters.hit === (value === "true")} // Приводим к boolean
-            onChange={(e) =>
-              onFilterChange({
-                ...filters,
-                hit: e.target.value === "true" ? true : false, // Преобразуем строку в boolean
-              })
-            }
-          />
-          {label}
-        </label>
-      </li>
-    ))}
-  </ul>
-</div>
-
-
-
-
+        <h3 className="sidebar__title">Інші фільтри</h3>
+        <ul className="sidebar__list">
+          {[
+            { value: "all", label: "Всі" },
+            { value: "true", label: "Хіти продажу" }, // "true" передается как строка
+          ].map(({ value, label }) => (
+            <li key={value}>
+              <label>
+                <input
+                  type="radio"
+                  name="hit"
+                  value={value}
+                  checked={filters.hit === (value === "true")} // Приводим к boolean
+                  onChange={(e) =>
+                    onFilterChange({
+                      ...filters,
+                      hit: e.target.value === "true" ? true : false, // Преобразуем строку в boolean
+                    })
+                  }
+                />
+                {label}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

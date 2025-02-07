@@ -1,14 +1,43 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .catalog {
-margin-top: 50px;
-  &__container{
-     display: flex;
-  gap: 30px;
+  margin-top: 50px;
+  &__container {
+    display: flex;
+    gap: 30px;
+flex-direction: column;
+    @include on-tablet {
+   
+    }
+
+    @include on-mid-desktop {
+     flex-direction: row;
+    }
+
+  @include on-desktop {
+    flex-direction: row;
   }
- 
+
+  }
 
   &__sidebar {
-    flex: 0 0 250px; // Фиксированная ширина для сайдбара
-    max-width: 250px;
+    // width: 100%; // Фиксированная ширина для сайдбара
+    // max-width: 250px;
+  display: flex;
+  flex-direction: row;
+    @include on-tablet {
+   
+    }
+
+    @include on-mid-desktop {
+      flex: 0 0 250px;
+      max-width: 250px;
+    }
+
+  @include on-desktop {
+    
+  }
   }
 
   &__shopItems {
