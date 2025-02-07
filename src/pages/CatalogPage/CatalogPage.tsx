@@ -10,7 +10,6 @@ import { ShopItems } from "../../components/ShopItems";
 import { useFilters } from "../../types/useFilters";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 export const CatalogPage: React.FC = () => {
-
   const { filters, updateFilters } = useFilters();
   return (
     <div className="catalog container">
