@@ -447,6 +447,8 @@ export const ShopItems: React.FC<{ filters: Filters }> = ({ filters }) => {
           </AnimatePresence>
         </div>
       </motion.div>
+
+
       <div className="shopItems__carousel--hint">
         <p>Проведіть вгору або вниз, щоб гортати</p>
       </div>
