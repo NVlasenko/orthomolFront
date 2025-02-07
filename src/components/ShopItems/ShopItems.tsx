@@ -311,7 +311,12 @@ export const ShopItems: React.FC<{ filters: Filters }> = ({ filters }) => {
       </motion.div>
       
       <motion.div className="shopItems__carousel" {...handlers}>
-  <div className="shopItems__carousel--wrapper">
+  <div className="shopItems__carousel--wrapper" 
+  style={{
+    
+    transition: "transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)"
+  }}
+  >
     <AnimatePresence>
       {filteredProducts.length > 0 ? (
         filteredProducts.slice(currentIndex, currentIndex + 3).map((product) => (
@@ -322,7 +327,6 @@ export const ShopItems: React.FC<{ filters: Filters }> = ({ filters }) => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ type: "spring", stiffness: 100 
-              
             }}
           >
             <Card product={product} />

@@ -168,24 +168,13 @@ display: none;
   overflow: hidden;
   height: 500px;
   touch-action: pan-y;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  
   
   @include on-mid-desktop {
     display: none;
   }
   @include on-desktop {
     display: none;
-  }
-}
-
-.shopItems__list {
-  display: none;
-  
-  @include on-mid-desktop {
-    display: grid;
-  }
-  @include on-desktop {
-    display: grid;
   }
 }
 
@@ -204,7 +193,7 @@ display: none;
 .shopItems__carousel--item {
   flex: 0 0 auto;
   width: 90%;
-  background: white;
+  
   border-radius: 16px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 16px;
