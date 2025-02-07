@@ -1,5 +1,6 @@
 import React from "react";
 import "./VitaminPromoBlock.scss";
+import { NavLink } from "react-router-dom";
 
 export const VitaminPromoBlock: React.FC = () => {
   return (
@@ -10,9 +11,9 @@ export const VitaminPromoBlock: React.FC = () => {
           Інтернет-магазин вітамінів в Україні. Вся продукція сертифікована
           німецькою Радою Технічного Контролю (TÜV Rheinland)
         </h2>
-        <a href="#" className="vitaminPromoBlock__btn">
+        <NavLink to="/catalog" className="vitaminPromoBlock__btn">
           У Каталог
-        </a>
+        </NavLink>
       </div>
       <div className="vitaminPromoBlock__img">
         <img

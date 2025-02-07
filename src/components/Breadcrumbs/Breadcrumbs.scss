@@ -1,0 +1,31 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #6b6b6b;
+  margin-bottom: 20px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: #6b6b6b;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  &__current {
+    color: #000;
+    font-weight: bold;
+  }
+
+  &__separator {
+    margin: 0 8px;
+  }
+}
