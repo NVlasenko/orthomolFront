@@ -43,7 +43,8 @@
     will-change: transform;
     @include on-tablet {
       justify-content: center;
-      gap: 85px;
+      row-gap: 100px;
+    column-gap: 80px;
     }
     @include on-mid-desktop {
       justify-content: space-around;
