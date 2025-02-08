@@ -5,18 +5,22 @@
   margin-top: 50px;
   &__container {
     display: flex;
-    gap: 30px;
+    gap: 10px;
+    margin-top: 10px;
 flex-direction: column;
     @include on-tablet {
-   
+      margin-top: 20px;
     }
 
     @include on-mid-desktop {
      flex-direction: row;
+     gap: 30px;
+     margin-top: 30px;
     }
 
   @include on-desktop {
     flex-direction: row;
+    gap: 30px;
   }
 
   }

@@ -174,7 +174,7 @@
     height: auto;
     left: 0;
     width: 240px;
-    margin-top: 30px;
+
   }
   @include on-desktop {
     position: static;
@@ -202,7 +202,7 @@
     font-weight: bold;
     text-align: center;
     transition: background-color 0.3s ease;
-     margin-top: 20px;
+  
     &:hover {
       background-color: darken($second-primary-color, 10%);
     }
