@@ -373,13 +373,13 @@ margin-top: 0;
   }
 
   &__list {
- 
+    overflow: hidden;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     row-gap: 120px;
-    column-gap: 50px;
+  
     width: max-content; /* Устанавливает ширину контейнера в зависимости от содержимого */
     margin: 0 auto;
-    margin-top: 150px;
+  
     justify-content: center; /* Горизонтальное выравнивание */
     align-content: center;
 display: none;
@@ -387,7 +387,7 @@ display: none;
       grid-template-columns: repeat(2, 1fr);
     place-items: center; /* Центрирование по горизонтали и вертикали */
     margin: 0 auto;
-    margin-top: 150px;
+  
     row-gap: 150px;
     column-gap: 50px;
     width: auto;
@@ -397,11 +397,15 @@ display: none;
       column-gap: 30px;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
       display: grid;
+      padding-top: 100px;
+      margin-top: 50px;
     }
     @include on-desktop {
       column-gap: 30px;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+      padding-top: 100px;
+      margin-top: 50px;
     }
   }
 }
@@ -502,3 +506,72 @@ flex-wrap: wrap;
     display: none;
   }
 }
+.pagination {
+display: none;
+  @include on-tablet {
+    display: none;
+  }
+  @include on-mid-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  @include on-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+    padding: 20px;
+  }
+  &__button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 12px 24px;
+   
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+
+    &:hover {
+      background: linear-gradient(135deg, #786fc4, #170f49);
+      transform: translateY(-2px) scale(1.07);
+      box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+    }
+
+    &:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 6px rgba(0, 123, 255, 0.2);
+    }
+
+    &:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  &__info {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &__button--prev, &__button--next {
+    min-width: 120px;
+  }
+}
+

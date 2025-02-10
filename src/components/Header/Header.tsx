@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Header.scss";
 import classNames from "classnames";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { DropDownCatalog } from "../DropDownCatalog";
 import "./../../styles/container.scss";
 import { useBasket } from "../../context/BasketContextType";
@@ -11,6 +11,8 @@ export const Header: React.FC = () => {
   const [isCatalogHovered, setCatalogHovered] = useState(false);
   const catalogRef = useRef<HTMLDivElement | null>(null);
   const dropDownRef = useRef<HTMLDivElement | null>(null);
+  const navigate = useNavigate();
+
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
     classNames("header__link", {
       "is-active": isActive,
@@ -31,6 +33,18 @@ export const Header: React.FC = () => {
     ) {
       setCatalogHovered(false);
     }
+  };
+
+  
+
+  const handleNavigation = (sectionId: string) => {
+    navigate(`/#${sectionId}`); // Переход на HomePage с хешем
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Даем время на переход
   };
 
   useEffect(() => {
@@ -81,9 +95,7 @@ export const Header: React.FC = () => {
                 className="header__link"
                 onClick={(e) => {
                   e.preventDefault();
-                  document
-                    .getElementById("popular")
-                    ?.scrollIntoView({ behavior: "smooth" });
+                  handleNavigation("popular"); // Переход на HomePage и прокрутка
                 }}
               >
                 Популярні товари
@@ -96,9 +108,7 @@ export const Header: React.FC = () => {
                 className="header__link"
                 onClick={(e) => {
                   e.preventDefault();
-                  document
-                    .getElementById("partners")
-                    ?.scrollIntoView({ behavior: "smooth" });
+                  handleNavigation("partners"); // Переход на HomePage и прокрутка
                 }}
               >
                 Наші партнери
@@ -111,9 +121,7 @@ export const Header: React.FC = () => {
                 className="header__link"
                 onClick={(e) => {
                   e.preventDefault();
-                  document
-                    .getElementById("faq")
-                    ?.scrollIntoView({ behavior: "smooth" });
+                  handleNavigation("faq"); // Переход на HomePage и прокрутка
                 }}
               >
                 FAQ

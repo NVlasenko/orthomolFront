@@ -70,9 +70,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-сделать сортировку
-по новой почте ввод по буквам
-страницы для каталога
 фавориты
-shopItem в листах убрать лишний код и в целом
-выгнутя карта
+фильтра по дропдауну
+страницы отобража в адрес
+навигация
