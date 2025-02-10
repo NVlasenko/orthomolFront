@@ -8,7 +8,7 @@
   min-height: 100vh;
 
   &__title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: #2c3e50;
     margin-bottom: 30px;
@@ -31,20 +31,21 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 100px 30px;
     // padding: 0 20px;
-    margin-top: 150px;
+    margin-top: 85px;
   
     place-items: center;
 
     @include on-tablet {
      justify-content: center;
+     margin-top: 110px;
      }
  
      @include on-mid-desktop {
-     
+      margin-top: 150px;
      }
  
    @include on-desktop {
-     
+    // margin-top: 150px;
    }
   }
 
