@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useCallback} from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Card.scss";
 import { Product } from "../../types";
 import { useBasket } from "../../context/BasketContextType";
+import { useFavorites } from "../../context/FavoritesContext";
 
 type Props = {
   product: Product;
@@ -12,47 +13,40 @@ export const Card: React.FC<Props> = ({ product }) => {
   const [inBasket, setInBasket] = useState(false);
   const [isFlying, setIsFlying] = useState(false);
 
-  // useEffect(() => {
-  //   const savedBasket = localStorage.getItem("basket");
-  //   if (savedBasket) {
-  //     const basketItems = JSON.parse(savedBasket);
-  //     const isInBasket = basketItems.some(
-  //       (item: { product: Product }) => item.product.id === product.id
-  //     );
-  //     setInBasket(isInBasket);
-  //   }
-  // }, [basketItems, product.id]);
+  const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites();
+
+  const [favorite, setFavorite] = useState(false);
+
   useEffect(() => {
     setInBasket(basketItems.some((item) => item.product.id === product.id));
-  }, [basketItems, product.id]); 
+    setFavorite(isFavorite(product.id));
+  }, [basketItems, product.id, isFavorite]);
 
-  // const handleAddToBasket = () => {
-  //   if (inBasket) return;
-
-  //   setIsFlying(true);
-  //   addToBasket(product);
-  //   setInBasket(true);
-  // };
   const handleAddToBasket = useCallback(() => {
     if (inBasket) return;
-  
+
     setIsFlying(true);
     addToBasket(product);
-
   }, [inBasket, addToBasket, product]);
+  const handleFavoriteToggle = () => {
+    if (favorite) {
+      removeFromFavorites(product.id); // Удаляет из избранного
+    } else {
+      addToFavorites(product); // Добавляет в избранное
+    }
+    setFavorite(!favorite); // Переключает состояние "избранное"
+  };
   
 
   return (
     <div className="card">
-     
       <div>
-         <img
-        className="card__image"
-        src={`${process.env.PUBLIC_URL}/${product.imgProductRef}`}
-        alt={product.name}
-      />
+        <img
+          className="card__image"
+          src={`${process.env.PUBLIC_URL}/${product.imgProductRef}`}
+          alt={product.name}
+        />
       </div>
-     
 
       <div className="card__content">
         <div className="card__info">
@@ -60,30 +54,38 @@ export const Card: React.FC<Props> = ({ product }) => {
           <h3 className="card__info--subtitle">{product.appointment}</h3>
         </div>
 
+        <div className="card__actions--w">
+          <div className="card__price">
+            {product.priceRegular.toLocaleString()} грн
+          </div>
 
-<div className="card__actions--w">
-  <div className="card__price">
-          {product.priceRegular.toLocaleString()} грн
-        </div>
+          <div className="card__actions">
+            <button
+              className={`card__actions--btn ${inBasket ? "in-basket" : ""}`}
+              onClick={handleAddToBasket}
+              disabled={inBasket}
+            >
+              {inBasket ? "У кошику" : "В кошик"}
+            </button>
+            <a
+  href="#"
+  className={`card__actions--wishlist ${favorite ? "favorite" : ""}`}
+  onClick={(e) => {
+    e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+    handleFavoriteToggle(); // Добавляем товар в избранное
+  }}
+>
+  <img
+    className="card__actions--heart"
+    src={`${process.env.PUBLIC_URL}/images/icons/${
+      favorite ? "heartActive.svg" : "heart.svg"
+    }`}
+    alt="heart"
+  />
+</a>
 
-        <div className="card__actions">
-          <button
-            className={`card__actions--btn ${inBasket ? "in-basket" : ""}`}
-            onClick={handleAddToBasket}
-            disabled={inBasket}
-          >
-            {inBasket ? "У кошику" : "В кошик"}
-          </button>
-          <a href="#" className="card__actions--wishlist">
-            <img
-              className="card__actions--heart"
-              src={`${process.env.PUBLIC_URL}/images/icons/heart.svg`}
-              alt="heart"
-            />
-          </a>
+          </div>
         </div>
-</div>
-        
       </div>
 
       <img

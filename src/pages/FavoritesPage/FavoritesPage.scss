@@ -1,0 +1,103 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+.favorites {
+ padding-top: 40px;
+ padding-bottom: 40px;
+  text-align: center;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    @include on-tablet {
+     font-size: 22px;
+    }
+
+    @include on-mid-desktop {
+      font-size: 32px;
+    }
+
+  @include on-desktop {
+    font-size: 33px;
+  }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 100px 30px;
+    // padding: 0 20px;
+    margin-top: 150px;
+  
+    place-items: center;
+
+    @include on-tablet {
+     justify-content: center;
+     }
+ 
+     @include on-mid-desktop {
+     
+     }
+ 
+   @include on-desktop {
+     
+   }
+  }
+
+  &__empty {
+    font-size: 20px;
+    color: #bdc3c7;
+    margin-top: 40px;
+  }
+}
+
+/* Стили для карточек */
+.card {
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &__image {
+    width: 220px;
+    height: 180px;
+    object-fit: cover;
+    transform: translateY(-40%);
+    position: absolute;
+    top: 5px;
+    left: 12%;
+    cursor: pointer;
+    @include on-mid-desktop {
+      left: 10%;
+    }
+    @include on-desktop {
+      width: 100%;
+      height: auto;
+      top: 5px;
+      left: 0;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__price {
+    text-align: left;
+  }
+
+  &__actions {
+    .card__actions--heart {
+      transition: transform 0.3s;
+
+      &.favorite {
+        transform: scale(1.2);
+        fill: #e74c3c;
+      }
+    }
+  }
+}

@@ -220,6 +220,7 @@
   @include on-desktop {
     width: 266px;
     height: 393px;
+  
   }
 
   &__image {
@@ -363,10 +364,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+      &.favorite {
+        background-color: #EB5757; // Красный фон для избранного
+      }
       &--heart {
         width: 22px;
         height: 20px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        &.favorite {
+          filter: brightness(0) saturate(100%) invert(44%) sepia(99%) saturate(333%) hue-rotate(328deg) brightness(92%) contrast(86%);
+          transform: scale(1.1);
+        }
       }
     }
   }

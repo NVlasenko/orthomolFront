@@ -5,8 +5,6 @@ import "./CatalogPage.scss";
 import { Title } from "../../components/Title";
 import { Sidebar } from "../../components/Sidebar";
 import { ShopItems } from "../../components/ShopItems";
-
-
 import { useFilters } from "../../types/useFilters";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 

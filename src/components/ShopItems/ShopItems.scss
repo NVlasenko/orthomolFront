@@ -239,7 +239,7 @@
 .shopItems {
   width: 100%;
   // padding: 20px 0;
-
+padding-top: 20px;
   margin: 0 auto;
   margin-bottom: 100px;
   &__header {
@@ -422,11 +422,14 @@ display: none;
   scroll-behavior: smooth;
   overflow-y: scroll;
   margin-top: 50px;
-  box-shadow: 0px -10px 15px -5px rgba(0, 0, 0, 0.2), // Тень сверху
-            0px 10px 15px -5px rgba(0, 0, 0, 0.2);  // Тень снизу
-  
+   // Тень снизу
+   @include on-tablet {
+    box-shadow: 0px -10px 15px -5px rgba(0, 0, 0, 0.2), // Тень сверху
+    0px 10px 15px -5px rgba(0, 0, 0, 0.2);
+  }
   @include on-mid-desktop {
     display: none;
+  
   }
   @include on-desktop {
     display: none;

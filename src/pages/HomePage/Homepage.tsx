@@ -28,9 +28,7 @@ export const HomePage: React.FC = () => {
       <div className="container">
         <VitaminPromoBlock />
         <InfoStrip />
-
         <PopularProducts />
-
         <Categories />
         <Partners />
         <FAQ />

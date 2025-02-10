@@ -5,17 +5,23 @@ import { Header } from "./components/Header";
 import { Outlet } from "react-router-dom";
 import { BasketProvider } from "./context/BasketContextType";
 import { Footer } from "./components/Footer";
+import { FavoritesProvider } from "./context/FavoritesContext";
+import { FixedFavorites } from "./components/FixedFavorites";
+
 
 export const App: React.FC = () => {
   return (
-    <BasketProvider>
+    <FavoritesProvider>
+       <BasketProvider>
       <div className="app-layout">
         <Header />
         <div className="content">
           <Outlet />
         </div>
         <Footer />
+     <FixedFavorites />
       </div>
     </BasketProvider>
+    </FavoritesProvider>
   );
 };
