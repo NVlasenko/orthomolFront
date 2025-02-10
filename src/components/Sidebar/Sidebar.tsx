@@ -342,6 +342,20 @@ export const Sidebar: React.FC<SidebarProps> = ({
       hit: false,
     });
   };
+  const categories = [
+    { value: "all", label: "Всі" },
+    { value: "Спорт", label: "Спорт" },
+    { value: "Травлення", label: "Травлення" },
+    { value: "Мозкова активність", label: "Мозкова активність" },
+    { value: "Імунна система", label: "Імунна система" },
+    { value: "Стрес та порушення сну", label: "Стрес та порушення сну" },
+    { value: "Краса (шкіра, волосся, нігті)", label: "Краса (шкіра, волосся, нігті)" },
+    { value: "Зачаття та вагітність", label: "Зачаття та вагітність" },
+    { value: "Зір", label: "Зір" },
+    { value: "Простата", label: "Простата" },
+    { value: "Діти", label: "Діти" },
+    { value: "Серце і судини", label: "Серце і судини" },
+  ];
 
   return (
 <div className="sidebar--wrapper">
@@ -458,44 +472,22 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <div className="sidebar__section">
               <h3 className="sidebar__title">Призначення</h3>
               <ul className="sidebar__list">
-                {[
-                  { value: "all", label: "Всі" },
-                  { value: "Спорт", label: "Спорт" },
-                  { value: "Травлення", label: "Травлення" },
-                  { value: "Мозкова активність", label: "Мозкова активність" },
-                  { value: "мунна система", label: "Імунна система" },
-                  {
-                    value: "Стрес та порушення сну",
-                    label: "Стрес та порушення сну",
-                  },
-                  {
-                    value: "Краса (шкіра, волосся, нігті)",
-                    label: "Краса (шкіра, волосся, нігті)",
-                  },
-                  {
-                    value: "Зачаття та вагітність",
-                    label: "Зачаття та вагітність",
-                  },
-                  { value: "Зір", label: "Зір" },
-                  { value: "Простата", label: "Простата" },
-                  { value: "Діти", label: "Діти" },
-                  { value: "Серце і судини", label: "Серце і судини" },
-                ].map(({ value, label }) => (
-                  <li key={value}>
-                    <label>
-                      <input
-                        type="radio"
-                        name="purpose"
-                        value={value}
-                        checked={filters.purpose === value}
-                        onChange={(e) =>
-                          handleFilterChange("purpose", e.target.value)
-                        }
-                      />
-                      {label}
-                    </label>
-                  </li>
-                ))}
+              {categories.map(({ value, label }) => (
+        <li key={value}>
+          <label>
+            <input
+              type="radio"
+              name="purpose"
+              value={value}
+              checked={filters.purpose === value}
+              onChange={(e) =>
+                handleFilterChange("purpose", e.target.value)
+              }
+            />
+            {label}
+          </label>
+        </li>
+      ))}
               </ul>
             </div>
 
