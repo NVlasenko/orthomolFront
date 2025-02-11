@@ -120,7 +120,7 @@
 
 //     &--btn {
 //       position: relative;
-      
+
 //       width: 150px;
 //       height: 44px;
 //       background-color: $second-primary-color;
@@ -190,7 +190,6 @@
 //   }
 // }
 
-
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
@@ -220,7 +219,6 @@
   @include on-desktop {
     width: 266px;
     height: 393px;
-  
   }
 
   &__image {
@@ -250,7 +248,6 @@
     align-items: flex-start;
     height: 100%;
     justify-content: space-between;
-
   }
 
   &__info {
@@ -274,7 +271,8 @@
         right: -30px;
         width: 45px;
         height: 45px;
-        background: url("../../../public/images/product/productCategory.svg") no-repeat center / contain;
+        background: url("../../../public/images/product/productCategory.svg")
+          no-repeat center / contain;
         z-index: 999;
 
         @include on-tablet {
@@ -311,16 +309,15 @@
   }
 
   &__actions {
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
-&--w{
-  width: 100%;
-}
+    &--w {
+      width: 100%;
+    }
     &--btn {
       position: relative;
-      
+
       width: 150px;
       height: 44px;
       background-color: $second-primary-color;
@@ -342,7 +339,8 @@
         left: 11px;
         width: 22px;
         height: 23px;
-        background: url("../../../public/images/icons/basket2.svg") no-repeat center / contain;
+        background: url("../../../public/images/icons/basket2.svg") no-repeat
+          center / contain;
       }
 
       &:hover {
@@ -359,13 +357,14 @@
     &--wishlist {
       width: 44px;
       height: 44px;
+      border: none;
       border-radius: 50%;
-      background-color: #FAF0F1;
+      background-color: #faf0f1;
       display: flex;
       justify-content: center;
       align-items: center;
       &.favorite {
-        background-color: #EB5757; // Красный фон для избранного
+        background-color: #eb5757; // Красный фон для избранного
       }
       &--heart {
         width: 22px;
@@ -373,10 +372,17 @@
         cursor: pointer;
         transition: transform 0.2s ease;
         &.favorite {
-          filter: brightness(0) saturate(100%) invert(44%) sepia(99%) saturate(333%) hue-rotate(328deg) brightness(92%) contrast(86%);
+          filter: brightness(0) saturate(100%) invert(44%) sepia(99%)
+            saturate(333%) hue-rotate(328deg) brightness(92%) contrast(86%);
           transform: scale(1.1);
         }
       }
+    }
+
+    &--icon{
+      width: 17px;
+        height: 17px;
+        cursor: pointer;
     }
   }
 }

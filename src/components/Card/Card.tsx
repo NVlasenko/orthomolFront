@@ -67,7 +67,7 @@ export const Card: React.FC<Props> = ({ product }) => {
             >
               {inBasket ? "У кошику" : "В кошик"}
             </button>
-            <a
+            {/* <a
   href="#"
   className={`card__actions--wishlist ${favorite ? "favorite" : ""}`}
   onClick={(e) => {
@@ -82,7 +82,36 @@ export const Card: React.FC<Props> = ({ product }) => {
     }`}
     alt="heart"
   />
-</a>
+</a> */}
+
+<button
+              className="card__actions--wishlist"
+              onClick={(e) => {
+                e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+                handleFavoriteToggle(); // Добавляем товар в избранное
+              }}
+            >
+              {favorite ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="#e74c3c"
+                  stroke="#e74c3c"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="card__actions--icon"
+                >
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              ) : (
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/icons/heart.svg`}
+                  alt="heart"
+                  className="heart__icon"
+                />
+              )}
+            </button>
 
           </div>
         </div>
