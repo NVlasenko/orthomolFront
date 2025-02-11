@@ -1,3 +1,110 @@
+// @import "../../styles/mixins";
+
+// .fixed-favorites {
+//   position: fixed;
+//   top: 18%;
+//   right: 10px;
+//   width: 30px;
+//   height: 30px;
+//   background-color: #e74c3c;
+//   border-radius: 50%;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   cursor: pointer;
+//   transition: transform 0.3s, box-shadow 0.3s;
+//   @include on-tablet {
+//     width: 40px;
+//   height: 40px;
+//   top: 25%;
+//     }
+
+//     @include on-mid-desktop {
+//      width: 50px;
+//   height: 50px;
+//   top: 25%;
+//   right: 15px;
+//     }
+
+//   @include on-desktop {
+//     width: 60px;
+//     height: 60px;
+//     top: 30%;
+//     right: 20px;
+//   }
+
+//   &:hover {
+//     transform: scale(1.1);
+//     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+//   }
+
+//   &__icon img {
+//     width: 15px;
+//     height: 15px;
+//     display: flex;
+//     fill: #ffffff;
+//     @include on-tablet {
+//       width: 25px;
+//     height: 25px;
+//       }
+  
+//       @include on-mid-desktop {
+//        width: 30px;
+//     height: 30px;
+  
+//       }
+  
+//     @include on-desktop {
+//       width: 35px;
+//       height: 35px;
+//     }
+//   }
+
+//   &__counter {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     background-color: #ffffff;
+//     color: #e74c3c;
+//     width: 14px;
+//     height: 14px;
+//     border-radius: 50%;
+//     font-size: 8px;
+//     font-weight: bold;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//     @include on-tablet {
+//       font-size: 10px;
+//       width: 18px;
+//       height: 18px;
+//       top: -2px;
+//       right: -4px;
+//       }
+  
+//       @include on-mid-desktop {
+//         font-size: 12px;
+//         width: 23px;
+//         height: 23px;
+//         top: -2px;
+//         right: -4px;
+  
+//       }
+  
+//     @include on-desktop {
+//       font-size: 14px;
+//       width: 20px;
+//       height: 20px;
+//       top: 5px;
+//     right: 5px;
+//     }
+//   }
+// }
+
+
+
 @import "../../styles/mixins";
 
 .fixed-favorites {
@@ -38,12 +145,19 @@
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
-
-  &__icon img {
-    width: 15px;
-    height: 15px;
+  &__icon {
     display: flex;
-    fill: #ffffff;
+    justify-content: center;
+    align-items: center;
+
+  
+  }
+  &__icon {
+    width: 18px;
+    height: 18px;
+    stroke: white; // Цвет линии
+    fill: none; // Прозрачный фон
+    transition: stroke 0.3s ease;
     @include on-tablet {
       width: 25px;
     height: 25px;
@@ -58,6 +172,9 @@
     @include on-desktop {
       width: 35px;
       height: 35px;
+    }
+    &:hover {
+      stroke: #ffeb3b; // Изменение цвета при наведении
     }
   }
 
