@@ -73,3 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 фильтра по дропдауну
 дропдауну положение
+сердечко
+убрать дропдаун
+и страницы когда одна или нет товара убрать

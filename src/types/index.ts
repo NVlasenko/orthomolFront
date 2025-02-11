@@ -73,3 +73,21 @@ export const faqData: FAQItem[] = [
       "Продукти Ортомол можуть зберігати лактозу, але не всі. Деякі комплекси розроблені без лактози, щоб бути безпечними для людей з лактазною недостатністю чи непереносимістю лактози.",
   },
 ];
+
+export interface City {
+  Ref: string;
+  Description: string;
+}
+
+// Определяем тип данных для областей (если нужно)
+export interface Oblast {
+  Ref: string;
+  Description: string;
+}
+
+// Определяем тип данных для отделений НП
+export interface Warehouse {
+  Ref: string;
+  Description: string;
+}
+
