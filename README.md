@@ -72,5 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 фильтра по дропдауну
-сделать падинги для экрана как у саши
 дропдауну положение

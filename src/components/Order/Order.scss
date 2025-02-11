@@ -44,7 +44,8 @@
   }
 
   &__form {
-    flex: 2;
+    flex: 1; /* Растягивает форму, чтобы она занимала доступное пространство */
+  min-width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
