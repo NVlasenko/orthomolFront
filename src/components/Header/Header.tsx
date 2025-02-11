@@ -1,16 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef  } from "react";
 import "./Header.scss";
 import classNames from "classnames";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { DropDownCatalog } from "../DropDownCatalog";
+// import { DropDownCatalog } from "../DropDownCatalog";
 import "./../../styles/container.scss";
 import { useBasket } from "../../context/BasketContextType";
 
 export const Header: React.FC = () => {
   const { basketItems } = useBasket();
-  const [isCatalogHovered, setCatalogHovered] = useState(false);
+  // const [isCatalogHovered, setCatalogHovered] = useState(false);
   const catalogRef = useRef<HTMLDivElement | null>(null);
-  const dropDownRef = useRef<HTMLDivElement | null>(null);
+  // const dropDownRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
 
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
@@ -18,22 +18,22 @@ export const Header: React.FC = () => {
       "is-active": isActive,
     });
 
-  const handleMouseEnterCatalog = () => setCatalogHovered(true);
-  const handleMouseLeaveCatalog = () => setCatalogHovered(false);
+  // const handleMouseEnterCatalog = () => setCatalogHovered(true);
+  // const handleMouseLeaveCatalog = () => setCatalogHovered(false);
 
-  const handleMouseEnterDropdown = () => setCatalogHovered(true);
-  const handleMouseLeaveDropdown = () => setCatalogHovered(false);
+  // const handleMouseEnterDropdown = () => setCatalogHovered(true);
+  // const handleMouseLeaveDropdown = () => setCatalogHovered(false);
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      catalogRef.current &&
-      !catalogRef.current.contains(event.target as Node) &&
-      dropDownRef.current &&
-      !dropDownRef.current.contains(event.target as Node)
-    ) {
-      setCatalogHovered(false);
-    }
-  };
+  // const handleClickOutside = (event: MouseEvent) => {
+  //   if (
+  //     catalogRef.current &&
+  //     !catalogRef.current.contains(event.target as Node) &&
+  //     dropDownRef.current &&
+  //     !dropDownRef.current.contains(event.target as Node)
+  //   ) {
+  //     setCatalogHovered(false);
+  //   }
+  // };
 
   
 
@@ -47,12 +47,12 @@ export const Header: React.FC = () => {
     }, 100); // Даем время на переход
   };
 
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
 
   return (
     <div className="header">
@@ -73,13 +73,13 @@ export const Header: React.FC = () => {
             <div
               className="header__catalog--wrapper"
               ref={catalogRef}
-              onMouseEnter={handleMouseEnterCatalog}
-              onMouseLeave={handleMouseLeaveCatalog}
+              // onMouseEnter={handleMouseEnterCatalog}
+              // onMouseLeave={handleMouseLeaveCatalog}
             >
               <NavLink to="/catalog" className={getLinkClass}>
                 Каталог
               </NavLink>
-              {isCatalogHovered && (
+              {/* {isCatalogHovered && (
                 <div
                   ref={dropDownRef}
                   onMouseEnter={handleMouseEnterDropdown}
@@ -87,7 +87,7 @@ export const Header: React.FC = () => {
                 >
                   <DropDownCatalog />
                 </div>
-              )}
+              )} */}
             </div>
             <div>
               <a

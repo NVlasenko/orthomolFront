@@ -48,7 +48,7 @@ export const FixedFavorites: React.FC = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="white"
-          strokeWidth="2"
+          strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
           className="heart__icon"

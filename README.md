@@ -69,10 +69,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
-
-фильтра по дропдауну
-дропдауну положение
 сердечко
 убрать дропдаун
 и страницы когда одна или нет товара убрать
