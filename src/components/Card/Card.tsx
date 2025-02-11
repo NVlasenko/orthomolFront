@@ -36,7 +36,6 @@ export const Card: React.FC<Props> = ({ product }) => {
     }
     setFavorite(!favorite); // Переключает состояние "избранное"
   };
-  
 
   return (
     <div className="card">
@@ -84,7 +83,7 @@ export const Card: React.FC<Props> = ({ product }) => {
   />
 </a> */}
 
-<button
+            <button
               className="card__actions--wishlist"
               onClick={(e) => {
                 e.preventDefault(); // Предотвращаем стандартное поведение ссылки
@@ -112,7 +111,6 @@ export const Card: React.FC<Props> = ({ product }) => {
                 />
               )}
             </button>
-
           </div>
         </div>
       </div>

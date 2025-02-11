@@ -653,7 +653,15 @@ export const ShopItems: React.FC<{ filters: Filters }> = ({ filters }) => {
     const updatedParams = new URLSearchParams(searchParams);
     updatedParams.set("page", newPage.toString());
     setSearchParams(updatedParams);
+  
+    // Прокрутка страницы вверх
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: window.innerHeight * 0.3, behavior: "smooth" });
+  }, [currentPage]);
+  
 
   useEffect(() => {
     const loadProducts = async () => {

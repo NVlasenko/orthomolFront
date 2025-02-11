@@ -3,7 +3,7 @@
 .favorites {
  padding-top: 40px;
  padding-bottom: 40px;
-  text-align: center;
+  // text-align: center;
   background-color: #f9f9f9;
   min-height: 100vh;
 
@@ -32,20 +32,27 @@
     gap: 100px 30px;
     // padding: 0 20px;
     margin-top: 85px;
-  
+  // display: flex;
+  // justify-content: start;
     place-items: center;
 
     @include on-tablet {
      justify-content: center;
      margin-top: 110px;
+     gap: 130px 50px;
      }
  
      @include on-mid-desktop {
       margin-top: 150px;
+      justify-content: start;
+   place-items: unset;
+   gap: 100px 20px;
      }
  
    @include on-desktop {
+    // justify-content: start;
     // margin-top: 150px;
+    place-items: unset;
    }
   }
 
