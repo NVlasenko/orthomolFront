@@ -363,12 +363,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+  
       &.favorite {
-        background-color: #eb5757; // Красный фон для избранного
+        background-color: #eb5757; // Красный фон при добавлении в избранное
       }
       &--heart {
         width: 22px;
-        height: 20px;
+        height: 22px;
         cursor: pointer;
         transition: transform 0.2s ease;
         &.favorite {

@@ -84,7 +84,7 @@ export const Card: React.FC<Props> = ({ product }) => {
 </a> */}
 
             <button
-              className="card__actions--wishlist"
+              className={`card__actions--wishlist ${favorite ? "favorite" : ""}`}
               onClick={(e) => {
                 e.preventDefault(); // Предотвращаем стандартное поведение ссылки
                 handleFavoriteToggle(); // Добавляем товар в избранное
@@ -94,8 +94,8 @@ export const Card: React.FC<Props> = ({ product }) => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  fill="#e74c3c"
-                  stroke="#e74c3c"
+                  fill="none"
+                  stroke="#fff"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
