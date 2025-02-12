@@ -3,6 +3,7 @@ import "./Card.scss";
 import { Product } from "../../types";
 import { useBasket } from "../../context/BasketContextType";
 import { useFavorites } from "../../context/FavoritesContext";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   product: Product;
@@ -16,7 +17,7 @@ export const Card: React.FC<Props> = ({ product }) => {
   const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites();
 
   const [favorite, setFavorite] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     setInBasket(basketItems.some((item) => item.product.id === product.id));
     setFavorite(isFavorite(product.id));
@@ -38,7 +39,16 @@ export const Card: React.FC<Props> = ({ product }) => {
   };
 
   return (
-    <div className="card">
+    <div
+    className="card"
+    onClick={() =>
+      navigate(
+        `/product/${product.id}/${encodeURIComponent(product.name)}/${encodeURIComponent(product.category)}`
+      )
+    }
+    style={{ cursor: "pointer" }}
+  >
+  
       <div>
         <img
           className="card__image"
@@ -61,7 +71,10 @@ export const Card: React.FC<Props> = ({ product }) => {
           <div className="card__actions">
             <button
               className={`card__actions--btn ${inBasket ? "in-basket" : ""}`}
-              onClick={handleAddToBasket}
+              onClick={(e) => {
+                e.stopPropagation(); // ❗ Предотвращает переход на страницу товара
+                handleAddToBasket();
+              }}
               disabled={inBasket}
             >
               {inBasket ? "У кошику" : "В кошик"}
@@ -86,8 +99,9 @@ export const Card: React.FC<Props> = ({ product }) => {
             <button
               className={`card__actions--wishlist ${favorite ? "favorite" : ""}`}
               onClick={(e) => {
-                e.preventDefault(); // Предотвращаем стандартное поведение ссылки
-                handleFavoriteToggle(); // Добавляем товар в избранное
+                e.stopPropagation(); // ❗ Предотвращает переход на страницу товара
+                e.preventDefault();
+                handleFavoriteToggle();
               }}
             >
               {favorite ? (

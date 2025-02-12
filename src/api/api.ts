@@ -19,7 +19,7 @@ import { Product } from "../types";
 export const fetchProducts = async (): Promise<Product[]> => {
   try {
     if (!Array.isArray(vitaminsData)) {
-      console.error("Ошибка: данные о витаминах не являются массивом", vitaminsData);
+      console.error("Помилка: дані про вітаміни не є масивом", vitaminsData);
       return Promise.reject(new Error("Невірний формат даних."));
     }
 
@@ -32,13 +32,13 @@ export const fetchProducts = async (): Promise<Product[]> => {
     );
 
     if (!isValid) {
-      console.error("Ошибка: некорректная структура данных в vitamins.json", vitaminsData);
-      return Promise.reject(new Error("Некорректна структура даних."));
+      console.error("Помилка: некоректна структура даних у vitamins.json", vitaminsData);
+      return Promise.reject(new Error("Невірний формат даних."));
     }
 
     return Promise.resolve(vitaminsData as Product[]);
   } catch (error) {
-    console.error("Ошибка при загрузке продуктов:", error);
+    console.error("Помилка при завантаженні продуктів:", error);
     return Promise.reject(new Error("Не вдалося завантажити продукти."));
   }
 };

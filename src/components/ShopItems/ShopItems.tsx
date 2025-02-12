@@ -669,7 +669,7 @@ export const ShopItems: React.FC<{ filters: Filters }> = ({ filters }) => {
         const data = await fetchProducts();
         setProducts(data);
       } catch (error) {
-        console.error("Ошибка загрузки товаров:", error);
+        console.error("Помилка завантаження товарів:", error);
       }
     };
     loadProducts();

@@ -1424,5 +1424,197 @@
     "packaging": 12,
     "hit": true,
     "expirationDate": "15 лип. 2025 р."
+  },
+  {
+    "id": 31,
+    "name": "HeartGuard",
+    "appointment": "Підтримка серцево-судинної системи",
+    "category": "heart",
+    "gender": "unisex",
+    "ageCategory": ["від 50 років"],
+    "healthCategory": ["Серце і судини"],
+    "priceRegular": 31500,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN24001",
+    "brand": "Doctor's Best",
+    "shape": "Капсули",
+    "taste": "Апельсин",
+    "packaging": 90,
+    "hit": true,
+    "expirationDate": "10 серп. 2026 р.",
+    "description": [
+      {
+        "text": [
+          "HeartGuard допомагає підтримувати здоров'я серця, знижує рівень холестерину та покращує циркуляцію крові."
+        ]
+      },
+      {
+        "text": [
+          "Містить коензим Q10, омега-3 жирні кислоти та магній, які сприяють нормалізації артеріального тиску."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "EyeVision Max",
+    "appointment": "Підтримує зір і здоров'я очей",
+    "category": "vision",
+    "gender": "unisex",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Зір"],
+    "priceRegular": 26000,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": false,
+    "articleNumber": "CEN24002",
+    "brand": "Puritan's Pride",
+    "shape": "Таблетки",
+    "taste": "Лісові ягоди",
+    "packaging": 60,
+    "hit": false,
+    "expirationDate": "5 квіт. 2026 р.",
+    "description": [
+      {
+        "text": [
+          "EyeVision Max містить лютеїн і зеаксантин, які сприяють підтримці гостроти зору."
+        ]
+      },
+      {
+        "text": [
+          "Рекомендується для людей, які працюють за комп’ютером або мають підвищене навантаження на очі."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "KidSmart Omega",
+    "appointment": "Розвиток мозку і пам’яті у дітей",
+    "category": "kids",
+    "gender": "unisex",
+    "ageCategory": ["Діти"],
+    "healthCategory": ["Мозкова активність"],
+    "priceRegular": 19800,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN24003",
+    "brand": "Nordic Naturals",
+    "shape": "Капсули",
+    "taste": "Лайм-малина",
+    "packaging": 30,
+    "hit": true,
+    "expirationDate": "22 трав. 2027 р.",
+    "description": [
+      {
+        "text": [
+          "KidSmart Omega містить омега-3 DHA, необхідну для розвитку мозку у дітей."
+        ]
+      },
+      {
+        "text": [
+          "Підходить для дітей від 3 років, сприяє концентрації уваги та покращенню когнітивних функцій."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "ImmunoBoost",
+    "appointment": "Зміцнення імунітету в сезон застуд",
+    "category": "immune",
+    "gender": "unisex",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Імунна система"],
+    "priceRegular": 27850,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN24004",
+    "brand": "Nature's Way",
+    "shape": "Питні пляшечки",
+    "taste": "Грейпфрут",
+    "packaging": 20,
+    "hit": false,
+    "expirationDate": "15 вер. 2026 р.",
+    "description": [
+      {
+        "text": [
+          "ImmunoBoost містить вітамін C, цинк і екстракт ехінацеї для підтримки імунітету."
+        ]
+      },
+      {
+        "text": [
+          "Сприяє швидкому відновленню після хвороб і підвищує захисні сили організму."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "NeuroBalance",
+    "appointment": "Підтримує роботу нервової системи",
+    "category": "nervous",
+    "gender": "unisex",
+    "ageCategory": ["від 18 до 50 років"],
+    "healthCategory": ["Стрес та порушення сну"],
+    "priceRegular": 31200,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": false,
+    "articleNumber": "CEN24005",
+    "brand": "Thorne Research",
+    "shape": "Капсули",
+    "taste": "Лісові ягоди",
+    "packaging": 90,
+    "hit": true,
+    "expirationDate": "30 жовт. 2025 р.",
+    "description": [
+      {
+        "text": [
+          "NeuroBalance допомагає зменшити рівень стресу, покращує якість сну та емоційний стан."
+        ]
+      },
+      {
+        "text": [
+          "Містить магній, вітаміни групи B та екстракт ашваганди для заспокоєння нервової системи."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "VitalPregnancy",
+    "appointment": "Комплекс для вагітних для підтримки здоров’я матері та дитини",
+    "category": "pregnancy",
+    "gender": "women",
+    "ageCategory": ["Зачаття та вагітність"],
+    "healthCategory": ["Зачаття та вагітність"],
+    "priceRegular": 29000,
+    "imgProductRef": "/images/product/product1.svg",
+    "imgCategoryRef": "/images/product/productCategory.svg",
+    "inStock": true,
+    "articleNumber": "CEN24006",
+    "brand": "Garden of Life",
+    "shape": "Таблетки",
+    "taste": "Апельсин",
+    "packaging": 120,
+    "hit": false,
+    "expirationDate": "1 лип. 2027 р.",
+    "description": [
+      {
+        "text": [
+          "VitalPregnancy містить фолієву кислоту, залізо та DHA для підтримки здоров'я матері та розвитку дитини."
+        ]
+      },
+      {
+        "text": [
+          "Допомагає знизити ризик дефектів розвитку та підтримує нормальну вагітність."
+        ]
+      }
+    ]
   }
 ]

@@ -895,6 +895,9 @@ export const Order: React.FC = () => {
                   placeholder="Оберіть місто"
                   isSearchable
                   isClearable
+                  filterOption={(option, inputValue) =>
+                    option.label.toLowerCase().startsWith(inputValue.toLowerCase())
+                  }
                 />
 
                 {errors.misto && (
