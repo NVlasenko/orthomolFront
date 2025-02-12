@@ -692,7 +692,7 @@ export const ShopItems: React.FC<{ filters: Filters }> = ({ filters }) => {
     updatedParams.set("sort", criteria);
     setSearchParams(updatedParams);
   };
-
+  console.log(filteredProducts.length);
   return (
     <div className="shopItems">
       <div className="shopItems__header">
@@ -769,8 +769,8 @@ export const ShopItems: React.FC<{ filters: Filters }> = ({ filters }) => {
           </AnimatePresence>
         </div>
       </motion.div>
-
-      <div className="pagination">
+{filteredProducts.length > itemsPerPage && (
+   <div className="pagination">
         <button
           disabled={currentPage === 1}
           onClick={() => handlePageChange(currentPage - 1)}
@@ -789,6 +789,9 @@ export const ShopItems: React.FC<{ filters: Filters }> = ({ filters }) => {
           Вперед
         </button>
       </div>
+)}
+
+     
       <div className="shopItems__carousel--hint">
         <p>Проведіть вгору або вниз, щоб гортати</p>
       </div>

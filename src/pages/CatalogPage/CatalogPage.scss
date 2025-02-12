@@ -46,5 +46,7 @@ flex-direction: column;
 
   &__shopItems {
     flex: 1; // Занимает оставшееся пространство
+    margin-bottom: 50px;
+    position: relative;
   }
 }

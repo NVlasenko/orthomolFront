@@ -155,8 +155,8 @@
   &__icon {
     width: 18px;
     height: 18px;
-    stroke: white; // Цвет линии
-    fill: none; // Прозрачный фон
+    // stroke: rgb(46, 19, 167); // Цвет линии
+    // fill: none; // Прозрачный фон
     transition: stroke 0.3s ease;
     @include on-tablet {
       width: 25px;

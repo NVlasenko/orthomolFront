@@ -257,10 +257,12 @@ margin-top: 0;
       gap: 20px;
       justify-content: start;
       align-items: start;
+ 
     }
     @include on-desktop {
+    margin-top: 0;
       gap: 20px;
-   
+     
       justify-content: start;
     }
   }
@@ -402,6 +404,7 @@ display: none;
       margin-top: 50px;
       padding-left: 10px;
       padding-right: 10px;
+    
     }
     @include on-desktop {
       column-gap: 30px;
@@ -409,6 +412,7 @@ display: none;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
       padding-top: 100px;
       margin-top: 50px;
+
       padding-left: 10px;
       padding-right: 10px;
     }
@@ -522,15 +526,28 @@ display: none;
     display: none;
   }
   @include on-mid-desktop {
+    position: absolute;
+  
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px;
     margin-top: 30px;
     padding: 20px;
+    position: absolute;
+    bottom: -50px;
+        left: 50%;
+        transform: translate(-50%, -50%);
   }
 
   @include on-desktop {
+   
+    position: absolute;
+// top: 98%;
+bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -571,13 +588,24 @@ display: none;
   }
 
   &__info {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #222;
-    padding: 8px 16px;
-    background: #f8f9fa;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    @include on-tablet {
+      // width: 100%; // Чтобы карточки равномерно распределялись
+    }
+    @include on-mid-desktop {
+      font-size: 17px;
+      font-weight: bold;
+      color: #222;
+      padding: 7px 7px;
+      background: #f8f9fa;
+      border-radius: 6px;
+   
+    }
+  
+    @include on-desktop {
+      font-size: 20px;
+      padding: 8px 16px;
+    }
   }
 
   &__button--prev, &__button--next {
