@@ -69,7 +69,7 @@ export const Card: React.FC<Props> = ({ product }) => {
           </div>
 
           <div className="card__actions">
-            <button
+            {/* <button
               className={`card__actions--btn ${inBasket ? "in-basket" : ""}`}
               onClick={(e) => {
                 e.stopPropagation(); // ❗ Предотвращает переход на страницу товара
@@ -78,8 +78,20 @@ export const Card: React.FC<Props> = ({ product }) => {
               disabled={inBasket}
             >
               {inBasket ? "У кошику" : "В кошик"}
-            </button>
-        
+            </button> */}
+<button
+  className={`card__actions--btn ${!product.inStock ? "out-of-stock" : inBasket ? "in-basket" : ""}`}
+  onClick={(e) => {
+    e.stopPropagation();
+    handleAddToBasket();
+  }}
+  disabled={inBasket || !product.inStock} // Заблокированная кнопка, если нет в наличии
+>
+  {!product.inStock ? "Немає в наявності" : inBasket ? "У кошику" : "В кошик"}
+</button>
+
+
+
 
             <button
               className={`card__actions--wishlist ${favorite ? "favorite" : ""}`}

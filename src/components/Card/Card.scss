@@ -352,6 +352,16 @@
         cursor: not-allowed;
         border: 1px solid $background-first;
       }
+
+      &.out-of-stock {
+        background-color: #ccc;
+        border: 1px solid #aaa;
+        cursor: not-allowed;
+    color: #000;
+        &::before {
+          display: none; // Полностью убираем иконку корзины
+        }
+      }
     }
 
     &--wishlist {

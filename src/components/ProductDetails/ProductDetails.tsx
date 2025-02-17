@@ -250,12 +250,13 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
           </div>
 
           <button
-            className={`productDetails__addToCart ${inBasket ? "in-basket" : ""}`}
-            onClick={handleAddToBasket}
-            disabled={inBasket}
-          >
-            {inBasket ? "У кошику" : "В кошик"}
-          </button>
+  className={`productDetails__addToCart ${!product.inStock ? "out-of-stock" : inBasket ? "in-basket" : ""}`}
+  onClick={handleAddToBasket}
+  disabled={inBasket || !product.inStock} // Блокируем, если нет в наличии
+>
+  {!product.inStock ? "Немає в наявності" : inBasket ? "У кошику" : "В кошик"}
+</button>
+
 
           <div className="productDetails__bestBefore">
             <p className="productDetails__bestBefore--icon">i</p>
