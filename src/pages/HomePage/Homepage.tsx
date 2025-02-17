@@ -68,15 +68,15 @@ export const HomePage: React.FC = () => {
   return (
     <div>
       <div className="container">
-        <div className="fade-in"><VitaminPromoBlock /></div>   
-        <div className="fade-in">  <InfoStrip /></div> 
-        <div className="fade-in"> <PopularProducts /></div>  
-        <div className="fade-in"><Categories /></div>   
-        <div className="fade-in"> <Partners /></div>  
-        <div className="fade-in"> <FAQ /></div>  
+        <div><VitaminPromoBlock /></div>   
+        <div>  <InfoStrip /></div> 
+        <div> <PopularProducts /></div>  
+        <div><Categories /></div>   
+        <div> <Partners /></div>  
+        <div> <FAQ /></div>  
       </div>
       <div>
-        <div className="fade-in"> <Consultation /></div>  
+        <div> <Consultation /></div>  
       </div>
     </div>
   );

@@ -1,0 +1,50 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.infoBox {
+  border: 1px solid #786FC440;
+  border-radius: 10px;
+  padding: 24px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 300px;
+height: 100%;
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__title {
+ 
+font-size: 16px;
+font-weight: 700;
+line-height: 19.5px;
+text-align: left;
+color: #170F49;
+
+  }
+&__subtitle{
+
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+color: #5C5569;
+}
+&__italic{
+
+font-size: 14px;
+font-style: italic;
+font-weight: 400;
+line-height: 24px;
+color: #5C5569;
+
+}
+  &__divider {
+    height: 1px;
+    background: #e0e0e0;
+    width: 100%;
+  }
+}

@@ -28,31 +28,39 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    // display: flex;
     gap: 100px 30px;
     // padding: 0 20px;
     margin-top: 85px;
+    // flex-wrap: wrap;
   // display: flex;
   // justify-content: start;
-    place-items: center;
-
+    // place-items: center;
+// justify-content: center;
     @include on-tablet {
-     justify-content: center;
+
      margin-top: 110px;
      gap: 130px 50px;
+    //  justify-content: space-between;
      }
  
      @include on-mid-desktop {
+
       margin-top: 150px;
-      justify-content: start;
-   place-items: unset;
-   gap: 100px 20px;
+  //     justify-content: start;
+  //  place-items: unset;
+   gap: 100px 50px;
      }
  
    @include on-desktop {
-    // justify-content: start;
-    // margin-top: 150px;
-    place-items: unset;
+    // justify-content: flex-start;
+
+  /* Когда товаров больше двух, используем space-between */
+
+    margin-top: 100px;
+    gap: 120px 50px;
+    // place-items: unset;
    }
   }
 

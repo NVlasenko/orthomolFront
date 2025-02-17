@@ -24,10 +24,15 @@ export const BasketPage: React.FC = () => {
         <div className="basketPage__content">
           <div className="basketPage__items">
             {basketItems.map(({ product, quantity }) => (
-              <div key={product.id} className="basketPage__item">
+              <div key={product.id} className="basketPage__item" onClick={() =>
+                navigate(
+                  `/product/${product.id}/${encodeURIComponent(product.name)}/${encodeURIComponent(product.category)}`
+                )
+              }
+              style={{ cursor: "pointer" }}>
                 <img
                   className="basketPage__img"
-                  src={`${process.env.PUBLIC_URL}/${product.imgProductRef}`}
+                  src={`${process.env.PUBLIC_URL}/${product.imgProductRef[0]}`}
                   alt={product.name}
                 />
                 <div className="basketPage__info">
@@ -39,7 +44,10 @@ export const BasketPage: React.FC = () => {
                   <div className="basketPage__quantity">
                     <button
                       className="basketPage__counter"
-                      onClick={() => updateQuantity(product.id, quantity - 1)}
+                      onClick={(e) => {
+                        e.stopPropagation(); // Остановка всплытия, чтобы не кликало на переход
+                        updateQuantity(product.id, quantity - 1);
+                      }}
                     >
                       -
                     </button>
@@ -48,7 +56,10 @@ export const BasketPage: React.FC = () => {
                     </p>
                     <button
                       className="basketPage__counter"
-                      onClick={() => updateQuantity(product.id, quantity + 1)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        updateQuantity(product.id, quantity + 1);
+                      }}
                     >
                       +
                     </button>
@@ -56,7 +67,10 @@ export const BasketPage: React.FC = () => {
                 </div>
                 <button
                   className="basketPage__remove"
-                  onClick={() => removeFromBasket(product.id)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    removeFromBasket(product.id);
+                  }}
                 >
                   ✖
                 </button>

@@ -1,20 +1,21 @@
 import React, { useMemo } from "react";
-import "./PopularProducts.scss";
+import "./SimilarProducts.scss";
 import { Cards } from "../Cards";
 
 import { useProducts } from "../../api/useProducts";
 
 
 type Props = {
-  
+  productId: number;
+  category: string;
 };
-export const PopularProducts: React.FC<Props> = ({  }) => {
+export const SimilarProducts: React.FC<Props> = ({ productId, category }) => {
 
     const { products, isLoading, error } = useProducts();
-     const filteredProducts = useMemo(
-        () => products.filter((product) => product.category === "immune"),
-        [products]
-      );
+    const filteredProducts = useMemo(
+      () => products.filter((product) => product.category === category && product.id !== productId),
+      [products, category, productId]
+    );
       if (isLoading) return <p>Loading...</p>;
 
       if (error) {
@@ -27,7 +28,9 @@ export const PopularProducts: React.FC<Props> = ({  }) => {
       }
   return (
     <div id="popular" className="popularProducts">
-      <Cards filteredProducts={filteredProducts} title={"Популярні товари"}/>
-    </div>
+    {filteredProducts.length > 0 && (
+      <Cards filteredProducts={filteredProducts} title={"Схожі товари"} />
+    ) }
+  </div>
   )
 }

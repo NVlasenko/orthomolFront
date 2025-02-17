@@ -52,7 +52,7 @@ export const Card: React.FC<Props> = ({ product }) => {
       <div>
         <img
           className="card__image"
-          src={`${process.env.PUBLIC_URL}/${product.imgProductRef}`}
+          src={`${process.env.PUBLIC_URL}/${product.imgProductRef[0]}`}
           alt={product.name}
         />
       </div>
@@ -79,27 +79,12 @@ export const Card: React.FC<Props> = ({ product }) => {
             >
               {inBasket ? "У кошику" : "В кошик"}
             </button>
-            {/* <a
-  href="#"
-  className={`card__actions--wishlist ${favorite ? "favorite" : ""}`}
-  onClick={(e) => {
-    e.preventDefault(); // Предотвращаем стандартное поведение ссылки
-    handleFavoriteToggle(); // Добавляем товар в избранное
-  }}
->
-  <img
-    className="card__actions--heart"
-    src={`${process.env.PUBLIC_URL}/images/icons/${
-      favorite ? "heartActive.svg" : "heart.svg"
-    }`}
-    alt="heart"
-  />
-</a> */}
+        
 
             <button
               className={`card__actions--wishlist ${favorite ? "favorite" : ""}`}
               onClick={(e) => {
-                e.stopPropagation(); // ❗ Предотвращает переход на страницу товара
+                e.stopPropagation(); 
                 e.preventDefault();
                 handleFavoriteToggle();
               }}

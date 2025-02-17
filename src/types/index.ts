@@ -21,7 +21,7 @@ export type Product = {
   ageCategory: string[];
   healthCategory:string[];
   priceRegular: number;
-  imgProductRef: string;
+  imgProductRef: string[];
   imgCategoryRef: string;
   inStock: boolean;
   articleNumber: string;
