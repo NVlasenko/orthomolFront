@@ -128,8 +128,7 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
           </button>
         </div>
 
-        {/* Главное изображение */}
-        <div className="productDetails__mainImage">
+   <div className="productDetails__mainImage">
           <img
             src={
               selectedImage.startsWith("/images/")
@@ -144,7 +143,57 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
         </div>
 
         {/* Кнопка "Добавить в избранное" */}
-        <div className="productDetails__favorites">
+        {/* <div className="productDetails__favorites">
+          <button
+            className={`card__actions--wishlist ${favorite ? "favorite" : ""}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              e.preventDefault();
+              handleFavoriteToggle();
+            }}
+          >
+            {favorite ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="card__actions--icon"
+              >
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            ) : (
+              <img
+                src={`${process.env.PUBLIC_URL}/images/icons/heart.svg`}
+                alt="heart"
+                className="heart__icon"
+              />
+            )}
+          </button>
+        </div> */}
+
+        <div className="productDetails__info">
+          <div className="productDetails__status">
+            <span
+              className="productDetails__status--availability"
+              style={{
+                backgroundColor: product.inStock ? "#9EC79D26" : "#D9534F", // Фон: зелёный или красный
+                color: product.inStock ? "#71AA47" : "#000", // Текст: тёмно-зелёный или красный
+              }}
+            >
+              {product.inStock ? "В наявності" : "Немає в наявності"}
+            </span>
+
+            <span className="productDetails__status--sku">
+              Артикул{" "}
+              <span className="productDetails__status--sku-code">
+                {product.articleNumber}
+              </span>
+            </span>
+            <div className="productDetails__favorites">
           <button
             className={`card__actions--wishlist ${favorite ? "favorite" : ""}`}
             onClick={(e) => {
@@ -175,25 +224,6 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
             )}
           </button>
         </div>
-
-        <div className="productDetails__info">
-          <div className="productDetails__status">
-            <span
-              className="productDetails__status--availability"
-              style={{
-                backgroundColor: product.inStock ? "#9EC79D26" : "#D9534F", // Фон: зелёный или красный
-                color: product.inStock ? "#71AA47" : "#000", // Текст: тёмно-зелёный или красный
-              }}
-            >
-              {product.inStock ? "В наявності" : "Немає в наявності"}
-            </span>
-
-            <span className="productDetails__status--sku">
-              Артикул{" "}
-              <span className="productDetails__status--sku-code">
-                {product.articleNumber}
-              </span>
-            </span>
           </div>
 
           <div className="productDetails__price">
@@ -266,6 +296,9 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
             </div>
           </div>
         </div>
+
+        {/* Главное изображение */}
+       
 
         <DeliveryPaymentGuarantee />
       </div>
