@@ -477,20 +477,22 @@ padding-right: 20px;
   // transform-style: preserve-3d;
   // perspective: 1000px;
   // border-radius: 16px;
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+
   // padding: 10px;
   // text-align: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
  
   @include on-tablet {
-    // width: 100%; // Чтобы карточки равномерно распределялись
+  // Чтобы карточки равномерно распределялись
   }
   @include on-mid-desktop {
     width: 100%;
+
   }
 
   @include on-desktop {
     width: 100%;
+    
   }
 }
 
