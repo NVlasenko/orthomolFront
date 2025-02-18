@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.description{
+  margin-top: 50px;
+// width: 80%;
+display: flex;
+justify-content: center;
+
+flex-direction: column;
+  &__title{
+
+font-size: 28px;
+font-weight: 700;
+line-height: 40px;
+text-align: left;
+color: $second-primary-color;
+
+  }
+
+  &__subtitle{
+margin-top: 50px;
+font-size: 26px;
+font-weight: 600;
+line-height: 40px;
+text-align: left;
+color: $first-primary-color;
+
+  }
+
+  &__info{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+  }
+
+  &__text{
+
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: left;
+    color: $first-primary-color;
+    
+        }
+
+  &__recommendation{
+    margin-top: 50px;
+  }
+
+  &__list{
+    padding-left: 50px;
+  }
+}

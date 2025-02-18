@@ -1,0 +1,111 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.reviews {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__empty {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.review {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &__rating {
+    display: flex;
+    margin-bottom: 5px;
+  }
+
+  &__comment {
+    font-size: 14px;
+    color: #333;
+  }
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+margin-top: 30px;
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  textarea {
+    height: 80px;
+    resize: none;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .star {
+      font-size: 20px;
+    }
+  }
+
+  button {
+    background: $second-primary-color;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #434190;
+    }
+  }
+}
+
+.star {
+  color: #ddd;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+
+  &.filled {
+    color: #f39c12;
+  }
+
+  &:hover {
+    color: #ffcc00;
+  }
+}

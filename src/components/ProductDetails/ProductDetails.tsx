@@ -5,6 +5,8 @@ import { useFavorites } from "../../context/FavoritesContext";
 import { useBasket } from "../../context/BasketContextType";
 import { DeliveryPaymentGuarantee } from "../DeliveryPaymentGuarantee";
 import { SimilarProducts } from "../SimilarProducts";
+import { TabSwitcher } from "../TabSwitcher";
+import { ProductProvider } from "../../context/ProductContext";
 
 type Props = {
   product: Product;
@@ -51,7 +53,6 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
     for (let i = 0; i < quantity; i++) {
       addToBasket(product);
     }
-  
   };
   const handleFavoriteToggle = () => {
     if (favorite) {
@@ -79,7 +80,8 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
   };
 
   return (
-    <div className="productDetails">
+    <ProductProvider product={product}> 
+       <div className="productDetails">
       <h1 className="productDetails__title"> {product.name}</h1>
 
       {/* Галерея миниатюр */}
@@ -128,7 +130,7 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
           </button>
         </div>
 
-   <div className="productDetails__mainImage">
+        <div className="productDetails__mainImage">
           <img
             src={
               selectedImage.startsWith("/images/")
@@ -194,36 +196,38 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
               </span>
             </span>
             <div className="productDetails__favorites">
-          <button
-            className={`card__actions--wishlist ${favorite ? "favorite" : ""}`}
-            onClick={(e) => {
-              e.stopPropagation();
-              e.preventDefault();
-              handleFavoriteToggle();
-            }}
-          >
-            {favorite ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#fff"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="card__actions--icon"
+              <button
+                className={`card__actions--wishlist ${
+                  favorite ? "favorite" : ""
+                }`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  handleFavoriteToggle();
+                }}
               >
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              </svg>
-            ) : (
-              <img
-                src={`${process.env.PUBLIC_URL}/images/icons/heart.svg`}
-                alt="heart"
-                className="heart__icon"
-              />
-            )}
-          </button>
-        </div>
+                {favorite ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="card__actions--icon"
+                  >
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                ) : (
+                  <img
+                    src={`${process.env.PUBLIC_URL}/images/icons/heart.svg`}
+                    alt="heart"
+                    className="heart__icon"
+                  />
+                )}
+              </button>
+            </div>
           </div>
 
           <div className="productDetails__price">
@@ -250,13 +254,18 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
           </div>
 
           <button
-  className={`productDetails__addToCart ${!product.inStock ? "out-of-stock" : inBasket ? "in-basket" : ""}`}
-  onClick={handleAddToBasket}
-  disabled={inBasket || !product.inStock} // Блокируем, если нет в наличии
->
-  {!product.inStock ? "Немає в наявності" : inBasket ? "У кошику" : "В кошик"}
-</button>
-
+            className={`productDetails__addToCart ${
+              !product.inStock ? "out-of-stock" : inBasket ? "in-basket" : ""
+            }`}
+            onClick={handleAddToBasket}
+            disabled={inBasket || !product.inStock} // Блокируем, если нет в наличии
+          >
+            {!product.inStock
+              ? "Немає в наявності"
+              : inBasket
+              ? "У кошику"
+              : "В кошик"}
+          </button>
 
           <div className="productDetails__bestBefore">
             <p className="productDetails__bestBefore--icon">i</p>
@@ -299,13 +308,15 @@ export const ProductDetails: React.FC<Props> = ({ product }) => {
         </div>
 
         {/* Главное изображение */}
-       
 
         <DeliveryPaymentGuarantee />
       </div>
 
       <SimilarProducts productId={product.id} category={product.category} />
-    </div>
+
+      <TabSwitcher/>
+    </div> 
+    </ProductProvider>
+  
   );
 };
-

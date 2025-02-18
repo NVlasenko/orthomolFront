@@ -1,0 +1,38 @@
+.tab-switcher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+margin-top: 136px;
+  &__buttons {
+    display: flex;
+    border: 1px solid #dcdcdc;
+    border-radius: 50px;
+    overflow: hidden;
+    background: #fff;
+    width: 80%;
+  }
+
+  &__button {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: #252525;
+    font-weight: 600;
+
+    &.active {
+      background: #786FC440;
+      border-radius: 50px;
+      color: #1a1a8f;
+    }
+  }
+
+  &__content {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
