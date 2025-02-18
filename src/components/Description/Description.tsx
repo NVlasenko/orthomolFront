@@ -8,7 +8,7 @@ export const Description: React.FC = () => {
   if (!product) return <p>Товар не знайдено</p>;
 
   return (
-    <div className="description container">
+    <div className="description">
       <h2 className="description__title">{product.name}</h2>
       <h2 className="description__subtitle">Опис {product.name}</h2>
       <div className="description__info">
@@ -17,12 +17,12 @@ export const Description: React.FC = () => {
         ))}
       </div>
       <div className="description__recommendation">
-        <h3 className="description__title">
+        <h3>
           {product.recommendation
             .filter((rec) => rec.title) // Фильтруем только элементы с title
             .map((rec, index) =>
               rec.title?.map((title, subIndex) => (
-                <h3 key={`${index}-${subIndex}`}>{title}</h3>
+                <h3 className="description__title" key={`${index}-${subIndex}`}>{title}</h3>
               ))
             )}
         </h3>

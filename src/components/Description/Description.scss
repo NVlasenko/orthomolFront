@@ -2,55 +2,143 @@
 @import "../../styles/mixins";
 
 .description{
-  margin-top: 50px;
+  margin-top: 20px;
 // width: 80%;
 display: flex;
 justify-content: center;
 
 flex-direction: column;
+
+@include on-tablet {
+  margin-top: 40px;
+}
+@include on-mid-desktop {
+  margin-top: 40px;
+}
+@include on-desktop {
+  margin-top: 50px;
+}
   &__title{
 
-font-size: 28px;
-font-weight: 700;
-line-height: 40px;
+font-size: 20px;
+font-weight: 600;
+line-height: 20px;
 text-align: left;
 color: $second-primary-color;
+
+@include on-tablet {
+  font-size: 24px;
+
+  line-height: 35px;
+}
+@include on-mid-desktop {
+  font-size: 25px;
+
+  line-height: 35px;
+}
+@include on-desktop {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+}
 
   }
 
   &__subtitle{
-margin-top: 50px;
-font-size: 26px;
+margin-top: 20px;
+font-size: 20px;
 font-weight: 600;
 line-height: 40px;
 text-align: left;
 color: $first-primary-color;
-
+@include on-tablet {
+  margin-top: 30px;
+  font-size: 22px;
+}
+@include on-mid-desktop {
+  margin-top: 40px;
+  font-size: 24px;
+}
+@include on-desktop {
+  margin-top: 50px;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 40px;
+}
   }
 
   &__info{
-    margin-top: 50px;
+   
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
+    @include on-tablet {
+      margin-top: 30px;
+    
+    }
+    @include on-mid-desktop {
+      margin-top: 40px;
+   gap: 20px;
+    }
+    @include on-desktop {
+      margin-top: 50px;
+      gap: 30px;
+    }
 
   }
 
   &__text{
 
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 20px;
     text-align: left;
     color: $first-primary-color;
-    
+    @include on-tablet {
+  
+      font-size: 15px;
+  
+      line-height:25px;
+    }
+    @include on-mid-desktop {
+   
+    }
+    @include on-desktop {
+      font-size: 28px;
+  
+      line-height: 30px;
+    }
         }
 
   &__recommendation{
-    margin-top: 50px;
+    margin-top: 20px;
+    @include on-tablet {
+      margin-top: 30px;
+     
+    }
+    @include on-mid-desktop {
+      margin-top: 40px;
+    }
+    @include on-desktop {
+      margin-top: 50px;
+    }
   }
 
   &__list{
-    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 20px;
+    @include on-tablet {
+      padding-left: 30px;
+      gap: 20px;
+     
+    }
+    @include on-mid-desktop {
+      padding-left: 40px;
+    }
+    @include on-desktop {
+      padding-left: 50px;
+    }
   }
 }
