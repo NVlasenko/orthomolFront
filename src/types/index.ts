@@ -8,7 +8,7 @@ export type ProductRecommendation = {
 };
 
 export type CompositionOfVitamins = {
-  vitamin?: string;
+  traceElements?: string;
   details?: string[]; // Поле details также необязательно
 };
 
@@ -31,6 +31,7 @@ export type Product = {
   hit: boolean;
   packaging: number;
   expirationDate: string;
+  traceElements?: string;
   compositionOfVitamins?: CompositionOfVitamins[];
   description: ProductDescription[];
   recommendation: ProductRecommendation[];

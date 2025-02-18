@@ -8,6 +8,8 @@ export interface Filters {
   taste: string;
   shape: string;
   hit: boolean;
+  details: string;
+  traceElements: string;
 }
 
 export interface SidebarProps {

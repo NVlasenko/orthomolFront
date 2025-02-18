@@ -16,6 +16,8 @@ export const useFilters = () => {
     taste: searchParams.get("taste") || "all",
     shape: searchParams.get("shape") || "all",
     hit: searchParams.get("hit") === "true",
+    details: searchParams.get("details") || "all",
+    traceElements: searchParams.get("traceElements") || "all",
   };
 
   // Функция для обновления фильтров в URL
@@ -30,6 +32,8 @@ export const useFilters = () => {
     updatedParams.set("taste", newFilters.taste);
     updatedParams.set("shape", newFilters.shape);
     updatedParams.set("hit", String(newFilters.hit));
+    updatedParams.set("details", newFilters.details);
+    updatedParams.set("traceElements", newFilters.traceElements);
 
     setSearchParams(updatedParams);
   };

@@ -31,8 +31,7 @@
     "expirationDate": "30 лип. 2026 р.",
     "compositionOfVitamins": [
       {
-        "vitamin": "D",
-        "details": ["Вітамін D 400 -5000ME", "Вітамін D 5000-25000ME"]
+        "traceElements": "Фолієва кислота"
       }
     ] ,
     "description": [
@@ -101,8 +100,7 @@
     "expirationDate": "30 лип. 2026 р.",
     "compositionOfVitamins": [
       {
-        "vitamin": "B",
-        "details": ["Біотин", "Фолієва кислота"]
+        "traceElements": "B"
       }
     ] ,
     "description": [
@@ -171,10 +169,10 @@
     "expirationDate": "30 лип. 2026 р.",
     "compositionOfVitamins": [
       {
-        "vitamin": "B",
-        "details": ["Фолієва кислота"]
+        "traceElements": "B"
       }
     ] ,
+ 
     "description": [
       {
         "text": [
@@ -241,7 +239,7 @@
     "expirationDate": "30 лип. 2026 р.",
     "compositionOfVitamins": [
       {
-        "vitamin": "K"
+        "traceElements": "K"
       }
     ] ,
     "description": [
@@ -310,7 +308,7 @@
     "expirationDate": "30 лип. 2026 р.",
     "compositionOfVitamins": [
       {
-        "vitamin": "A"
+        "traceElements": "A"
       }
     ] ,
     "description": [
@@ -379,7 +377,7 @@
     "expirationDate": "30 лип. 2026 р.",
     "compositionOfVitamins": [
       {
-        "vitamin": "E"
+        "traceElements": "E"
       }
     ] ,
     "description": [
@@ -448,7 +446,7 @@
     "expirationDate": "30 лип. 2026 р.",
     "compositionOfVitamins": [
       {
-        "vitamin": "C"
+        "traceElements": "C"
       }
     ] ,
     "description": [
@@ -517,8 +515,7 @@
     "expirationDate": "30 лип. 2026 р.",
     "compositionOfVitamins": [
       {
-        "vitamin": "D",
-        "details": ["Вітамін D 400 -5000ME"]
+        "traceElements": "Фолієва кислота"
       }
     ] ,
     "description": [
@@ -585,6 +582,12 @@
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
+    "compositionOfVitamins": [
+      {
+        "traceElements": "D",
+        "details": "400-5000ME"
+      }
+    ] ,
     "description": [
       {
         "text": [
@@ -645,6 +648,7 @@
     "packaging": 90,
     "hit": false,
     "expirationDate": "30 лип. 2026 р.",
+    
     "description": [
       {
         "text": [
@@ -1310,7 +1314,12 @@
     "taste": "Грейпфрут",
     "packaging": 60,
     "hit": false,
-    "expirationDate": "15 бер. 2027 р."
+    "expirationDate": "15 бер. 2027 р.",
+    "compositionOfVitamins": [
+      {
+        "traceElements": "Біотин"
+      }
+    ] 
   },
   {
     "id": 25,

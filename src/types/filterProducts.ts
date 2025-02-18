@@ -82,6 +82,25 @@ export const filterProducts = (products: Product[], filters: Filters): Product[]
       return false;
     }
 
+    if (
+      filters.traceElements !== "all" &&
+      !(
+        product.compositionOfVitamins?.some(
+          (vit) => vit.traceElements === filters.traceElements
+        ) || product.traceElements === filters.traceElements
+      )
+    ) {
+      return false;
+    }
+
+    // ✅ Фильтр по дозировке (details)
+    if (filters.details !== "all") {
+      const hasDetails = product.compositionOfVitamins?.some(
+        (comp) => comp.details && comp.details.includes(filters.details)
+      );
+      if (!hasDetails) return false;
+    }
+
     // Фильтр "Хіти продажу"
     if (filters.hit && !product.hit) {
       return false;
