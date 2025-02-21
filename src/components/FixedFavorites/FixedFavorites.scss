@@ -159,6 +159,9 @@
     // fill: none; // Прозрачный фон
     color: white;
     transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     -webkit-mask-image: none;
 mask-image: none;
     @include on-tablet {
