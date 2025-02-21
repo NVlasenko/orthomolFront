@@ -1,13 +1,15 @@
 @font-face {
-  font-family: 'Montserrat';
-  src: url(../../public/fonts/Montserrat-VariableFont_wght.ttf) format('truetype');
-  font-weight: 100 900;
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Thin.woff2") format("woff2"),
+       url("/fonts/Montserrat-Thin.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Oddval';
-  src: url(${process.env.PUBLIC_URL}/fonts/Oddval-Regular.ttf) format('truetype');
+  src: url("/fonts/Oddval-SemiBold.woff2") format("woff2"),
+       url("/fonts/Oddval-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }

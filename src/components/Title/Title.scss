@@ -4,12 +4,13 @@
 .title {
   font-size: 28px;
   font-weight: 700;
-  line-height: 35px;
+  line-height: 58px;
   letter-spacing: -1px;
   text-align: left;
   color: $first-primary-color;
   @include on-tablet {
      font-size: 40px;
+     line-height: 80px;
   }
   @include on-desktop {
     font-size: 48px;

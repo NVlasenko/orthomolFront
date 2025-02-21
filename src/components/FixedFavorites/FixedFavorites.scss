@@ -104,7 +104,7 @@
 // }
 
 
-
+@import "../../styles/variables";
 @import "../../styles/mixins";
 
 .fixed-favorites {
@@ -152,12 +152,15 @@
 
   
   }
-  &__icon {
+  &__actions--icon {
     width: 18px;
     height: 18px;
     // stroke: rgb(46, 19, 167); // Цвет линии
     // fill: none; // Прозрачный фон
-    transition: stroke 0.3s ease;
+    color: white;
+    transition: all 0.3s ease;
+    -webkit-mask-image: none;
+mask-image: none;
     @include on-tablet {
       width: 25px;
     height: 25px;
@@ -174,7 +177,7 @@
       height: 35px;
     }
     &:hover {
-      stroke: #ffeb3b; // Изменение цвета при наведении
+      transform: scale(1.1); // Изменение цвета при наведении
     }
   }
 

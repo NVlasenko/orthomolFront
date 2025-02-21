@@ -967,7 +967,7 @@ export const Order: React.FC = () => {
                   <div className="basketPage__info">
                     <h3 className="basketPage__name">{product.name}</h3>
                     <p className="basketPage__price">
-                      {product.priceRegular.toString().replace(/^(\d)/, "$1 ")}{" "}
+                    {product.priceRegular.toLocaleString()}
                       грн
                     </p>
                     <div className="basketPage__quantity">

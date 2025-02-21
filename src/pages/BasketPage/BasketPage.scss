@@ -5,14 +5,14 @@
   margin: 50px auto;
   max-width: 800px;
   padding: 20px;
-  background: linear-gradient(to bottom right, #786fc4, #ffffff);
+  background: linear-gradient(to bottom right, #a6a0cf, #ffffff);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 
   &__title {
     font-size: 48px;
     font-weight: 700;
-    color: $first-primary-color;
+    color: #fff;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -139,11 +139,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background: linear-gradient(
-      to right,
-      $second-primary-color,
-      $first-primary-color
-    );
+    background:$second-primary-color;
     color: #fff;
     border-radius: 12px;
 
